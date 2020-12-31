@@ -5,28 +5,32 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#fff`,
       marginBottom: `1.45rem`,
+      boxShadow: `0px 0px 6px 0px rgba(0,0,0,0.5)`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
+        padding: `0.85rem 0.85rem`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+      <Link
+        to="/"
+        style={{
+          color: `black`,
+          textDecoration: `none`,
+        }}
+      >
+        <img
+          src={"https://juanoa.com/wp-content/uploads/2020/10/juanoa-logo-min.png.webp"}
           style={{
-            color: `white`,
-            textDecoration: `none`,
+            height: 44,
           }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+        />
+      </Link>
     </div>
   </header>
 )

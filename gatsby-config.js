@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Juan Otálora Alarcón | Thoughts, stories and ideas`,
+    title: `Juan Otálora Alarcón`,
     description: `La vida de un ingeniero informático como yo no es nada fácil. Me gusta leer, retener y escribir sobre temas que me gustan. ¿Me lees?`,
     author: `@juanoa`,
   },

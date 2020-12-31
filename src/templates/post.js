@@ -2,15 +2,49 @@ import React from 'react'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import { graphql, Link } from "gatsby"
+import ReactMarkdown from 'react-markdown'
 
 const PostTemplate = ({ data }) => (
   <Layout>
-    <h1>{data.strapiPost.title}</h1>
-    <p>
-      <Link to={`/category/${data.strapiPost.category.slug}`}>{data.strapiPost.category.title}</Link>
-    </p>
-    <Img fixed={data.strapiPost.coverPhoto.childImageSharp.fixed}/>
-    <p>{data.strapiPost.content}</p>
+    <Link to={`/category/${data.strapiPost.category.slug}`}
+      style={{
+        textDecoration: "none",
+      }}
+    >
+      <span
+        style={{
+          borderBottom: "3px solid black",
+          paddingBottom: 2,
+          color: "black",
+          textTransform: "uppercase",
+          fontWeight: 700,
+          fontSize: 16
+        }}
+      >
+        {data.strapiPost.category.title}
+      </span>
+    </Link>
+    <h1
+      style={{
+        fontSize: 52,
+        marginTop: 15
+      }}
+    >
+      {data.strapiPost.title}
+    </h1>
+    <Img
+      fixed={data.strapiPost.coverPhoto.childImageSharp.fixed}
+    />
+    <div
+      style={{
+        marginTop: 25,
+        maxWidth: 700,
+        marginLeft: "auto",
+        marginRight: "auto"
+      }}
+    >
+      <ReactMarkdown source={ data.strapiPost.content } escapeHtml={false} />
+    </div>
   </Layout>
 )
 
@@ -28,7 +62,7 @@ export const query = graphql`
       }
       coverPhoto {
         childImageSharp {
-          fixed(width: 800) {
+          fixed(width: 900) {
             ...GatsbyImageSharpFixed
           }
         }

@@ -37,9 +37,7 @@ const Layout = ({ children }) => {
         <footer style={{
           marginTop: `2rem`
         }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          Juan Otálora © 2018-{new Date().getFullYear()}. Todos los derechos reservados
         </footer>
       </div>
     </>

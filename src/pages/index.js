@@ -15,7 +15,7 @@ const IndexPage = ({data}) => (
                   <Link to={`/${document.node.slug}`}>{document.node.title}</Link>
               </h3>
               <Img fixed={document.node.coverPhoto.childImageSharp.fixed}/>
-              <p>{document.node.content}</p>
+              <p>{document.node.content.slice(0, 100)}...</p>
           </li>
         ))}
     </ul>

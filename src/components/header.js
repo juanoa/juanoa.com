@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
     <div
       style={{
         margin: `0 auto`,
-        padding: `0.85rem 0.85rem`,
+        padding: `0.75rem 0.75rem`,
         maxWidth: 960,
       }}
     >
@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
           style={{
             height: 44,
           }}
-        />
+          alt={"Juan Otálora"}/>
       </Link>
     </div>
   </header>

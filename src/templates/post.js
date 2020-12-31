@@ -26,7 +26,6 @@ const PostTemplate = ({ data }) => (
     </Link>
     <h1
       style={{
-        fontSize: 52,
         marginTop: 15
       }}
     >
@@ -34,6 +33,9 @@ const PostTemplate = ({ data }) => (
     </h1>
     <Img
       fixed={data.strapiPost.coverPhoto.childImageSharp.fixed}
+      style={{
+        width: "100%"
+      }}
     />
     <div
       style={{

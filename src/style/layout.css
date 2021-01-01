@@ -598,38 +598,50 @@ pre tt:after {
 
 
 
-
-
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: white;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
+.card-title {
   color: black;
-  text-align: center;
-  padding-right: 14px;
-  padding-left: 14px;
-  text-decoration: none;
-  font-size: 17px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: black;
+.grid-item{
+  border: none !important;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
+.grid-item .card-body {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 14px;
+  color: #484848;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
+.descripcion-destacada{
+  font-size: 14px;
+  color: #484848;
+}
+
+.card-img-top {
+  border-radius: 0 0 0 0 !important;
+}
+
+.content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.homepage {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.titulo-destacado {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .titulo-destacado {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }

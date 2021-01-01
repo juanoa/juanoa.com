@@ -1,16 +1,16 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import { graphql, Link } from "gatsby"
 import ReactMarkdown from 'react-markdown'
 
 const PostTemplate = ({ data }) => (
   <Layout>
-    <Link to={`/category/${data.strapiPost.category.slug}`}
-      style={{
-        textDecoration: "none",
-      }}
-    >
+    <div className="content">
+      <Link to={`/category/${data.strapiPost.category.slug}`}
+            style={{
+              textDecoration: "none",
+            }}
+      >
       <span
         style={{
           borderBottom: "3px solid black",
@@ -23,20 +23,22 @@ const PostTemplate = ({ data }) => (
       >
         {data.strapiPost.category.title}
       </span>
-    </Link>
-    <h1
-      style={{
-        marginTop: 15
-      }}
-    >
-      {data.strapiPost.title}
-    </h1>
-    <Img
-      fixed={data.strapiPost.coverPhoto.childImageSharp.fixed}
-      style={{
-        width: "100%"
-      }}
-    />
+      </Link>
+      <h1
+        style={{
+          marginTop: 15
+        }}
+      >
+        {data.strapiPost.title}
+      </h1>
+      <img
+        src={data.strapiPost.coverPhoto.publicURL}
+        style={{
+          width: "100%"
+        }}
+       alt={data.strapiPost.title}/>
+    </div>
+
     <div
       style={{
         marginTop: 25,
@@ -63,11 +65,7 @@ export const query = graphql`
           title
       }
       coverPhoto {
-        childImageSharp {
-          fixed(width: 900) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        publicURL
       }
     }
   }

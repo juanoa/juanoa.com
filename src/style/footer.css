@@ -1,0 +1,18 @@
+footer {
+    color: white;
+}
+
+.avatar {
+    width: 25%;
+    border-radius: 50% 50% 50% 50%;
+}
+
+h4 {
+    font-size: 24px !important;
+}
+
+.enlaces-interes {
+    list-style: none;
+    line-height: 1;
+    margin-left: 0 !important;
+}

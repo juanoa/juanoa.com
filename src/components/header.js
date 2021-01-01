@@ -1,51 +1,39 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import {FaBars} from 'react-icons/fa'
+import 'react-icons/fa'
+import { Navbar } from "react-bootstrap"
+import { Nav } from "react-bootstrap"
 
-import './nav.css'
-
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+import '../style/nav.css'
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#fff`,
-      marginBottom: `1.45rem`,
-      boxShadow: `0px 0px 6px 0px rgba(0,0,0,0.5)`,
-    }}
-  >
-    <div className="topnav" id="myTopnav">
-      <Link
-        to="/"
-        style={{
-          color: `black`,
-          textDecoration: `none`,
-        }}
-      >
+
+  <Navbar bg="light" expand="lg">
+    <div className="container d-flex justify-content-between nav-container">
+      <Navbar.Brand href="/">
         <img
-          src={"https://juanoa.com/wp-content/uploads/2020/10/juanoa-logo-min.png.webp"}
-          style={{
-            height: 40,
-          }}
-          alt={"Juan Otálora"}/>
-      </Link>
-      <Link to={"https://cv.juanoa.com"} alt={"Sobre mi"}>Sobre mi</Link>
-      <Link to={"https://cv.juanoa.com"} alt={"Sobre mi"}>Sobre mi</Link>
-      <Link to={"https://cv.juanoa.com"} alt={"Sobre mi"}>Sobre mi</Link>
-      <a href="javascript:void(0);" className="icon" onClick={myFunction}>
-        <FaBars />
-      </a>
+          src="https://juanoa.com/wp-content/uploads/2020/10/juanoa-logo-min.png.webp"
+          width="56"
+          height="56"
+          className="d-inline-block align-top"
+          alt="React Bootstrap logo"
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="https://cv.juanoa.com">Sobre mi</Nav.Link>
+          <Nav.Link href="#">Libros</Nav.Link>
+          <Nav.Link href="#">Tecnología</Nav.Link>
+          <Nav.Link href="#">Economía</Nav.Link>
+        </Nav>
+        <Nav>
+          <Nav.Link href="#" className="btn btn-sm btn-contacto">Contacto</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
     </div>
-  </header>
+
+  </Navbar>
 )
 
 Header.propTypes = {

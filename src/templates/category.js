@@ -1,23 +1,36 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Img from "gatsby-image"
+import SEO from "../components/seo"
+import { Card, Col, Row } from "react-bootstrap"
 
 const CategoryTemplate = ({ data }) => (
   <Layout>
-    <h1>{data.strapiCategory.title}</h1>
-    <p>{data.strapiCategory.description}</p>
-    <ul>
-      {data.strapiCategory.posts.map(post => (
-        <li key={post.id}>
-          <h3>
-            <Link to={`/${post.slug}`}>{post.title}</Link>
-          </h3>
-          <Img fixed={post.coverPhoto.childImageSharp.fixed}/>
-          <p>{post.content}</p>
-        </li>
-      ))}
-    </ul>
+      <div className="content">
+          <SEO title={data.strapiCategory.title} />
+          <h1>{data.strapiCategory.title}</h1>
+          <p>{data.strapiCategory.description}</p>
+
+          <Row>
+              {data.strapiCategory.posts.map(post => (
+                <Col md={4}>
+                    <Card className="grid-item">
+                        <Link to={`/${post.slug}`}>
+                            <Card.Img variant="top" src={post.coverPhoto.publicURL} />
+                        </Link>
+                        <Card.Body>
+                            <Link to={`/${post.slug}`}>
+                                <Card.Title>{post.title}</Card.Title>
+                            </Link>
+                            <Card.Text>
+                                {post.content.slice(0, 100)}...
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+              ))}
+          </Row>
+      </div>
   </Layout>
 )
 
@@ -35,11 +48,7 @@ export const query = graphql`
                 content
                 slug
                 coverPhoto {
-                    childImageSharp {
-                        fixed(width: 250) {
-                          ...GatsbyImageSharpFixed
-                        }
-                    }
+                    publicURL
                 }
             }
         }

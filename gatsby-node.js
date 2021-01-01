@@ -24,6 +24,9 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             slug
+            category {
+                slug
+            }
           }
         }
       }
@@ -32,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiPost.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.slug}`,
+        path: `/${node.category.slug}/${node.slug}`,
         component: path.resolve(`src/templates/post.js`),
         context: {
           slug: node.slug,
@@ -55,7 +58,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each category.
     result.data.allStrapiCategory.edges.forEach(({ node }) => {
       createPage({
-        path: `/category/${node.slug}`,
+        path: `/categoria/${node.slug}`,
         component: path.resolve(`src/templates/category.js`),
         context: {
           slug: node.slug,

@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from "../components/seo"
-import { Card, Col, Row } from "react-bootstrap"
+import { Row } from "react-bootstrap"
+import CategoryItemGrid from "../components/categoryItemGrid"
 
 const CategoryTemplate = ({ data }) => (
   <Layout>
@@ -13,21 +14,7 @@ const CategoryTemplate = ({ data }) => (
 
           <Row>
               {data.strapiCategory.posts.map(post => (
-                <Col md={4}>
-                    <Card className="grid-item">
-                        <Link to={`/${post.slug}`}>
-                            <Card.Img variant="top" src={post.coverPhoto.publicURL} />
-                        </Link>
-                        <Card.Body>
-                            <Link to={`/${post.slug}`}>
-                                <Card.Title>{post.title}</Card.Title>
-                            </Link>
-                            <Card.Text>
-                                {post.content.slice(0, 100)}...
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                <CategoryItemGrid post={post} categorySlug={data.strapiCategory.slug}/>
               ))}
           </Row>
       </div>
@@ -42,6 +29,7 @@ export const query = graphql`
             id
             title
             description
+            slug
             posts {
                 id
                 title

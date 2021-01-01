@@ -637,6 +637,8 @@ pre tt:after {
 .titulo-destacado {
   font-size: 55px;
   font-weight: 700;
+  text-decoration: none;
+  color: black;
 }
 
 @media (max-width: 600px) {

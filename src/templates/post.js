@@ -2,9 +2,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql, Link } from "gatsby"
 import ReactMarkdown from 'react-markdown'
+import SEO from "../components/seo"
 
 const PostTemplate = ({ data }) => (
   <Layout>
+    <SEO title={data.strapiPost.title} description={data.strapiPost.content.slice(0, 140)} />
     <div className="content">
       <Link to={`/category/${data.strapiPost.category.slug}`}
             style={{

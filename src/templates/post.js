@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const PostTemplate = ({ data }) => (
   <Layout>
     <SEO title={data.strapiPost.title} description={data.strapiPost.content.slice(0, 140)} />
-    <div className="content">
+    <div className="page-content">
       <Link to={`/category/${data.strapiPost.category.slug}`}
             style={{
               textDecoration: "none",
@@ -49,7 +49,7 @@ const PostTemplate = ({ data }) => (
         marginRight: "auto"
       }}
     >
-      <ReactMarkdown source={ data.strapiPost.content } escapeHtml={false} />
+      <ReactMarkdown className="content" source={ data.strapiPost.content } escapeHtml={false} />
     </div>
   </Layout>
 )

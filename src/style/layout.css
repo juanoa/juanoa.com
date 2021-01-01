@@ -624,9 +624,15 @@ pre tt:after {
   border-radius: 0 0 0 0 !important;
 }
 
-.content {
+.page-content {
   max-width: 850px;
   margin: auto;
+}
+
+.content {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .homepage {
@@ -645,5 +651,15 @@ pre tt:after {
   .titulo-destacado {
     font-size: 18px;
     font-weight: 700;
+  }
+
+  .page-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .homepage {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

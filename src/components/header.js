@@ -5,7 +5,7 @@ import { Navbar } from "react-bootstrap"
 import { Nav } from "react-bootstrap"
 
 import '../style/nav.css'
-import Logo from '../images/logo.webp'
+import Logo from '../images/logo.png'
 
 const Header = ({ siteTitle }) => (
 
@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
           width="56"
           height="56"
           className="d-inline-block align-top"
-          alt="React Bootstrap logo"
+          alt="Juan Otálora"
         />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -43,8 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       exclude: [
-        `/categoria/*`,
-        `/politica-privacidad`
+        `/politica-privacidad`,
       ],
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

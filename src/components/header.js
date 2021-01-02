@@ -22,10 +22,10 @@ const Header = ({ siteTitle }) => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/categoria/productividad">Productividad</Nav.Link>
-          <Nav.Link href="/categoria/lifestyle">Lifestyle</Nav.Link>
-          <Nav.Link href="/categoria/desarrollo">Desarrollo</Nav.Link>
-          <Nav.Link href="/categoria/economia">Economía</Nav.Link>
+          <Nav.Link href="/productividad">Productividad</Nav.Link>
+          <Nav.Link href="/lifestyle">Lifestyle</Nav.Link>
+          <Nav.Link href="/desarrollo">Desarrollo</Nav.Link>
+          <Nav.Link href="/economia">Economía</Nav.Link>
           <Nav.Link href="#">Libros</Nav.Link>
         </Nav>
         <Nav>

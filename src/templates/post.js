@@ -8,7 +8,7 @@ const PostTemplate = ({ data }) => (
   <Layout>
     <SEO title={data.strapiPost.title} description={data.strapiPost.content.slice(0, 140)} />
     <div className="page-content">
-      <Link to={`/categoria/${data.strapiPost.category.slug}`}
+      <Link to={`/${data.strapiPost.category.slug}`}
             style={{
               textDecoration: "none",
             }}

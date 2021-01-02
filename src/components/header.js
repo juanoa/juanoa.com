@@ -5,6 +5,7 @@ import { Navbar } from "react-bootstrap"
 import { Nav } from "react-bootstrap"
 
 import '../style/nav.css'
+import Logo from '../images/logo.webp'
 
 const Header = ({ siteTitle }) => (
 
@@ -12,7 +13,7 @@ const Header = ({ siteTitle }) => (
     <div className="container d-flex justify-content-between nav-container">
       <Navbar.Brand href="/">
         <img
-          src="https://juanoa.com/wp-content/uploads/2020/10/juanoa-logo-min.png.webp"
+          src={Logo}
           width="56"
           height="56"
           className="d-inline-block align-top"

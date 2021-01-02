@@ -2,6 +2,7 @@ import React from "react"
 import { Col, Container, Row } from "react-bootstrap"
 
 import '../style/footer.css'
+import FotoJuan from '../images/juan.webp'
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <Row>
           <Col md={3}>
             <h4>Más sobre mi</h4>
-            <img className="avatar" src={"https://juanoa.com/wp-content/uploads/2020/04/foto-linkedin-camisa-azul-150x150.jpg.webp"} alt="Juan Otálora"/>
+            <img className="avatar" src={FotoJuan} alt="Juan Otálora"/>
             <p className="mt-3">
               Mi nombre es Juan Otálora y soy estudiante de ingeniería informática. En este blog personal cuento cosas que me pasan por la cabeza y que creo que otros deberían conocer.
             </p>

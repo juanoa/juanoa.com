@@ -14,7 +14,7 @@ const FeaturedIndexItem = ({post}) => {
         <Link to={`/${post.category.slug}/${post.slug}`}>
           <h3 className="titulo-destacado">{post.title}</h3>
         </Link>
-        <small>Publicado el {post.published_at}</small>
+        <small style={{color: '#5564eb'}}><b>{post.category.title}</b></small>
         <p className="descripcion-destacada">{post.content.slice(0, 150)}...</p>
       </Col>
     </Row>

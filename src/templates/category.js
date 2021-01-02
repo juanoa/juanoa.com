@@ -7,11 +7,11 @@ import CategoryItemGrid from "../components/categoryItemGrid"
 
 const CategoryTemplate = ({ data }) => (
   <Layout>
-      <div className="content">
+    <SEO title={data.strapiCategory.title} description={data.strapiCategory.description?.slice(0, 140)} />
+      <div className="page-content">
           <SEO title={data.strapiCategory.title} />
           <h1>{data.strapiCategory.title}</h1>
           <p>{data.strapiCategory.description}</p>
-
           <Row>
               {data.strapiCategory.posts.map(post => (
                 <CategoryItemGrid post={post} categorySlug={data.strapiCategory.slug}/>

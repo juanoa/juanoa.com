@@ -7,6 +7,7 @@ const IndexItemGrid = ({post}) => {
     <Col md={3}>
       <Card className="grid-item">
         <Link to={`/${post.node.category.slug}/${post.node.slug}`}>
+          <span className="notify-badge">{post.node.category.title}</span>
           <Card.Img variant="top" src={post.node.coverPhoto.publicURL} />
         </Link>
         <Card.Body>

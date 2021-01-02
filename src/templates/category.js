@@ -9,7 +9,6 @@ const CategoryTemplate = ({ data }) => (
   <Layout>
     <SEO title={data.strapiCategory.title} description={data.strapiCategory.description?.slice(0, 140)} />
       <div className="page-content">
-          <SEO title={data.strapiCategory.title} />
           <h1>{data.strapiCategory.title}</h1>
           <p>{data.strapiCategory.description}</p>
           <Row>

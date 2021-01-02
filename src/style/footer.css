@@ -16,3 +16,8 @@ h4 {
     line-height: 1;
     margin-left: 0 !important;
 }
+
+.enlaces-interes a {
+    color: white;
+    text-decoration: none;
+}

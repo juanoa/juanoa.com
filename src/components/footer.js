@@ -26,7 +26,7 @@ const Footer = () => {
           <Col md={3}>
             <h4>Enlaces de interés</h4>
             <ul className="enlaces-interes">
-              <li>Política de privacidad</li>
+              <li><a href="/politica-privacidad">Política de privacidad</a></li>
               <li>Recomendaciones</li>
               <li>Contacto</li>
             </ul>

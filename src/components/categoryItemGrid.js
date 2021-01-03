@@ -4,7 +4,7 @@ import React from "react"
 
 const CategoryItemGrid = ({post, categorySlug}) => {
   return (
-    <Col md={4}>
+    <Col md={4} xs={6}>
       <Card className="grid-item">
         <Link to={`/${categorySlug}/${post.slug}`}>
           <Card.Img variant="top" src={post.coverPhoto.publicURL} />

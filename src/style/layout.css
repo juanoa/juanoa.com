@@ -631,8 +631,6 @@ pre tt:after {
 
 .content {
   text-align: justify;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .homepage {
@@ -665,6 +663,10 @@ pre tt:after {
   margin: auto;
 }
 
+.category-grid h2 {
+  font-size: 32px;
+}
+
 @media (max-width: 600px) {
   .titulo-destacado {
     font-size: 18px;
@@ -672,12 +674,23 @@ pre tt:after {
   }
 
   .page-content {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .homepage {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
+
+  .category-grid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
 }

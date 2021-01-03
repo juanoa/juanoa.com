@@ -18,7 +18,11 @@ const Footer = () => {
           </Col>
           <Col md={3} className={"text-center"}>
             <a href="https://scrummanager.com/website/c/profile/member.php?id=30425">
-              <img alt="Scrum Manager Expert" src="https://scrummanager.com/website/img/experto-en.png" />
+              <img
+                alt="Scrum Manager Expert"
+                src="https://scrummanager.com/website/img/experto-en.png"
+                className="mb-4"
+              />
             </a>
           </Col>
           <Col md={3} className={"text-center"}>
@@ -33,6 +37,7 @@ const Footer = () => {
             </ul>
           </Col>
         </Row>
+        <small>Juan Otálora Alarcón © 2018-{new Date().getFullYear()}. Todos los derechos reservados</small>
       </Container>
     </footer>
   )

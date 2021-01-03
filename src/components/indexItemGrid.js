@@ -4,11 +4,11 @@ import React from "react"
 
 const IndexItemGrid = ({post}) => {
   return (
-    <Col md={3}>
+    <Col md={3} xs={6}>
       <Card className="grid-item">
         <Link to={`/${post.node.category.slug}/${post.node.slug}`}>
           <span className="notify-badge">{post.node.category.title}</span>
-          <Card.Img variant="top" src={post.node.coverPhoto.publicURL} />
+          <Card.Img variant="top" src={post.node.coverPhoto.childImageSharp.fixed.src} />
         </Link>
         <Card.Body>
           <Link to={`/${post.node.category.slug}/${post.node.slug}`}>

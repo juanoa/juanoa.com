@@ -58,6 +58,11 @@ export const pageQuery = graphql`
           content
           coverPhoto {
             publicURL
+            childImageSharp {
+              fixed(width: 500, height: 282) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
         }
       }

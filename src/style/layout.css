@@ -398,6 +398,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  text-align: justify;
 }
 pre {
   margin-left: 0;
@@ -519,10 +520,6 @@ p *:last-child {
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }
-code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
 kbd {
   font-size: 0.85rem;
   line-height: 1.45rem;
@@ -627,10 +624,6 @@ pre tt:after {
 .page-content {
   max-width: 850px;
   margin: auto;
-}
-
-.content {
-  text-align: justify;
 }
 
 .homepage {

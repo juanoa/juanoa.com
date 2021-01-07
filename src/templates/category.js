@@ -24,7 +24,11 @@ export default CategoryTemplate
 
 export const query = graphql`
     query CategoryTemplate($slug: String!) {
-        strapiCategory(slug: { eq: $slug }) {
+        strapiCategory(
+          slug: { 
+            eq: $slug 
+          }
+        ) {
             id
             title
             description
@@ -33,6 +37,7 @@ export const query = graphql`
                 id
                 title
                 content
+                published_at
                 slug
                 coverPhoto {
                     publicURL

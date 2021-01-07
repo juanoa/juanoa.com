@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const PostTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.strapiPost.title} description={data.strapiPost.content.slice(0, 140)} />
+    <SEO title={data.strapiPost.seoTitle || data.strapiPost.title} description={data.strapiPost.seoDescription || data.strapiPost.content.slice(0, 140)} />
     <div className="page-content">
       <Link to={`/${data.strapiPost.category.slug}`}
             style={{
@@ -48,8 +48,9 @@ const PostTemplate = ({ data }) => (
         marginLeft: "auto",
         marginRight: "auto"
       }}
+      className="content"
     >
-      <ReactMarkdown className="content" source={ data.strapiPost.content } escapeHtml={false} />
+      <ReactMarkdown source={ data.strapiPost.content } escapeHtml={false} />
     </div>
   </Layout>
 )
@@ -69,6 +70,8 @@ export const query = graphql`
       coverPhoto {
         publicURL
       }
+      seoDescription
+      seoTitle
     }
   }
 `

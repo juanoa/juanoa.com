@@ -44,10 +44,11 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allStrapiPost (sort: {order: DESC, fields: published_at}) {
+    allStrapiPost (filter: {homepage: {eq: true}}, sort: {order: DESC, fields: published_at}) {
       edges {
         node {
           id
+          homepage
           published_at(formatString: "d-M-yyyy")
           title
           category {

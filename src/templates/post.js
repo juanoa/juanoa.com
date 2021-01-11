@@ -85,6 +85,13 @@ export const query = graphql`
         title
         link
         description
+        coverPhoto {
+          childImageSharp {
+            fixed(height: 250) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
       seoDescription
       seoTitle

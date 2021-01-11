@@ -85,9 +85,6 @@ export const query = graphql`
         title
         link
         description
-        coverPhoto {
-          publicURL
-        }
       }
       seoDescription
       seoTitle

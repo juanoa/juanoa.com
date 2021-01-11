@@ -13,7 +13,7 @@ const BookPost = ({book}) => {
         <Row>
           <Col xs={4} md={3} style={{textAlign: 'center'}}>
             <img
-              src={book.coverPhoto.publicUrl}
+              src={book.coverPhoto.publicURL}
               alt={book.title}/>
           </Col>
           <Col xs={8} md={9}>

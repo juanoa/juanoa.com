@@ -7,7 +7,7 @@ const CategoryItemGrid = ({post, categorySlug}) => {
     <Col md={4} xs={6}>
       <Card className="grid-item">
         <Link to={`/${categorySlug}/${post.slug}`}>
-          <Card.Img variant="top" src={post.coverPhoto.url} />
+          <Card.Img variant="top" src={post.coverPhoto.publicURL} />
         </Link>
         <Card.Body>
           <Link to={`/${categorySlug}/${post.slug}`}>

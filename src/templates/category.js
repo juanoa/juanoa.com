@@ -12,7 +12,7 @@ const CategoryTemplate = ({ data }) => (
           <h1>{data.strapiCategory.title}</h1>
           <p>{data.strapiCategory.description}</p>
           <Row>
-              {data.strapiCategory.posts.map(post => (
+              {data.strapiCategory.posts.reverse().map(post => (
                 <CategoryItemGrid post={post} categorySlug={data.strapiCategory.slug}/>
               ))}
           </Row>

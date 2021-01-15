@@ -660,6 +660,15 @@ pre tt:after {
   font-size: 32px;
 }
 
+.book-year {
+  background: #cccccc;
+  background: linear-gradient(90deg, #5564eb, #00dfd8);
+  font-weight: 800;
+  font-size: 4rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
 @media (max-width: 600px) {
   .titulo-destacado {
     font-size: 18px;

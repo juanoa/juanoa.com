@@ -32,7 +32,7 @@ const Footer = () => {
             <h4>Enlaces de interés</h4>
             <ul className="enlaces-interes">
               <li><a href="/politica-privacidad">Política de privacidad</a></li>
-              <li>Recomendaciones</li>
+              <li><a href="/libros">Libros recomendadas</a></li>
               <li>Contacto</li>
             </ul>
           </Col>

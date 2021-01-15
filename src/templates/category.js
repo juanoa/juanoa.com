@@ -40,6 +40,11 @@ export const query = graphql`
                 published_at
                 slug
                 coverPhoto {
+                  formats {
+                    small {
+                      url
+                    }
+                  }
                   localFile {
                     publicURL
                   }

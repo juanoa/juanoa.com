@@ -58,6 +58,14 @@ export const pageQuery = graphql`
           slug
           content
           coverPhoto {
+            formats {
+              small {
+                url
+              }
+              medium {
+                url
+              }
+            }
             localFile {
               publicURL
             }

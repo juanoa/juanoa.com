@@ -3,19 +3,25 @@ import { Link } from "gatsby"
 import React from "react"
 
 const IndexItemGrid = ({post}) => {
+  const thumbnail = post.node.coverPhoto.formats?.small.url || post.node.coverPhoto.localFile.publicURL;
+  const link = `/${post.node.category.slug}/${post.node.slug}`;
+  const title = post.node.title;
+  const description = `${post.node.content.slice(0, 100)}...`;
+  const category = post.node.category.title;
+
   return (
     <Col md={3} xs={6}>
       <Card className="grid-item">
-        <Link to={`/${post.node.category.slug}/${post.node.slug}`}>
-          <span className="notify-badge">{post.node.category.title}</span>
-          <Card.Img variant="top" src={post.node.coverPhoto.localFile.publicURL} />
+        <Link to={link}>
+          <span className="notify-badge">{category}</span>
+          <Card.Img variant="top" src={thumbnail} />
         </Link>
         <Card.Body>
-          <Link to={`/${post.node.category.slug}/${post.node.slug}`}>
-            <Card.Title>{post.node.title}</Card.Title>
+          <Link to={link}>
+            <Card.Title>{title}</Card.Title>
           </Link>
           <Card.Text>
-            {post.node.content.slice(0, 100)}...
+            {description}
           </Card.Text>
         </Card.Body>
       </Card>

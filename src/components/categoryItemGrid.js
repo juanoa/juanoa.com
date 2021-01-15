@@ -3,18 +3,23 @@ import { Link } from "gatsby"
 import React from "react"
 
 const CategoryItemGrid = ({post, categorySlug}) => {
+  const thumbnail = post.coverPhoto.formats?.small.url || post.coverPhoto.localFile.publicURL;
+  const link = `/${categorySlug}/${post.slug}`;
+  const title = post.title;
+  const description = `${post.content.slice(0, 100)}...`
+
   return (
     <Col md={4} xs={6}>
       <Card className="grid-item">
-        <Link to={`/${categorySlug}/${post.slug}`}>
-          <Card.Img variant="top" src={post.coverPhoto.localFile.publicURL} />
+        <Link to={link}>
+          <Card.Img variant="top" src={thumbnail} />
         </Link>
         <Card.Body>
-          <Link to={`/${categorySlug}/${post.slug}`}>
-            <Card.Title>{post.title}</Card.Title>
+          <Link to={link}>
+            <Card.Title>{title}</Card.Title>
           </Link>
           <Card.Text>
-            {post.content.slice(0, 100)}...
+            {description}
           </Card.Text>
         </Card.Body>
       </Card>

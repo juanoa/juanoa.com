@@ -22,7 +22,7 @@ const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
             <Col md={4}>
               <Card className="grid-item bg-dark">
                 <Link to={`/${post.node.category.slug}/${post.node.slug}`}>
-                  <Card.Img variant="top" src={post.node.coverPhoto.localFile.publicURL} />
+                  <Card.Img variant="top" src={post.node.coverPhoto.formats?.small.url || post.node.coverPhoto.localFile.publicURL} />
                 </Link>
                 <Card.Body>
                   <Link to={`/${post.node.category.slug}/${post.node.slug}`}>

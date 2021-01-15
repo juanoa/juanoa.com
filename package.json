@@ -15,7 +15,7 @@
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-plugin-sitemap": "^2.9.0",
     "gatsby-source-filesystem": "^2.5.0",
-    "gatsby-source-strapi": "^0.0.12",
+    "gatsby-source-strapi": "^1.0.0-alpha.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

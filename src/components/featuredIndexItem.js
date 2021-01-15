@@ -7,7 +7,7 @@ const FeaturedIndexItem = ({post}) => {
     <Row className="mb-4">
       <Col md={6} className="pt-3">
         <Link to={`/${post.category.slug}/${post.slug}`}>
-          <img src={post.coverPhoto.publicURL} alt={post.title} />
+          <img src={post.coverPhoto.localFile.publicURL} alt={post.title} />
         </Link>
       </Col>
       <Col md={6} className="pt-3">

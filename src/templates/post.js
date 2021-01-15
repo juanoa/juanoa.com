@@ -42,7 +42,7 @@ const PostTemplate = ({ data }) => {
         </h1>
         <p><b><span role="img" aria-label="tiempo">⏳</span> {timeToRead} min</b></p>
         <img
-          src={data.strapiPost.coverPhoto.publicURL}
+          src={data.strapiPost.coverPhoto.localFile.publicURL}
           style={{
             width: "100%"
           }}
@@ -79,12 +79,19 @@ export const query = graphql`
           title
       }
       coverPhoto {
-        publicURL
+        localFile {
+          publicURL
+        }
       }
       book {
         title
         link
         description
+        coverPhoto {
+          localFile {
+            publicURL
+          }
+        }
       }
       seoDescription
       seoTitle

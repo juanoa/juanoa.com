@@ -40,7 +40,9 @@ export const query = graphql`
                 published_at
                 slug
                 coverPhoto {
+                  localFile {
                     publicURL
+                  }
                 }
             }
         }

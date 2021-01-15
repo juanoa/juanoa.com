@@ -4,9 +4,9 @@ import { Row } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import IndexItemGrid from "../components/indexItemGrid"
-import FeaturedIndexItem from "../components/featuredIndexItem"
-import CategoryIndexGrid from "../components/categoryIndexGrid"
+import IndexItemGrid from "../components/index/indexItemGrid"
+import FeaturedIndexItem from "../components/index/featuredIndexItem"
+import CategoryIndexGrid from "../components/index/categoryIndexGrid"
 
 const IndexPage = ({data}) => (
   <Layout>

@@ -1,12 +1,13 @@
 import { Col, Row } from "react-bootstrap"
 import { Link } from "gatsby"
 import React from "react"
+import { createDescription } from "../../helpers/createDescription"
 
 const FeaturedIndexItem = ({post}) => {
   const thumbnail = post.coverPhoto.formats?.medium.url || post.coverPhoto.localFile.publicURL;
   const link = `/${post.category.slug}/${post.slug}`;
   const title = post.title;
-  const description = `${post.content.slice(0, 150)}...`;
+  const description = createDescription(post.content, 150);
   const category = post.category.title;
 
   return (

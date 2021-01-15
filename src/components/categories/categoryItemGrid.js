@@ -1,12 +1,13 @@
 import { Card, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import React from "react"
+import { createDescription } from "../../helpers/createDescription"
 
 const CategoryItemGrid = ({post, categorySlug}) => {
   const thumbnail = post.coverPhoto.formats?.small.url || post.coverPhoto.localFile.publicURL;
   const link = `/${categorySlug}/${post.slug}`;
   const title = post.title;
-  const description = `${post.content.slice(0, 100)}...`
+  const description = createDescription(post.content, 100)
 
   return (
     <Col md={4} xs={6}>

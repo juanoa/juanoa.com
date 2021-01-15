@@ -55,7 +55,7 @@ exports.createPages = ({ actions, graphql }) => {
           }
       }
   `).then(result => {
-    // Create pages for each category.
+    // Create pages for each categories.
     result.data.allStrapiCategory.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.slug}`,

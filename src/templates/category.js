@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 import { Row } from "react-bootstrap"
-import CategoryItemGrid from "../components/categoryItemGrid"
+import CategoryItemGrid from "../components/categories/categoryItemGrid"
 
 const CategoryTemplate = ({ data }) => (
   <Layout>

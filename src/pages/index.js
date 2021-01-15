@@ -12,8 +12,8 @@ const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Inicio" />
     <div className="homepage">
-      {data.allStrapiPost.edges.slice(0, 1).map(document => (
-        <FeaturedIndexItem post={document.node} />
+      {data.allStrapiPost.edges.slice(0, 1).map(post => (
+        <FeaturedIndexItem post={post.node} />
       ))}
       <Row>
         {data.allStrapiPost.edges.slice(1, 5).map(post => (

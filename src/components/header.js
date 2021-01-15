@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
           <Nav.Link href="/lifestyle">Lifestyle</Nav.Link>
           <Nav.Link href="/desarrollo">Desarrollo</Nav.Link>
           <Nav.Link href="/economia">Economía</Nav.Link>
-          <Nav.Link href="#">Libros</Nav.Link>
+          <Nav.Link href="/libros">Libros</Nav.Link>
         </Nav>
         <Nav>
           <Nav.Link href="https://cv.juanoa.com">Sobre mi</Nav.Link>

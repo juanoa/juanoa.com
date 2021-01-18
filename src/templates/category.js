@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from "react"
 import { graphql } from 'gatsby'
+
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 import { Pagination, Row } from "react-bootstrap"
 import CategoryItemGrid from "../components/categories/categoryItemGrid"
 
 const CategoryTemplate = ({ data }) => {
-  const postsPorPagina = 9;
+  const postsPorPagina = 3;
   const postsLength = data.strapiCategory.posts.length;
 
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const pagina = parseInt(urlParams.get('p') || 1);
+  const [pagina, setPagina] = useState(1)
+
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search)
+    setPagina(parseInt(query.get('p')) || 1)
+  }, [])
+
+  console.log(pagina)
+
   const postInicio = postsPorPagina*(pagina-1);
   const postFinal = postInicio+postsPorPagina;
 
@@ -24,6 +31,7 @@ const CategoryTemplate = ({ data }) => {
       <div className="page-content">
         <h1>{data.strapiCategory.title}</h1>
         <p>{data.strapiCategory.description}</p>
+        <p>{postInicio} - {postFinal} de {postsLength}</p>
         <Row>
           {data.strapiCategory.posts.reverse().slice(postInicio, postFinal).map(post => (
             <CategoryItemGrid post={post} categorySlug={data.strapiCategory.slug}/>

@@ -1,9 +1,13 @@
+require('dotenv').config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Juan Otálora Alarcón`,
     description: `La vida de un ingeniero informático como yo no es nada fácil. Me gusta leer, retener y escribir sobre temas que me gustan. ¿Me lees?`,
     author: `@juanoa_`,
-    siteUrl: `https://juanoa.com`,
+    siteUrl: `https://www.juanoa.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://api-juanoa.herokuapp.com',
+        apiURL: process.env.API_URL,
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'post',
           'category',

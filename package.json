@@ -6,7 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "gatsby": "^2.26.1",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.31.0",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-google-gtag": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.1",

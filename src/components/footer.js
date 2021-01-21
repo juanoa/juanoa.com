@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap"
 
 import '../style/footer.css'
 import FotoJuan from '../images/juan.webp'
+import { FaGithub } from "react-icons/all";
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
           <Col md={3}>
             <h4>Más sobre mi</h4>
             <img className="avatar" src={FotoJuan} alt="Juan Otálora"/>
-            <p className="mt-3">
+            <p className="mt-3 descripcion-perfil-footer">
               Mi nombre es Juan Otálora y soy estudiante de ingeniería informática. En este blog personal cuento cosas que me pasan por la cabeza y que creo que otros deberían conocer.
             </p>
           </Col>
@@ -37,7 +38,10 @@ const Footer = () => {
             </ul>
           </Col>
         </Row>
-        <small>Juan Otálora Alarcón © 2018-{new Date().getFullYear()}. Todos los derechos reservados</small>
+        <small className="copyright">
+          juanoa.com © 2018-{new Date().getFullYear()} | Diseñado por <a href="https://juanoa.com">Juan Otálora</a>
+          <a href="https://github.com/juanoa/juanoa.com"> <FaGithub /> Ver repositorio en GitHub</a>
+        </small>
       </Container>
     </footer>
   )

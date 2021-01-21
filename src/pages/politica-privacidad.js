@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Política de privacidad" />
+    <SEO title="Política de privacidad" robots="noindex" />
     <div className="page-content">
       <h1>Política de privacidad</h1>
         <h2>1. Quiénes somos</h2>

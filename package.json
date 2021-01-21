@@ -2,7 +2,7 @@
   "name": "juanoa.com",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Juan Otálora <juan@juanoa.com>",
   "dependencies": {
     "bootstrap": "^4.5.3",

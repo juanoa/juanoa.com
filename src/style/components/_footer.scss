@@ -1,0 +1,49 @@
+footer {
+    background-color: $dark-gray;
+    color: $white;
+}
+
+.footer__avatar {
+    border-radius: 50% 50% 50% 50%;
+    width: 25%;
+}
+
+.footer__heading {
+    font-size: 24px !important;
+}
+
+.footer__interest-links {
+    list-style: none;
+    line-height: 1;
+    margin-left: 0 !important;
+}
+
+.footer__interest-links a {
+    color: $white;
+    text-decoration: none;
+}
+
+.footer__link {
+    color: $white;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.footer__github {
+    color: $white;
+    margin-left: 10px;
+    padding: 4px;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.footer__profile-description {
+    font-size: 0.85rem;
+}

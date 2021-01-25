@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby"
 import ReactMarkdown from 'react-markdown'
 import SEO from "../components/seo"
 import BookPost from "../components/books/bookPost"
-import '../style/highlight.css'
 
 const PostTemplate = ({ data }) => {
 

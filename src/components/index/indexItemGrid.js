@@ -11,22 +11,24 @@ const IndexItemGrid = ({post}) => {
   const category = post.node.category.title;
 
   return (
-    <Col md={3} xs={6}>
-      <Card className="grid-item">
-        <Link to={link}>
+    <div className="col-md-3 col-sm-6">
+      <div className="index__grid-item card">
+        <a href={link}>
           <span className="notify-badge">{category}</span>
-          <Card.Img variant="top" src={thumbnail} />
-        </Link>
-        <Card.Body>
-          <Link to={link}>
-            <Card.Title>{title}</Card.Title>
-          </Link>
-          <Card.Text>
+          <img className="card-img-top" src={thumbnail} alt={title} />
+        </a>
+        <div className="card-body index__card-body">
+          <a href={link}>
+            <div className="card-title index__card-title h5">
+              {title}
+            </div>
+          </a>
+          <p className="card-text">
             {description}
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </Col>
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
 

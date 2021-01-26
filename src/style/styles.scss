@@ -1,7 +1,10 @@
 // Base
 @import "./base/bootstrap";
 @import "./base/highlight";
+@import "./base/layout";
 @import "./base/colors";
 
 //Components
 @import "./components/footer";
+@import "./components/header";
+@import "./components/index";

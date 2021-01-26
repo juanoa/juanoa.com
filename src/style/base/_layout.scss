@@ -83,7 +83,7 @@ h1 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -260,7 +260,7 @@ h2 {
   margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -277,7 +277,7 @@ h3 {
   margin-bottom: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -294,7 +294,7 @@ h4 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -311,7 +311,7 @@ h5 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -328,7 +328,7 @@ h6 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -551,7 +551,7 @@ tt {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -569,24 +569,7 @@ tt:after {
   }
 }
 
-
-
-.card-title {
-  color: black;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.grid-item{
-  border: none !important;
-}
-
-.grid-item .card-body {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 14px;
-  color: #484848;
-}
+// Cambiar lo de abajo
 
 .descripcion-destacada{
   font-size: 14px;

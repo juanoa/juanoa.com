@@ -569,15 +569,9 @@ tt:after {
   }
 }
 
-// Cambiar lo de abajo
-
-.descripcion-destacada{
-  font-size: 14px;
-  color: #484848;
-}
-
-.card-img-top {
-  border-radius: 0 0 0 0 !important;
+.homepage {
+  max-width: 1100px;
+  margin: auto;
 }
 
 .page-content {
@@ -585,29 +579,10 @@ tt:after {
   margin: auto;
 }
 
-.homepage {
-  max-width: 1100px;
-  margin: auto;
-}
+// Cambiar lo de abajo
 
-.titulo-destacado {
-  font-size: 55px;
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-}
-
-.notify-badge{
-  position: absolute;
-  right:20px;
-  top:20px;
-  background: #5564eb;
-  text-align: center;
-  border-radius: 30px 30px 30px 30px;
-  color:white;
-  padding: 3px 10px;
-  font-size: 12px;
-  box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+.card-img-top {
+  border-radius: 0 0 0 0 !important;
 }
 
 .category-grid {

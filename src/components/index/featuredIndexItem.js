@@ -1,14 +1,17 @@
 import { Col, Row } from "react-bootstrap"
 import { Link } from "gatsby"
 import React from "react"
+
 import { createDescription } from "../../helpers/createDescription"
 
-const FeaturedIndexItem = ({post}) => {
-  const thumbnail = post.coverPhoto.formats?.medium.url || post.coverPhoto.localFile.publicURL;
-  const link = `/${post.category.slug}/${post.slug}`;
-  const title = post.title;
-  const description = createDescription(post.content, 150);
-  const category = post.category.title;
+const FeaturedIndexItem = ({posts}) => {
+  const post = posts.allStrapiPost.edges[0].node
+
+  const thumbnail = post.coverPhoto.formats?.medium.url || post.coverPhoto.localFile.publicURL
+  const link = `/${post.category.slug}/${post.slug}`
+  const title = post.title
+  const description = createDescription(post.content, 150)
+  const category = post.category.title
 
   return (
     <Row className="mb-4">
@@ -19,10 +22,10 @@ const FeaturedIndexItem = ({post}) => {
       </Col>
       <Col md={6} className="pt-3">
         <Link to={link}>
-          <h3 className="titulo-destacado">{title}</h3>
+          <h3 className="index__featured-title">{title}</h3>
         </Link>
-        <small style={{color: '#5564eb'}}><b>{category}</b></small>
-        <p className="descripcion-destacada">{description}</p>
+        <small className="index__featured-category"><b>{category}</b></small>
+        <p className="index__featured-description">{description}</p>
       </Col>
     </Row>
   );

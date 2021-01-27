@@ -19,7 +19,7 @@ const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
         <h2>{categoryName}</h2>
         <Row className="mt-3">
           {categoryPosts.map(post => (
-            <CategoryIndexItem post={post} />
+            <CategoryIndexItem post={post} key={post.node.id} />
           ))}
         </Row>
       </div>

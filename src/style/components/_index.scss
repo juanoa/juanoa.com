@@ -1,9 +1,3 @@
-.index__card-title {
-  color: black;
-  font-weight: 700;
-  font-size: 18px;
-}
-
 .index__grid-item{
   border: none !important;
   background-color: transparent;
@@ -18,6 +12,16 @@
 
 
 // Post
+
+.index__post-link:hover {
+  text-decoration: none;
+}
+
+.index__post-title {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
 
 .index__post-category-badge{
   background: $primary;

@@ -31,20 +31,8 @@ const Layout = ({ children }) => {
       <Footer />
       <CookieConsent
         buttonText="Las acepto"
-        style={{
-          background: 'white',
-          maxWidth: 350,
-          boxShadow: '0 0 6px 0 rgba(0,0,0,0.5)',
-          color: 'black',
-          marginBottom: 20,
-          marginLeft: 20,
-          textAlign: 'center',
-          padding: 10
-        }}
-        buttonStyle={{
-          background: '#5564eb',
-          color: 'white'
-        }}
+        containerClasses="layout__cookie-banner"
+        buttonClasses="layout__cookie-banner-button"
       >
         Este sitio web utiliza cookies para mejorar tu experiencia de uso. <a href="/politica-privacidad">Política de privacidad</a>
       </CookieConsent>

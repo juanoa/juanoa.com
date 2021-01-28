@@ -1,5 +1,4 @@
 import { Col, Row } from "react-bootstrap"
-import { Link } from "gatsby"
 import React from "react"
 
 import { createDescription } from "../../helpers/createDescription"
@@ -16,14 +15,14 @@ const FeaturedIndexItem = ({posts}) => {
   return (
     <Row className="mb-4">
       <Col md={6} className="pt-3">
-        <Link to={link}>
+        <a href={link} className="index__post-link">
           <img src={thumbnail} alt={title} />
-        </Link>
+        </a>
       </Col>
       <Col md={6} className="pt-3">
-        <Link to={link}>
+        <a href={link} className="index__post-link">
           <h3 className="index__featured-title">{title}</h3>
-        </Link>
+        </a>
         <small className="index__featured-category"><b>{category}</b></small>
         <p className="index__featured-description">{description}</p>
       </Col>

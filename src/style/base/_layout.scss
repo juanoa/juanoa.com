@@ -579,6 +579,22 @@ tt:after {
   margin: auto;
 }
 
+// Cookies Banner
+.layout__cookie-banner {
+  background-color: $white !important;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+  color: $dark-gray !important;
+  max-width: 350px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.layout__cookie-banner-button {
+  background-color: $primary !important;
+  color: $white !important;
+}
+
 // Cambiar lo de abajo
 
 .card-img-top {

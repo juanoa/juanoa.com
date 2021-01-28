@@ -10,11 +10,11 @@ const CategoryIndexItem = ({post}) => {
   return (
     <div className="col-md-4">
       <div className="card index__grid-item">
-        <a href={link}>
+        <a href={link} className="index__post-link">
           <img className="card-img-top" src={thumbnail} alt={title} />
         </a>
         <div className="card-body index__card-body">
-          <a href={link}>
+          <a href={link} className="index__post-link">
             <div className="card-title index__card-title h5 text-white">
               {title}
             </div>

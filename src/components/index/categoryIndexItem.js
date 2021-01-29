@@ -19,7 +19,7 @@ const CategoryIndexItem = ({post}) => {
               {title}
             </div>
           </a>
-          <p className="card-text text-white-50">
+          <p className="card-text text-white-50 index__post-description">
             {description}
           </p>
         </div>

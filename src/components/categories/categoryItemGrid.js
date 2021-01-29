@@ -1,5 +1,3 @@
-import { Card, Col } from "react-bootstrap"
-import { Link } from "gatsby"
 import React from "react"
 import { createDescription } from "../../helpers/createDescription"
 

@@ -9,7 +9,7 @@ const IndexPostItem = ({post}) => {
   const category = post.node.category.title;
 
   return (
-    <div className="col-md-3 col-sm-6">
+    <div className="col-6 col-md-3">
       <div className="index__grid-item card">
         <a href={link} className="index__post-link">
           <span className="index__post-category-badge">{category}</span>
@@ -21,7 +21,7 @@ const IndexPostItem = ({post}) => {
               {title}
             </div>
           </a>
-          <p className="card-text">
+          <p className="card-text index__post-description">
             {description}
           </p>
         </div>

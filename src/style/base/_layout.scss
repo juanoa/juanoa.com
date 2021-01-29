@@ -253,7 +253,7 @@ h2 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -263,14 +263,14 @@ h2 {
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h3 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 10px;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -280,7 +280,7 @@ h3 {
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1.65rem;
   line-height: 1.1;
 }
 h4 {
@@ -297,7 +297,7 @@ h4 {
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.1;
 }
 h5 {
@@ -389,6 +389,7 @@ dd {
   margin-bottom: 1.45rem;
 }
 p {
+  font-size: 1.15rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -579,6 +580,28 @@ tt:after {
   margin: auto;
 }
 
+@media (max-width: 600px) {
+  .page-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .homepage {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .index__category-grid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 // Cookies Banner
 .layout__cookie-banner {
   background-color: $white !important;
@@ -595,34 +618,5 @@ tt:after {
   color: $white !important;
 }
 
-// Cambiar lo de abajo
 
 
-
-@media (max-width: 600px) {
-  .titulo-destacado {
-    font-size: 18px;
-    font-weight: 700;
-  }
-
-  .page-content {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .homepage {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .category-grid {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .content {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-}

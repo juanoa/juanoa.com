@@ -15,7 +15,7 @@ const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
 
   return (
     <div className="bg-dark text-white pt-4 pb-4 mt-3">
-      <div className="category-grid">
+      <div className="index__category-grid">
         <h2>{categoryName}</h2>
         <Row className="mt-3">
           {categoryPosts.map(post => (

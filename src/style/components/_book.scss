@@ -1,0 +1,28 @@
+.book__year-title {
+  background: #cccccc;
+  background: linear-gradient(90deg, #5564eb, #00dfd8);
+  font-weight: 800;
+  font-size: 4rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.book__card-item {
+  border-radius: 10px;
+}
+
+.book__post-column {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.book__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.book__description {
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: inherit;
+}

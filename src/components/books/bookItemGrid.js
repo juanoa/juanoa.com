@@ -9,18 +9,18 @@ const BookItemGrid = ({book}) => {
   const link = book.node.link;
 
   return (
-    <Card className="border-0 bg-light shadow-sm mt-2" style={{borderRadius: 10}}>
+    <Card className="border-0 bg-light shadow-sm mt-2 book__card-item">
       <Card.Body className="text-center">
         <img
           alt={title}
           src={cover}
           width={100}
         />
-        <Card.Title style={{fontSize: 22}} className="mt-3">
+        <Card.Title className="book__title mt-3">
           {title}
         </Card.Title>
-        <Card.Text style={{fontSize: 16}} className="mt-2">
-          <i>{description}</i>
+        <Card.Text className="book__description mt-2">
+          {description}
         </Card.Text>
         <a
           className="btn btn-warning"

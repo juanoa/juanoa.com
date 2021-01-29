@@ -1,0 +1,35 @@
+// Page
+
+.category__description {
+  background-color: $primary-lighter;
+  border-radius: 10px;
+  font-style: italic;
+  padding: 20px;
+}
+
+
+// Grid
+.category__grid-item{
+  border: none !important;
+  background-color: transparent;
+}
+
+.category__grid-item .category__card-body {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 14px;
+  color: #484848;
+}
+
+
+// Post
+
+.category__post-link:hover {
+  text-decoration: none;
+}
+
+.category__post-title {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}

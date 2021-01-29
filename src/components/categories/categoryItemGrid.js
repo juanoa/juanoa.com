@@ -19,7 +19,7 @@ const CategoryItemGrid = ({post, categorySlug}) => {
               {title}
             </div>
           </a>
-          <p className="card-text">
+          <p className="card-text category__post-description">
             {description}
           </p>
         </div>

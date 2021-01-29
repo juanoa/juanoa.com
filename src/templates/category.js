@@ -28,7 +28,11 @@ const CategoryTemplate = ({ data }) => {
       <SEO title={data.strapiCategory.title} description={data.strapiCategory.description?.slice(0, 140)} />
       <div className="page-content">
         <h1>{data.strapiCategory.title}</h1>
-        <p>{data.strapiCategory.description}</p>
+        { data.strapiCategory.description &&
+          <div className="category__description mb-4">
+            {data.strapiCategory.description}
+          </div>
+        }
         <Row>
           {data.strapiCategory.posts.reverse().slice(postInicio, postFinal).map(post => (
             <CategoryItemGrid post={post} categorySlug={data.strapiCategory.slug}/>

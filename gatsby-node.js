@@ -50,6 +50,8 @@ exports.createPages = ({ actions, graphql }) => {
               edges {
                   node {
                       slug
+                      title
+                      description
                   }
               }
           }
@@ -57,11 +59,14 @@ exports.createPages = ({ actions, graphql }) => {
   `).then(result => {
     // Create pages for each categories.
     result.data.allStrapiCategory.edges.forEach(({ node }) => {
+      console.log(node.id)
       createPage({
         path: `/${node.slug}`,
         component: path.resolve(`src/templates/category.js`),
         context: {
           slug: node.slug,
+          title: node.title,
+          description: node.description,
         },
       })
     })

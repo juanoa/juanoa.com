@@ -3,14 +3,14 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from "../components/seo"
-import { Row } from "react-bootstrap"
+import { Pagination, Row } from "react-bootstrap";
 import CategoryItemGrid from "../components/categories/categoryItemGrid"
 
 const CategoryTemplate = ({data, pageContext}) => {
-  const {description, title, slug} = pageContext;
+  const {description, title, slug, index, currentUrl, previousUrl, nextUrl} = pageContext;
   return (
     <Layout>
-      <SEO title={title} description={description?.slice(0, 140)} />
+      <SEO title={title} description={description?.slice(0, 140)} index={index} />
       <div className="page-content">
         <h1>{title}</h1>
         { description &&
@@ -23,10 +23,10 @@ const CategoryTemplate = ({data, pageContext}) => {
             <CategoryItemGrid post={post.node} categorySlug={slug} key={post.node.id}/>
           ))}
         </Row>
-        {/*<Pagination>*/}
-        {/*  <Pagination.Prev disabled={paginaAnterior === pagina} href={`/${data.strapiCategory.slug}?p=${paginaAnterior}`} />*/}
-        {/*  <Pagination.Next disabled={paginaSiguiente === pagina} href={`/${data.strapiCategory.slug}?p=${paginaSiguiente}`} />*/}
-        {/*</Pagination>*/}
+        <Pagination>
+          <Pagination.Prev disabled={currentUrl === previousUrl} href={previousUrl} />
+          <Pagination.Next disabled={currentUrl === nextUrl} href={nextUrl} />
+        </Pagination>
       </div>
     </Layout>
   )
@@ -35,10 +35,12 @@ const CategoryTemplate = ({data, pageContext}) => {
 export default CategoryTemplate
 
 export const query = graphql`
-  query CategoryTemplate($slug: String!) {
+  query CategoryTemplate($slug: String!, $skip: Int!, $limit: Int!) {
     allStrapiPost(
       filter: {category: {slug: {eq: $slug}}},
-      sort: {fields: published_at, order: DESC}
+      sort: {fields: published_at, order: DESC},
+      skip: $skip,
+      limit: $limit
     ) {
       edges {
         node {

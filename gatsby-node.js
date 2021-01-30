@@ -52,6 +52,9 @@ exports.createPages = ({ actions, graphql }) => {
                       slug
                       title
                       description
+                      posts {
+                        id
+                      }
                   }
               }
           }
@@ -59,16 +62,39 @@ exports.createPages = ({ actions, graphql }) => {
   `).then(result => {
     // Create pages for each categories.
     result.data.allStrapiCategory.edges.forEach(({ node }) => {
-      console.log(node.id)
-      createPage({
-        path: `/${node.slug}`,
-        component: path.resolve(`src/templates/category.js`),
-        context: {
-          slug: node.slug,
-          title: node.title,
-          description: node.description,
-        },
-      })
+
+      const postPerPage = 9
+      const postLength = node.posts.length
+      const pagesLength = Math.ceil(postLength/postPerPage)
+
+      const previousUrl = (pageNumber) => {
+        if (pageNumber === 0 || pageNumber === 1) return `/${node.slug}`
+        else return `/${node.slug}/${pageNumber}`
+      }
+
+      const nextUrl = (pageNumber) => {
+        if (pagesLength === 1) return `/${node.slug}`
+        else if ((pageNumber+1) === pagesLength) return `/${node.slug}/${pageNumber+1}`
+        else return `/${node.slug}/${pageNumber+2}`
+      }
+
+      for (let pageNumber = 0; pageNumber < pagesLength; pageNumber++) {
+        createPage({
+          path: pageNumber === 0 ? `/${node.slug}` : `/${node.slug}/${pageNumber+1}`,
+          component: path.resolve(`src/templates/category.js`),
+          context: {
+            slug: node.slug,
+            title: node.title,
+            description: node.description,
+            skip: pageNumber*postPerPage,
+            limit: postPerPage,
+            index: pageNumber === 0,
+            currentUrl: pageNumber === 0 ? `/${node.slug}` : `/${node.slug}/${pageNumber+1}`,
+            previousUrl: previousUrl(pageNumber),
+            nextUrl: nextUrl(pageNumber),
+          },
+        })
+      }
     })
   });
 

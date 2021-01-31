@@ -7,8 +7,8 @@ import Logo from '../images/logo.png'
 
 const Header = ({ siteTitle }) => (
 
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="container d-flex nav-container">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light header__navbar">
+    <div className="container d-flex header__nav-container">
       <Link className="navbar-brand" to="/">
         <img
           src={Logo}

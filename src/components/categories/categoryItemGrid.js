@@ -1,4 +1,5 @@
 import React from "react"
+
 import { createDescription } from "../../helpers/createDescription"
 
 const CategoryItemGrid = ({post, categorySlug}) => {

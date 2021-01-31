@@ -5,3 +5,6 @@
  */
 
 import './src/style/styles.scss'
+import 'jquery/dist/jquery.min'
+import '@popperjs/core/dist/esm/popper'
+import 'bootstrap/js/src/collapse'

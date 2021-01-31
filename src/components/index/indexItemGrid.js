@@ -1,4 +1,5 @@
 import React from "react";
+
 import IndexPostItem from "./indexPostItem";
 
 export const IndexItemGrid = ({posts, init, end}) => {

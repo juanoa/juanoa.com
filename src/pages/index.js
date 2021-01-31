@@ -10,16 +10,16 @@ import { IndexItemGrid } from "../components/index/indexItemGrid";
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Inicio" />
-    <div className="homepage">
+    <div className="container-fluid homepage">
       <FeaturedIndexItem posts={data} />
       <IndexItemGrid posts={data} init={1} end={5} />
     </div>
     <CategoryIndexGrid posts={data.allStrapiPost.edges} categoryName={'Tecnología'} categorySlug={'tecnologia'} />
-    <div className="homepage mt-5">
+    <div className="container-fluid homepage mt-5">
       <IndexItemGrid posts={data} init={5} end={13} />
     </div>
     <CategoryIndexGrid posts={data.allStrapiPost.edges} categoryName={'Productividad'} categorySlug={'productividad'} />
-    <div className="homepage mt-5">
+    <div className="container-fluid homepage mt-5">
       <IndexItemGrid posts={data} init={13} end={21} />
     </div>
   </Layout>

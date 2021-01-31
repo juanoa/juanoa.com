@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from "../components/seo"
-import { Pagination, Row } from "react-bootstrap";
 import CategoryItemGrid from "../components/categories/categoryItemGrid"
 
 const CategoryTemplate = ({data, pageContext}) => {
@@ -18,15 +17,17 @@ const CategoryTemplate = ({data, pageContext}) => {
             {description}
           </div>
         }
-        <Row>
+        <div className="row">
           {data.allStrapiPost.edges.map(post => (
             <CategoryItemGrid post={post.node} categorySlug={slug} key={post.node.id}/>
           ))}
-        </Row>
-        <Pagination>
-          <Pagination.Prev disabled={currentUrl === previousUrl} href={previousUrl} />
-          <Pagination.Next disabled={currentUrl === nextUrl} href={nextUrl} />
-        </Pagination>
+        </div>
+        <nav aria-label="Page navigation">
+          <ul className="pagination">
+            <li className={`page-item ${currentUrl === previousUrl && "disabled"}`}><a className="page-link" href={previousUrl}>Anterior</a></li>
+            <li className={`page-item ${currentUrl === nextUrl && "disabled"}`}><a className="page-link" href={nextUrl}>Siguiente</a></li>
+          </ul>
+        </nav>
       </div>
     </Layout>
   )

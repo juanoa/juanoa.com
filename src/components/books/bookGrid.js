@@ -1,5 +1,4 @@
 import React from "react"
-import { CardColumns } from "react-bootstrap"
 import BookItemGrid from "./bookItemGrid"
 
 const BookGrid = ({books, year}) => {
@@ -13,11 +12,11 @@ const BookGrid = ({books, year}) => {
   return (
     <div className="mt-5 text-center">
       <h2 className="book__year-title">{year}</h2>
-      <CardColumns>
+      <div className="card-columns">
         {yearBooks.map(book => (
-          <BookItemGrid book={book} />
+          <BookItemGrid book={book} key={book.node.id} />
         ))}
-      </CardColumns>
+      </div>
     </div>
   );
 }

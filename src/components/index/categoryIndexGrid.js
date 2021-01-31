@@ -1,5 +1,5 @@
-import { Row } from "react-bootstrap"
 import React  from "react"
+
 import CategoryIndexItem from "./categoryIndexItem"
 
 const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
@@ -14,14 +14,14 @@ const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
   })
 
   return (
-    <div className="bg-dark text-white pt-4 pb-4 mt-3">
+    <div className="container-fluid bg-dark text-white pt-4 pb-4 mt-3">
       <div className="index__category-grid">
         <h2>{categoryName}</h2>
-        <Row className="mt-3">
+        <div className="row mt-3">
           {categoryPosts.map(post => (
             <CategoryIndexItem post={post} key={post.node.id} />
           ))}
-        </Row>
+        </div>
       </div>
     </div>
   );

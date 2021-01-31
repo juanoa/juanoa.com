@@ -1,16 +1,14 @@
 import PropTypes from "prop-types"
 import React from "react"
 import 'react-icons/fa'
-import { Navbar } from "react-bootstrap"
-import { Nav } from "react-bootstrap"
 
 import Logo from '../images/logo.png'
 
 const Header = ({ siteTitle }) => (
 
-  <Navbar bg="light" expand="lg">
-    <div className="container d-flex justify-content-between nav-container">
-      <Navbar.Brand href="/">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="container d-flex nav-container">
+      <a className="navbar-brand" href="/">
         <img
           src={Logo}
           width="56"
@@ -18,24 +16,27 @@ const Header = ({ siteTitle }) => (
           className="d-inline-block align-top"
           alt="Juan Otálora"
         />
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="/productividad">Productividad</Nav.Link>
-          <Nav.Link href="/lifestyle">Lifestyle</Nav.Link>
-          <Nav.Link href="/desarrollo">Desarrollo</Nav.Link>
-          <Nav.Link href="/economia">Economía</Nav.Link>
-          <Nav.Link href="/libros">Libros</Nav.Link>
-        </Nav>
-        <Nav>
-          <Nav.Link href="https://cv.juanoa.com">Sobre mi</Nav.Link>
-          <Nav.Link href="#">Contacto</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+      </a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"/>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item"><a className="nav-link" href="/productividad">Productividad</a></li>
+          <li className="nav-item"><a className="nav-link" href="/lifestyle">Lifestyle</a></li>
+          <li className="nav-item"><a className="nav-link" href="/desarrollo">Desarrollo</a></li>
+          <li className="nav-item"><a className="nav-link" href="/economia">Economía</a></li>
+          <li className="nav-item"><a className="nav-link" href="/libros">Libros</a></li>
+        </ul>
+        <ul className="navbar-nav">
+          <li className="nav-item"><a className="nav-link" href="https://cv.juanoa.com">Sobre mi</a></li>
+          <li className="nav-item"><a className="nav-link disabled" href="https://cv.juanoa.com">Contacto</a></li>
+        </ul>
+      </div>
     </div>
 
-  </Navbar>
+  </nav>
 )
 
 Header.propTypes = {

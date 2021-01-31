@@ -1,4 +1,5 @@
 import React  from "react"
+import { Link } from "gatsby";
 
 import { createDescription } from "../../helpers/createDescription"
 
@@ -11,15 +12,15 @@ const CategoryIndexItem = ({post}) => {
   return (
     <div className="col-md-4">
       <div className="card index__grid-item">
-        <a href={link} className="index__post-link">
+        <Link to={link} className="index__post-link">
           <img className="card-img-top" src={thumbnail} alt={title} />
-        </a>
+        </Link>
         <div className="card-body index__card-body">
-          <a href={link} className="index__post-link">
+          <Link to={link} className="index__post-link">
             <div className="card-title index__card-title h5 text-white">
               {title}
             </div>
-          </a>
+          </Link>
           <p className="card-text text-white-50 index__post-description">
             {description}
           </p>

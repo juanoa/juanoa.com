@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql, Link } from "gatsby";
 
 import Layout from '../components/layout'
 import SEO from "../components/seo"
@@ -24,8 +24,8 @@ const CategoryTemplate = ({data, pageContext}) => {
         </div>
         <nav aria-label="Page navigation">
           <ul className="pagination">
-            <li className={`page-item ${currentUrl === previousUrl && "disabled"}`}><a className="page-link" href={previousUrl}>Anterior</a></li>
-            <li className={`page-item ${currentUrl === nextUrl && "disabled"}`}><a className="page-link" href={nextUrl}>Siguiente</a></li>
+            <li className={`page-item ${currentUrl === previousUrl && "disabled"}`}><Link className="page-link" to={previousUrl}>Anterior</Link></li>
+            <li className={`page-item ${currentUrl === nextUrl && "disabled"}`}><Link className="page-link" to={nextUrl}>Siguiente</Link></li>
           </ul>
         </nav>
       </div>

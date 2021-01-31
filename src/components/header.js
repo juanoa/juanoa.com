@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import 'react-icons/fa'
+import { Link } from "gatsby";
 
 import Logo from '../images/logo.png'
 
@@ -8,7 +9,7 @@ const Header = ({ siteTitle }) => (
 
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container d-flex nav-container">
-      <a className="navbar-brand" href="/">
+      <Link className="navbar-brand" to="/">
         <img
           src={Logo}
           width="56"
@@ -16,22 +17,22 @@ const Header = ({ siteTitle }) => (
           className="d-inline-block align-top"
           alt="Juan Otálora"
         />
-      </a>
+      </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"/>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item"><a className="nav-link" href="/productividad">Productividad</a></li>
-          <li className="nav-item"><a className="nav-link" href="/lifestyle">Lifestyle</a></li>
-          <li className="nav-item"><a className="nav-link" href="/desarrollo">Desarrollo</a></li>
-          <li className="nav-item"><a className="nav-link" href="/economia">Economía</a></li>
-          <li className="nav-item"><a className="nav-link" href="/libros">Libros</a></li>
+          <li className="nav-item"><Link className="nav-link" to="/productividad">Productividad</Link></li>
+          <li className="nav-item"><Link className="nav-link" to="/lifestyle">Lifestyle</Link></li>
+          <li className="nav-item"><Link className="nav-link" to="/desarrollo">Desarrollo</Link></li>
+          <li className="nav-item"><Link className="nav-link" to="/economia">Economía</Link></li>
+          <li className="nav-item"><Link className="nav-link" to="/libros">Libros</Link></li>
         </ul>
         <ul className="navbar-nav">
-          <li className="nav-item"><a className="nav-link" href="https://cv.juanoa.com">Sobre mi</a></li>
-          <li className="nav-item"><a className="nav-link disabled" href="https://cv.juanoa.com">Contacto</a></li>
+          <li className="nav-item"><Link className="nav-link" to="https://cv.juanoa.com">Sobre mi</Link></li>
+          <li className="nav-item"><Link className="nav-link disabled" to="#">Contacto</Link></li>
         </ul>
       </div>
     </div>

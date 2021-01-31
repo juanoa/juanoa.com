@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby";
 
 import { createDescription } from "../../helpers/createDescription"
 
@@ -14,14 +15,14 @@ const FeaturedIndexItem = ({posts}) => {
   return (
     <div className="row mb-4">
       <div className="col-md-6 pt-3">
-        <a href={link} className="index__post-link">
+        <Link to={link} className="index__post-link">
           <img src={thumbnail} alt={title} />
-        </a>
+        </Link>
       </div>
       <div className="col-md-6 pt-3">
-        <a href={link} className="index__post-link">
+        <Link to={link} className="index__post-link">
           <h3 className="index__featured-title">{title}</h3>
-        </a>
+        </Link>
         <small className="index__featured-category"><b>{category}</b></small>
         <p className="index__featured-description">{description}</p>
       </div>

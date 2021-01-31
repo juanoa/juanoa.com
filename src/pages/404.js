@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,7 +12,7 @@ const NotFoundPage = () => (
         <h1>Error 404: página no encontrada</h1>
         <p>Vaya... Parece que has intentado acceder a una página que ya no existe o se ha movido de sitio. Mis disculpas.</p>
         <img src={sad} width="300px"  alt="sad"/>
-        <p><a className="btn btn-outline-secondary" href="/">Ir a la página principal</a></p>
+        <p><Link className="btn btn-outline-secondary" to="/">Ir a la página principal</Link></p>
     </div>
   </Layout>
 )

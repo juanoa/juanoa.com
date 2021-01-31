@@ -1,5 +1,6 @@
 import React from "react"
 import { FaAmazon } from "react-icons/all"
+import { Link } from "gatsby";
 
 const BookItemGrid = ({book}) => {
   const cover = book.node.coverPhoto.localFile.publicURL;
@@ -21,12 +22,12 @@ const BookItemGrid = ({book}) => {
         <p className="book__description mt-2 card-text">
           {description}
         </p>
-        <a
+        <Link
           className="btn btn-warning"
-          href={link}
+          to={link}
           rel="noreferrer nofollow"
           target="_blank"
-        ><FaAmazon/> Comprar</a>
+        ><FaAmazon/> Comprar</Link>
       </div>
     </div>
   );

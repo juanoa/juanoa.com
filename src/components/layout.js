@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby";
 import CookieConsent from "react-cookie-consent"
 
 import Header from "./header"
@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
         containerClasses="layout__cookie-banner"
         buttonClasses="layout__cookie-banner-button"
       >
-        Este sitio web utiliza cookies para mejorar tu experiencia de uso. <a href="/politica-privacidad">Política de privacidad</a>
+        Este sitio web utiliza cookies para mejorar tu experiencia de uso. <Link to="/politica-privacidad">Política de privacidad</Link>
       </CookieConsent>
     </>
   )

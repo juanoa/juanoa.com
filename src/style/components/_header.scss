@@ -11,3 +11,7 @@
 .nav-link {
   color: black !important;
 }
+
+.header__nav-link-active {
+  border-bottom: 2px solid $primary;
+}

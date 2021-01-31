@@ -24,15 +24,43 @@ const Header = ({ siteTitle }) => (
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item"><Link className="nav-link" to="/productividad">Productividad</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/lifestyle">Lifestyle</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/desarrollo">Desarrollo</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/economia">Economía</Link></li>
-          <li className="nav-item"><Link className="nav-link" to="/libros">Libros</Link></li>
+          <li className="nav-item">
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/productividad">
+              Productividad
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/lifestyle">
+              Lifestyle
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/desarrollo">
+              Desarrollo
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/economia">
+              Economía
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/libros">
+              Libros
+            </Link>
+          </li>
         </ul>
         <ul className="navbar-nav">
-          <li className="nav-item"><Link className="nav-link" to="https://cv.juanoa.com">Sobre mi</Link></li>
-          <li className="nav-item"><Link className="nav-link disabled" to="#">Contacto</Link></li>
+          <li className="nav-item">
+            <Link className="nav-link" to="https://cv.juanoa.com">
+              Sobre mi
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link disabled" activeClassName="header__nav-link-active" to="#">
+              Contacto
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

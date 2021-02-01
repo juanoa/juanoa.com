@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import ReactMarkdown from 'react-markdown'
 import SEO from "../components/seo"
 import BookPost from "../components/books/bookPost"
+import { RiTimerFill } from "react-icons/all";
 
 const PostTemplate = ({ data }) => {
 
@@ -40,12 +41,14 @@ const PostTemplate = ({ data }) => {
         >
           {data.strapiPost.title}
         </h1>
-        <p><b><span role="img" aria-label="tiempo">⏳</span> {timeToRead} min</b></p>
+        <div className="post__time-to-read">
+          <span>
+            <RiTimerFill /> {timeToRead} min
+          </span>
+        </div>
         <img
           src={data.strapiPost.coverPhoto.localFile.publicURL}
-          style={{
-            width: "100%"
-          }}
+          className="post__cover-photo"
           alt={data.strapiPost.title}/>
       </div>
 

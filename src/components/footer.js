@@ -17,13 +17,13 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-3 text-center">
-            <Link to="https://scrummanager.com/website/c/profile/member.php?id=30425" target="_blank">
+            <a href="https://scrummanager.com/website/c/profile/member.php?id=30425" target="_blank" rel="noreferrer">
               <img
                 alt="Scrum Manager Expert"
                 src="https://scrummanager.com/website/img/experto-en.png"
                 className="mb-4"
               />
-            </Link>
+            </a>
           </div>
           <div className="col-md-3">
 
@@ -38,8 +38,8 @@ const Footer = () => {
           </div>
         </div>
         <small className="footer__copyright">
-          juanoa.com © 2018-{new Date().getFullYear()} | Diseñado por <Link to="https://juanoa.com" className="footer__link">Juan Otálora</Link>
-          <Link to="https://github.com/juanoa/juanoa.com" target="_blank" className="footer__github"> <FaGithub /> Ver repositorio en GitHub</Link>
+          juanoa.com © 2018-{new Date().getFullYear()} | Diseñado por <a href="https://juanoa.com" className="footer__link">Juan Otálora</a>
+          <a href="https://github.com/juanoa/juanoa.com" target="_blank" rel="noreferrer" className="footer__github"> <FaGithub /> Ver repositorio en GitHub</a>
         </small>
       </div>
     </footer>

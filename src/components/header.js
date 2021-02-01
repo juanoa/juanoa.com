@@ -52,9 +52,9 @@ const Header = ({ siteTitle }) => (
         </ul>
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="https://cv.juanoa.com">
+            <a className="nav-link" href="https://cv.juanoa.com">
               Sobre mi
-            </Link>
+            </a>
           </li>
           <li className="nav-item">
             <Link className="nav-link disabled" activeClassName="header__nav-link-active" to="#">

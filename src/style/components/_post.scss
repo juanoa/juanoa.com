@@ -1,0 +1,21 @@
+.post__time-to-read {
+  margin-bottom: 20px;
+}
+
+.post__time-to-read > span {
+  background-color: $primary;
+  border-radius: 100px;
+  color: $white;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+.post__time-to-read > span > svg {
+  margin-right: 3px;
+  position: relative;
+  transform: translateY(-2px);
+}
+
+.post__cover-photo {
+  width: 100%;
+}

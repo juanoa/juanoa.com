@@ -1,6 +1,5 @@
 import React from "react"
 import { FaAmazon } from "react-icons/all"
-import { Link } from "gatsby";
 
 const BookPost = ({book}) => {
 
@@ -23,12 +22,12 @@ const BookPost = ({book}) => {
             <p className="book__description mt-2 card-text">
               {book.description}
             </p>
-            <Link
+            <a
               className="btn btn-warning"
-              to={book.link}
+              href={book.link}
               rel="noreferrer nofollow"
               target="_blank"
-            > <FaAmazon/> Comprar</Link>
+            > <FaAmazon/> Comprar</a>
           </div>
         </div>
       </div>

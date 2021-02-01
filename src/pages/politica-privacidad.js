@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -174,8 +173,8 @@ const SecondPage = () => (
           tengamos algún dato de contacto pertinente.</p>
         <h3>8.3. De qué terceros recibimos datos</h3>
         <p>De momento, no compramos ni recibimos ningún dato de tercero. Todos los datos a los que tenemos uso son los
-          pertenecientes a&nbsp;<Link to="https://juanoa.com" target="_blank" rel="noreferrer">Juan
-            Otálora</Link>&nbsp;Alarcón.</p>
+          pertenecientes a&nbsp;<a href="https://juanoa.com" target="_blank" rel="noreferrer">Juan
+            Otálora</a>&nbsp;Alarcón.</p>
         <p>Envío de newsletters a usuarios que únicamente han dado su consentimiento</p>
     </div>
   </Layout>

@@ -52,11 +52,13 @@ template {
   display: none;
 }
 a {
+  color: $primary;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
+  color: $primary;
   outline-width: 0;
 }
 abbr[title] {
@@ -479,6 +481,9 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+}
+.content > ul > li {
+  font-size: 1.15rem;
 }
 ol li {
   padding-left: 0;

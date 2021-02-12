@@ -25,23 +25,23 @@ const Header = ({ siteTitle }) => (
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/productividad">
-              Productividad
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/lifestyle">
-              Lifestyle
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="nav-link" activeClassName="header__nav-link-active" to="/desarrollo">
               Desarrollo
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/economia">
-              Economía
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/ingenieria">
+              Ingeniería
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/empresa">
+              Empresa
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/lean">
+              Lean
             </Link>
           </li>
           <li className="nav-item">

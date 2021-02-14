@@ -6,7 +6,7 @@ const BookPost = ({book}) => {
   if (!book) return (<></>);
 
   return (
-    <div className="media bg-light p-4 mb-4 shadow-sm rounded">
+    <div className="media bg-light p-3 p-md-4 mb-4 shadow-sm rounded">
       <img
         className="mr-3 book__post-image"
         src={book.coverPhoto.localFile.publicURL}
@@ -14,7 +14,7 @@ const BookPost = ({book}) => {
       />
       <div className="media-body">
         <h4 className="mt-0 mb-2 book__post-title text-right">Libro relacionado</h4>
-        <p className="mt-0 mb-1 font-weight-bold text-secondary">{book.title}</p>
+        <p className="mt-0 mb-1 font-weight-bold text-secondary text-left">{book.title}</p>
         <p className="book__post-description">{book.description}</p>
         <a
           className="btn btn-sm btn-warning mr-3"

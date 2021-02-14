@@ -7,22 +7,18 @@
   -webkit-background-clip: text;
 }
 
-.book__card-item {
-  border-radius: 10px;
+.book__post-image {
+  width: 25%;
 }
 
-.book__post-column {
-  padding-left: 2%;
-  padding-right: 2%;
+.book__post-title {
+  border-bottom: 1px solid $dark-gray;
+  padding-bottom: 5px;
 }
 
-.book__title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
 
-.book__description {
+.book__post-description {
+  line-height: 1rem;
   font-size: 0.85rem;
   font-style: italic;
-  line-height: inherit;
 }

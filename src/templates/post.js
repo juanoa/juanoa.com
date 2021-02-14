@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import SEO from "../components/seo"
 import BookPost from "../components/books/bookPost"
 import { RiTimerFill } from "react-icons/all";
+import ProjectPost from "../components/projects/projectPost";
 
 const PostTemplate = ({ data }) => {
 
@@ -62,6 +63,7 @@ const PostTemplate = ({ data }) => {
         className="content"
       >
         <BookPost book={data.strapiPost.book} />
+        <ProjectPost project={data.strapiPost.project}/>
         <ReactMarkdown source={ data.strapiPost.content } escapeHtml={false} />
       </div>
     </Layout>
@@ -95,6 +97,13 @@ export const query = graphql`
             publicURL
           }
         }
+      }
+      project {
+        title
+        github
+        external
+        description
+        tech
       }
       seoDescription
       seoTitle

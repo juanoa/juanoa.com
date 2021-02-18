@@ -104,6 +104,11 @@ export const query = graphql`
         external
         description
         tech
+        logo {
+          localFile {
+            publicURL
+          }
+        }
       }
       seoDescription
       seoTitle

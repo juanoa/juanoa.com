@@ -13,7 +13,7 @@ const BookPost = ({book}) => {
         alt={book.title}
       />
       <div className="media-body">
-        <h4 className="mt-0 mb-2 book__post-title text-right">Libro relacionado</h4>
+        <h4 className="mt-0 mb-2 book__post-title">Libro relacionado</h4>
         <p className="mt-0 mb-1 font-weight-bold text-secondary text-left">{book.title}</p>
         <p className="book__post-description">{book.description}</p>
         <a

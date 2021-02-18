@@ -9,14 +9,14 @@ const ProjectPost = ({project}) => {
       {
         project.logo &&
         <img
-          className="mr-3"
-          src="https://res.cloudinary.com/hlfqyyg9k/image/upload/v1610907253/Captura_de_pantalla_2021_01_17_a_las_19_13_56_aaa8ce3721.png"
+          className="mr-3 align-self-center project__post-logo"
+          src={project.logo.localFile.publicURL}
           alt={project.title}
         />
       }
 
       <div className="media-body">
-        <h4 className="mt-0 mb-2 project__post-title text-right">Proyecto relacionado</h4>
+        <h4 className="mt-0 mb-2 project__post-title">Proyecto relacionado</h4>
         <p className="mt-0 mb-1 font-weight-bold text-secondary text-left">{project.title}</p>
         <p className="project__post-description mb-1">{project.description}</p>
         <div className="mb-3">

@@ -1,10 +1,11 @@
 import React from 'react'
-import Layout from '../components/layout'
-import { graphql, Link } from "gatsby"
 import ReactMarkdown from 'react-markdown'
+import { graphql, Link } from "gatsby"
+import { RiTimerFill } from "react-icons/all";
+
+import Layout from '../components/layout'
 import SEO from "../components/seo"
 import BookPost from "../components/books/bookPost"
-import { RiTimerFill } from "react-icons/all";
 import ProjectPost from "../components/projects/projectPost";
 
 const PostTemplate = ({ data }) => {

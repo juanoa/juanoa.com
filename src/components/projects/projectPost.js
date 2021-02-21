@@ -1,11 +1,11 @@
 import React from "react"
-import { FaGithub, MdWeb } from "react-icons/all";
+import { FaGithub, GoInfo, MdWeb } from "react-icons/all";
 
 const ProjectPost = ({project}) => {
   if (!project) return (<></>);
 
   return (
-    <div className="media bg-light p-4 mb-4 shadow-sm rounded">
+    <div className="media bg-light p-4 mb-4 shadow rounded">
       {
         project.logo &&
         <img
@@ -18,36 +18,45 @@ const ProjectPost = ({project}) => {
       <div className="media-body">
         <h4 className="mt-0 mb-2 project__post-title">{project.title}</h4>
         <p className="project__post-description mb-1">{project.description}</p>
-        <div className="mb-3">
+        <div>
           {
             project.tech.split(', ').map((tech, i) => (
               <span key={i} className="badge badge-pill badge-primary mr-2">{tech}</span>
             ))
           }
         </div>
-        {
-          project.external &&
+        <div>
+          {
+            project.external &&
+            <a
+              className="btn btn-sm btn-outline-primary mr-2 mt-3"
+              href={project.external}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MdWeb /> <span className="project__post-button-text">Sitio web</span>
+            </a>
+          }
           <a
-            className="btn btn-sm btn-light mr-3"
-            href={project.external}
+            className="btn btn-sm btn-info mr-2 mt-3 disabled"
+            href="#"
             target="_blank"
             rel="noreferrer"
           >
-            <MdWeb /> Sitio web
+            <GoInfo /> <span className="project__post-button-text">Más información</span>
           </a>
-        }
-        {
-          project.github &&
-          <a
-            className="btn btn-sm btn-dark mr-3"
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub /> Repositorio
-          </a>
-        }
-
+          {
+            project.github &&
+            <a
+              className="btn btn-sm btn-dark mr-2 mt-3"
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub /> <span className="project__post-button-text">Repositorio</span>
+            </a>
+          }
+        </div>
       </div>
     </div>
   );

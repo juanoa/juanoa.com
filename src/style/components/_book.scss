@@ -7,6 +7,17 @@
   -webkit-background-clip: text;
 }
 
+.book__title {
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.book__description {
+  font-size: 0.85rem;
+  line-height: inherit;
+}
+
 .book__post-image {
   width: 25%;
 }

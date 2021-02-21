@@ -10,3 +10,9 @@
 .project__post-logo {
   width: 65px;
 }
+
+@media (max-width: 600px) {
+  .project__post-button-text {
+    display: none;
+  }
+}

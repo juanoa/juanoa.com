@@ -1,5 +1,5 @@
 import React from "react"
-import { FaGithub, GoInfo, MdWeb } from "react-icons/all";
+import { FaCode, FaGithub, MdWeb } from "react-icons/all";
 
 const ProjectPost = ({project}) => {
   if (!project) return (<></>);
@@ -37,14 +37,17 @@ const ProjectPost = ({project}) => {
               <MdWeb /> <span className="project__post-button-text">Sitio web</span>
             </a>
           }
-          <a
-            className="btn btn-sm btn-info mr-2 mt-3 disabled"
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GoInfo /> <span className="project__post-button-text">Más información</span>
-          </a>
+          {
+            project.docs &&
+            <a
+              className="btn btn-sm btn-outline-primary mr-2 mt-3"
+              href={project.docs}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaCode /> <span className="project__post-button-text">Documentación</span>
+            </a>
+          }
           {
             project.github &&
             <a

@@ -9,7 +9,7 @@ const ProjectPost = ({project}) => {
       {
         project.logo &&
         <img
-          className="mr-3 align-self-center project__post-logo"
+          className="mr-3 project__post-logo"
           src={project.logo.localFile.publicURL}
           alt={project.title}
         />

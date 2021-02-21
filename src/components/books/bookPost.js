@@ -13,8 +13,7 @@ const BookPost = ({book}) => {
         alt={book.title}
       />
       <div className="media-body">
-        <h4 className="mt-0 mb-2 book__post-title">Libro relacionado</h4>
-        <p className="mt-0 mb-1 font-weight-bold text-secondary text-left">{book.title}</p>
+        <h4 className="mt-0 mb-2 book__post-title">{book.title}</h4>
         <p className="book__post-description">{book.description}</p>
         <a
           className="btn btn-sm btn-warning mr-3"

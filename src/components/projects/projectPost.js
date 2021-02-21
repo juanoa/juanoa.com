@@ -16,8 +16,7 @@ const ProjectPost = ({project}) => {
       }
 
       <div className="media-body">
-        <h4 className="mt-0 mb-2 project__post-title">Proyecto relacionado</h4>
-        <p className="mt-0 mb-1 font-weight-bold text-secondary text-left">{project.title}</p>
+        <h4 className="mt-0 mb-2 project__post-title">{project.title}</h4>
         <p className="project__post-description mb-1">{project.description}</p>
         <div className="mb-3">
           {

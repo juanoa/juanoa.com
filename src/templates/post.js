@@ -94,9 +94,7 @@ export const query = graphql`
         link
         description
         coverPhoto {
-          localFile {
-            publicURL
-          }
+          url
         }
       }
       project {

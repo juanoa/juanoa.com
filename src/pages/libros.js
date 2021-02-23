@@ -42,9 +42,7 @@ export const pageQuery = graphql`
         node {
           id
           coverPhoto {
-            localFile {
-              publicURL
-            }
+            url
           }
           description
           readDate

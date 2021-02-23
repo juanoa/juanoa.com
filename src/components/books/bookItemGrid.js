@@ -2,7 +2,7 @@ import React from "react"
 import { FaAmazon } from "react-icons/all"
 
 const BookItemGrid = ({book}) => {
-  const cover = book.node.coverPhoto.localFile.publicURL;
+  const cover = book.node.coverPhoto.url;
   const title = book.node.title;
   const description = book.node.description || "Simplemente te lo recomiendo :)";
   const link = book.node.link;

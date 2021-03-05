@@ -13,7 +13,7 @@ const ContactPage = () => {
         <h1>Contacto</h1>
         <div className="row">
           <div className="col-md-6">
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
               <div className="form-group">
                 <label>Nombre</label>
                 <input type="text" className="form-control" />
@@ -30,6 +30,7 @@ const ContactPage = () => {
                 <label>Mensaje</label>
                 <textarea className="form-control" rows="3"/>
               </div>
+              <div data-netlify-recaptcha="true" />
               <button type="submit" className="btn btn-primary">Enviar</button>
             </form>
           </div>

@@ -16,21 +16,21 @@ const ContactPage = () => {
             <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
               <div className="form-group">
                 <label>Nombre</label>
-                <input type="text" className="form-control" />
+                <input type="text" className="form-control" name="nombre" />
               </div>
               <div className="form-group">
                 <label>Email</label>
-                <input type="email" className="form-control" />
+                <input type="email" className="form-control" name="email" />
               </div>
               <div className="form-group">
                 <label>Asunto</label>
-                <input type="text" className="form-control" />
+                <input type="text" className="form-control" name="asunto" />
               </div>
               <div className="form-group">
                 <label>Mensaje</label>
-                <textarea className="form-control" rows="3"/>
+                <textarea className="form-control" rows="3" name="mensaje" />
               </div>
-              <div data-netlify-recaptcha="true" />
+              <div className="mb-3" data-netlify-recaptcha="true" />
               <button type="submit" className="btn btn-primary">Enviar</button>
             </form>
           </div>

@@ -3,9 +3,7 @@ import { FaAmazon } from "react-icons/all"
 
 const BookItemGrid = ({book}) => {
   const cover = book.node.coverPhoto.url;
-  const title = book.node.title;
-  const description = book.node.description || "Simplemente te lo recomiendo :)";
-  const link = book.node.link;
+  const {title, link, author, description} = book.node;
 
   return (
     <div className="card book__card-item border-0 bg-light shadow-sm mt-2">
@@ -18,6 +16,10 @@ const BookItemGrid = ({book}) => {
         <div className="card-title book__title h5 mt-3">
           {title}
         </div>
+        {
+          author &&
+          <div className="book__author">{author}</div>
+        }
         <p className="book__description mt-2 card-text">
           {description}
         </p>

@@ -91,6 +91,7 @@ export const query = graphql`
       }
       book {
         title
+        author
         link
         description
         coverPhoto {

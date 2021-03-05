@@ -11,6 +11,13 @@
   font-size: 1.35rem;
   font-style: italic;
   font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book__author {
+  color: $dark-gray;
+  font-size: 0.85rem;
+  padding-bottom: 5px;
 }
 
 .book__description {
@@ -25,6 +32,12 @@
 .book__post-title {
   padding-bottom: 5px;
   font-style: italic;
+}
+
+.book__post-author {
+  color: $dark-gray;
+  font-size: 0.85rem;
+  padding-bottom: 5px;
 }
 
 

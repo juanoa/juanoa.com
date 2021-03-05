@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BookGrid from "../components/books/bookGrid"
 
-const IndexPage = ({data}) => {
+const BooksPage = ({data}) => {
 
   // Get Arrays of years since 2018
   const first = new Date( "01 July 2018").getFullYear();
@@ -33,7 +33,7 @@ const IndexPage = ({data}) => {
 
 
 
-export default IndexPage
+export default BooksPage
 
 export const pageQuery = graphql`
   query BookQuery {

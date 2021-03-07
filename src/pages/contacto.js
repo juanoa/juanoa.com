@@ -14,20 +14,20 @@ const ContactPage = () => {
           <div className="col-md-6">
             <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
               <div className="form-group">
-                <label>Nombre</label>
-                <input type="text" className="form-control" name="nombre" />
+                <label htmlFor="nombre">Nombre</label>
+                <input type="text" className="form-control" id="nombre" name="nombre" />
               </div>
               <div className="form-group">
-                <label>Email</label>
-                <input type="email" className="form-control" name="email" />
+                <label htmlFor="email">Email</label>
+                <input type="email" className="form-control" id="email" name="email" />
               </div>
               <div className="form-group">
-                <label>Asunto</label>
-                <input type="text" className="form-control" name="asunto" />
+                <label htmlFor="asunto">Asunto</label>
+                <input type="text" className="form-control" id="asunto" name="asunto" />
               </div>
               <div className="form-group">
-                <label>Mensaje</label>
-                <textarea className="form-control" rows="3" name="mensaje" />
+                <label htmlFor="mensaje">Mensaje</label>
+                <textarea className="form-control" rows="3" id="mensaje" name="mensaje" />
               </div>
               <div className="mb-3" data-netlify-recaptcha="true" />
               <button type="submit" className="btn btn-primary">Enviar</button>

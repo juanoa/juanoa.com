@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Map from "../components/map";
 
 const ContactPage = () => {
 
@@ -17,7 +18,7 @@ const ContactPage = () => {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
-              autocomplete="off"
+              autoComplete="off"
             >
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact" />
@@ -62,10 +63,11 @@ const ContactPage = () => {
             </form>
           </div>
           <div className="col-md-6">
-            <div className="alert alert-dark text-center" role="alert">
-              Reunirse es un comienzo; permanecer juntos es un progreso; trabajar juntos es un éxito.
-              <span className="font-italic font-weight-bold"> Henry Ford</span>
+            <div className="alert alert-light text-center" role="alert">
+              Como no soy una tienda, no puedo poner mi ubicación, pero sí los países en los que he estado.
+              <span role="img" aria-label="plane"> 🛫️</span>️
             </div>
+            <Map />
           </div>
         </div>
 

@@ -11,8 +11,10 @@ const ContactPage = () => {
       <div className="homepage">
         <h1>Contacto</h1>
         <div className="row">
-          <div className="col-md-6">
-            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
+          <div className="col-md-6">s
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
               <div className="form-group">
                 <label htmlFor="nombre">Nombre</label>
                 <input type="text" className="form-control" id="nombre" name="nombre" />
@@ -29,7 +31,6 @@ const ContactPage = () => {
                 <label htmlFor="mensaje">Mensaje</label>
                 <textarea className="form-control" rows="3" id="mensaje" name="mensaje" />
               </div>
-              <div className="mb-3" data-netlify-recaptcha="true" />
               <button type="submit" className="btn btn-primary">Enviar</button>
             </form>
           </div>

@@ -45,6 +45,7 @@ export const pageQuery = graphql`
             url
           }
           description
+          recommended
           readDate
           link
           title

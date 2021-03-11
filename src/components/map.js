@@ -15,7 +15,7 @@ const Map = () => {
       console.log(element);
       element.classList.add("visited")
     })
-  }, []);
+  }, [visited]);
 
 
 

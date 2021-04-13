@@ -7,9 +7,10 @@ import CategoryItemGrid from "../components/categories/categoryItemGrid"
 
 const CategoryTemplate = ({data, pageContext}) => {
   const {description, title, slug, index, currentUrl, previousUrl, nextUrl} = pageContext;
+  const metaTitle = `Artículos sobre ${title}`
   return (
     <Layout>
-      <SEO title={title} description={description?.slice(0, 140)} index={index} />
+      <SEO title={metaTitle} description={description?.slice(0, 140)} index={index} />
       <div className="page-content">
         <h1>{title}</h1>
         { description &&

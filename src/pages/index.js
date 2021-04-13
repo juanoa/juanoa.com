@@ -9,7 +9,7 @@ import { IndexItemGrid } from "../components/index/indexItemGrid";
 
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Inicio" />
+    <SEO title="Juan Otálora | Blog de un Ingeniero Informático" />
     <div className="container-fluid homepage">
       <FeaturedIndexItem posts={data} />
       <IndexItemGrid posts={data} init={1} end={5} />

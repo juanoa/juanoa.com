@@ -16,7 +16,6 @@ function SEO({ description, lang, meta, title, index }) {
       query {
         site {
           siteMetadata {
-            title
             description
             author
           }
@@ -26,7 +25,6 @@ function SEO({ description, lang, meta, title, index }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
@@ -34,7 +32,6 @@ function SEO({ description, lang, meta, title, index }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,

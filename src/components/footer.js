@@ -34,7 +34,7 @@ const Footer = () => {
             <ul className="footer__interest-links">
               <li><Link to="/politica-privacidad">Política de privacidad</Link></li>
               <li><Link to="/libros">Libros recomendados</Link></li>
-              <li>Contacto</li>
+              <li><Link to="/contacto">Contacto</Link></li>
             </ul>
           </div>
         </div>

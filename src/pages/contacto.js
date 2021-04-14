@@ -8,7 +8,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <SEO title="Contacto" />
+      <SEO title="Contacto" description="¿Quieres ponerte en contacto conmigo? Utiliza este formulario para hacerlo." />
       <div className="homepage">
         <h1>Contacto</h1>
         <div className="row">

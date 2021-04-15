@@ -35,7 +35,7 @@ Siéntete libre de modificarlo y adaptarlo a tus necesidades. También puedes co
 
 1.  **Abre el navegador.**
 
-    El sitio estará corriendo en `localhost:8000`, donde podrás ir viendo todos los cambios que hagas en el proyecto.
+    El sitio se estará ejecutando en `localhost:8000`, donde podrás ir viendo todos los cambios que hagas en el proyecto.
 
 ## 🧩 Respecto a la API
 

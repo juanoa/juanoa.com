@@ -1,11 +1,11 @@
-import PropTypes from "prop-types"
-import React from "react"
-import 'react-icons/fa'
+import PropTypes from "prop-types";
+import React from "react";
+import "react-icons/fa";
 import { Link } from "gatsby";
 
-import Logo from '../images/logo.png'
+import Logo from "../../images/logo.png";
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
 
   <nav className="navbar navbar-expand-lg navbar-light bg-light header__navbar">
     <div className="container d-flex header__nav-container">
@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"/>
+        <span className="navbar-toggler-icon" />
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
@@ -66,14 +66,14 @@ const Header = ({ siteTitle }) => (
     </div>
 
   </nav>
-)
+);
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  siteTitle: PropTypes.string
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: ``
+};
 
-export default Header
+export default Header;

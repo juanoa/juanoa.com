@@ -1,78 +1,70 @@
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
-import { graphql, Link } from "gatsby"
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import { graphql, Link } from "gatsby";
 import { RiTimerFill } from "react-icons/all";
 
-import Layout from '../components/layout'
-import SEO from "../components/seo"
-import BookPost from "../components/books/bookPost"
-import ProjectPost from "../components/projects/projectPost";
+import Layout from "../components/structure/layout";
+import SEO from "../components/structure/seo";
+import ProjectCard from "../components/projects/projectCard";
+import BookCard from "../components/books/bookCard";
 
 const PostTemplate = ({ data }) => {
 
-  const wom = data.strapiPost.content.match(/\S+/g)
+  const {
+    seoTitle,
+    seoDescription,
+    title,
+    content,
+    category,
+    book,
+    project,
+    coverPhoto: { localFile: { publicURL: coverPhoto } }
+  } = data.strapiPost;
+
+  const wom = data.strapiPost.content.match(/\S+/g);
   const words = wom ? wom.length : 0;
-  const timeToRead = Math.round(words/250);
+  const timeToRead = Math.round(words / 250);
 
   return (
     <Layout>
-      <SEO title={data.strapiPost.seoTitle || data.strapiPost.title} description={data.strapiPost.seoDescription || data.strapiPost.content.slice(0, 140)} />
+      <SEO title={seoTitle || title} description={seoDescription || content.slice(0, 140)} />
+
       <div className="page-content">
-        <Link to={`/${data.strapiPost.category.slug}`}
-              style={{
-                textDecoration: "none",
-              }}
-        >
-      <span
-        style={{
-          borderBottom: "3px solid black",
-          paddingBottom: 2,
-          color: "black",
-          textTransform: "uppercase",
-          fontWeight: 700,
-          fontSize: 16
-        }}
-      >
-        {data.strapiPost.category.title}
-      </span>
+
+        <Link to={`/${category.slug}`} className="post__category-link">
+          <span className="post__category-title">
+            {category.title}
+          </span>
         </Link>
-        <h1
-          style={{
-            marginTop: 15
-          }}
-        >
-          {data.strapiPost.title}
+
+        <h1 className="mt-3">
+          {title}
         </h1>
+
         <div className="post__time-to-read">
           <span>
             <RiTimerFill /> {timeToRead} min
           </span>
         </div>
+
         <img
-          src={data.strapiPost.coverPhoto.localFile.publicURL}
+          src={coverPhoto}
           className="post__cover-photo"
-          alt={data.strapiPost.title}/>
+          alt={title}
+        />
       </div>
 
-      <div
-        style={{
-          marginTop: 25,
-          maxWidth: 700,
-          marginLeft: "auto",
-          marginRight: "auto"
-        }}
-        className="content"
-      >
-        <BookPost book={data.strapiPost.book} />
-        <ProjectPost project={data.strapiPost.project}/>
-        <ReactMarkdown source={ data.strapiPost.content } escapeHtml={false} />
+      <div className="content">
+        <BookCard book={book} />
+        <ProjectCard project={project} />
+        <ReactMarkdown source={content} escapeHtml={false} />
       </div>
     </Layout>
-  )
+  );
 
-}
+};
 
-export default PostTemplate
+export default PostTemplate;
 
 export const query = graphql`
   query PostTemplate($slug: String!) {
@@ -114,4 +106,4 @@ export const query = graphql`
       seoTitle
     }
   }
-`
+`;

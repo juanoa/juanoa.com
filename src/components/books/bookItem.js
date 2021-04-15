@@ -1,7 +1,7 @@
 import React from "react"
 import { FaAmazon, FaStar } from "react-icons/all";
 
-const BookItemGrid = ({book}) => {
+const BookItem = ({book}) => {
   const cover = book.node.coverPhoto.url;
   const {title, link, author, description, recommended} = book.node;
 
@@ -38,4 +38,4 @@ const BookItemGrid = ({book}) => {
   );
 }
 
-export default BookItemGrid;
+export default BookItem;

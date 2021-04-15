@@ -1,26 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import FeaturedIndexItem from "../components/index/featuredIndexItem"
-import CategoryIndexGrid from "../components/index/categoryIndexGrid"
-import { IndexItemGrid } from "../components/index/indexItemGrid";
+import Layout from "../components/structure/layout"
+import SEO from "../components/structure/seo"
+import MainPost from "../components/posts/mainPost"
+import FeaturedPostGrid from "../components/posts/featuredPostGrid"
+import { PostGrid } from "../components/posts/postGrid";
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Juan Otálora | Blog de un Ingeniero Informático" />
     <div className="container-fluid homepage">
-      <FeaturedIndexItem posts={data} />
-      <IndexItemGrid posts={data} init={1} end={5} />
+      <MainPost posts={data} />
+      <PostGrid posts={data} init={1} end={5} />
     </div>
-    <CategoryIndexGrid posts={data.allStrapiPost.edges} categoryName={'Tecnología'} categorySlug={'tecnologia'} />
+    <FeaturedPostGrid posts={data.allStrapiPost.edges} categoryName={'Tecnología'} categorySlug={'tecnologia'} />
     <div className="container-fluid homepage mt-5">
-      <IndexItemGrid posts={data} init={5} end={13} />
+      <PostGrid posts={data} init={5} end={13} />
     </div>
-    <CategoryIndexGrid posts={data.allStrapiPost.edges} categoryName={'Desarrollo'} categorySlug={'desarrollo'} />
+    <FeaturedPostGrid posts={data.allStrapiPost.edges} categoryName={'Desarrollo'} categorySlug={'desarrollo'} />
     <div className="container-fluid homepage mt-5">
-      <IndexItemGrid posts={data} init={13} end={21} />
+      <PostGrid posts={data} init={13} end={21} />
     </div>
   </Layout>
 )

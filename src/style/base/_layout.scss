@@ -14,7 +14,7 @@ body {
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
-  font-kerning: normal;
+  font-kerning: norm∫al;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -582,6 +582,13 @@ li.nav-item {
 .homepage {
   max-width: 1100px;
   margin: auto;
+}
+
+.content {
+  margin-top: 25px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-content {

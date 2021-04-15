@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/structure/layout"
+import SEO from "../components/structure/seo"
 import sad from '../images/sad.png'
 
 const NotFoundPage = () => (

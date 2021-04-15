@@ -1,7 +1,7 @@
 import React from "react"
 import { FaAmazon } from "react-icons/all";
 
-const BookPost = ({book}) => {
+const BookCard = ({book}) => {
 
   if (!book) return (<></>);
 
@@ -37,4 +37,4 @@ const BookPost = ({book}) => {
   );
 }
 
-export default BookPost;
+export default BookCard;

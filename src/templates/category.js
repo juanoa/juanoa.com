@@ -1,28 +1,30 @@
 import React from "react"
 import { graphql, Link } from "gatsby";
 
-import Layout from '../components/layout'
-import SEO from "../components/seo"
-import CategoryItemGrid from "../components/categories/categoryItemGrid"
+import Layout from '../components/structure/layout'
+import SEO from "../components/structure/seo"
+import { PostGrid } from "../components/posts/postGrid";
 
 const CategoryTemplate = ({data, pageContext}) => {
-  const {description, title, slug, index, currentUrl, previousUrl, nextUrl} = pageContext;
+  const {description, title, index, currentUrl, previousUrl, nextUrl} = pageContext;
   const metaTitle = `Artículos sobre ${title}`
+
   return (
     <Layout>
       <SEO title={metaTitle} description={description?.slice(0, 140)} index={index} />
+
       <div className="page-content">
+
         <h1>{title}</h1>
-        { description &&
+        {
+          description &&
           <div className="category__description mb-4">
             {description}
           </div>
         }
-        <div className="row">
-          {data.allStrapiPost.edges.map(post => (
-            <CategoryItemGrid post={post.node} categorySlug={slug} key={post.node.id}/>
-          ))}
-        </div>
+
+        <PostGrid posts={data} showCategory={false} col={4} />
+
         <nav aria-label="Page navigation">
           <ul className="pagination">
             <li className={`page-item ${currentUrl === previousUrl && "disabled"}`}><Link className="page-link" to={previousUrl}>Anterior</Link></li>
@@ -51,6 +53,9 @@ export const query = graphql`
           content
           published_at
           slug
+          category {
+            slug
+          }
           coverPhoto {
             formats {
               small {

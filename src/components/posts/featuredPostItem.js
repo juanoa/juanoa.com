@@ -1,9 +1,9 @@
-import React  from "react"
+import React from "react";
 import { Link } from "gatsby";
 
-import { createDescription } from "../../helpers/createDescription"
+import { createDescription } from "../../helpers/createDescription";
 
-const CategoryIndexItem = ({post}) => {
+const FeaturedPostItem = ({ post }) => {
   const thumbnail = post.node.coverPhoto.formats?.small.url || post.node.coverPhoto.localFile.publicURL;
   const link = `/${post.node.category.slug}/${post.node.slug}`;
   const title = post.node.title;
@@ -28,6 +28,6 @@ const CategoryIndexItem = ({post}) => {
       </div>
     </div>
   );
-}
+};
 
-export default CategoryIndexItem;
+export default FeaturedPostItem;

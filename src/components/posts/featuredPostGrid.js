@@ -1,8 +1,8 @@
 import React  from "react"
 
-import CategoryIndexItem from "./categoryIndexItem"
+import FeaturedPostItem from "./featuredPostItem"
 
-const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
+const FeaturedPostGrid = ({posts, categoryName, categorySlug}) => {
 
   let categoryPosts = [];
   let index = 0;
@@ -19,7 +19,7 @@ const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
         <h2>{categoryName}</h2>
         <div className="row mt-3">
           {categoryPosts.map(post => (
-            <CategoryIndexItem post={post} key={post.node.id} />
+            <FeaturedPostItem post={post} key={post.node.id} />
           ))}
         </div>
       </div>
@@ -27,4 +27,4 @@ const CategoryIndexGrid = ({posts, categoryName, categorySlug}) => {
   );
 }
 
-export default CategoryIndexGrid;
+export default FeaturedPostGrid;

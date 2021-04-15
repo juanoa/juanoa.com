@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 import { Link } from "gatsby";
 
-import FotoJuan from '../images/juan.jpg'
+import FotoJuan from "../../images/juan.jpg";
 
 const Footer = () => {
   return (
@@ -9,7 +9,11 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-3">
-            <img className="footer__avatar" src={FotoJuan} alt="Juan Otálora"/>
+            <img
+              className="footer__avatar"
+              src={FotoJuan}
+              alt="Juan Otálora"
+            />
             <p className="mt-3 mb-2 footer__profile-description">
               Mi nombre es Juan Otálora y soy estudiante de ingeniería informática.
             </p>
@@ -39,11 +43,12 @@ const Footer = () => {
           </div>
         </div>
         <small className="footer__copyright">
-          juanoa.com © 2018-{new Date().getFullYear()} | Diseñado por <a href="https://juanoa.com" className="footer__link">Juan Otálora</a>
+          juanoa.com © 2018-{new Date().getFullYear()} | Diseñado por <a href="https://juanoa.com"
+                                                                         className="footer__link">Juan Otálora</a>
         </small>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

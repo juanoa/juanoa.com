@@ -1,36 +1,46 @@
-import React from "react"
+import React from "react";
 import { FaCode, FaGithub, MdWeb } from "react-icons/all";
 
-const ProjectPost = ({project}) => {
+const ProjectCard = ({ project }) => {
   if (!project) return (<></>);
+
+  const {
+    logo,
+    title,
+    description,
+    tech: techs,
+    external,
+    docs,
+    github
+  } = project;
 
   return (
     <div className="media bg-light p-4 mb-4 shadow rounded">
       {
-        project.logo &&
+        logo &&
         <img
           className="mr-3 project__post-logo"
-          src={project.logo.localFile.publicURL}
-          alt={project.title}
+          src={logo.localFile.publicURL}
+          alt={title}
         />
       }
 
       <div className="media-body">
-        <h4 className="mt-0 mb-2 project__post-title">{project.title}</h4>
-        <p className="project__post-description mb-1">{project.description}</p>
+        <h4 className="mt-0 mb-2 project__post-title">{title}</h4>
+        <p className="project__post-description mb-1">{description}</p>
         <div>
           {
-            project.tech.split(', ').map((tech, i) => (
+            techs.split(", ").map((tech, i) => (
               <span key={i} className="badge badge-pill badge-primary mr-2">{tech}</span>
             ))
           }
         </div>
         <div>
           {
-            project.external &&
+            external &&
             <a
               className="btn btn-sm btn-outline-primary mr-2 mt-3"
-              href={project.external}
+              href={external}
               target="_blank"
               rel="noreferrer"
             >
@@ -38,10 +48,10 @@ const ProjectPost = ({project}) => {
             </a>
           }
           {
-            project.docs &&
+            docs &&
             <a
               className="btn btn-sm btn-outline-primary mr-2 mt-3"
-              href={project.docs}
+              href={docs}
               target="_blank"
               rel="noreferrer"
             >
@@ -49,10 +59,10 @@ const ProjectPost = ({project}) => {
             </a>
           }
           {
-            project.github &&
+            github &&
             <a
               className="btn btn-sm btn-dark mr-2 mt-3"
-              href={project.github}
+              href={github}
               target="_blank"
               rel="noreferrer"
             >
@@ -63,6 +73,6 @@ const ProjectPost = ({project}) => {
       </div>
     </div>
   );
-}
+};
 
-export default ProjectPost;
+export default ProjectCard;

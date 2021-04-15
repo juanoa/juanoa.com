@@ -1,5 +1,5 @@
 import React from "react"
-import BookItemGrid from "./bookItemGrid"
+import BookItem from "./bookItem"
 
 const BookGrid = ({books, year}) => {
   const yearBooks = [];
@@ -14,7 +14,7 @@ const BookGrid = ({books, year}) => {
       <h2 className="book__year-title">{year}</h2>
       <div className="card-columns">
         {yearBooks.map(book => (
-          <BookItemGrid book={book} key={book.node.id} />
+          <BookItem book={book} key={book.node.id} />
         ))}
       </div>
     </div>

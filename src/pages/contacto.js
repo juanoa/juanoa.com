@@ -1,7 +1,7 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/structure/layout"
+import SEO from "../components/structure/seo"
 import Map from "../components/map";
 
 const ContactPage = () => {
@@ -75,7 +75,5 @@ const ContactPage = () => {
     </Layout>
   )
 }
-
-
 
 export default ContactPage

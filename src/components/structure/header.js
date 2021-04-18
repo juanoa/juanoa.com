@@ -30,8 +30,8 @@ const Header = () => (
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/ingenieria">
-              Ingeniería
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/modelos-mentales">
+              Modelos mentales
             </Link>
           </li>
           <li className="nav-item">

@@ -35,13 +35,36 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Juan Otálora Alarcón`,
+        short_name: `juanoa.com`,
+        description: `Blog de un ingeniero informático`,
         start_url: `/`,
         background_color: `#e9e9e9`,
         theme_color: `#5564eb`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/manifest/icon-512x512.png`, // This path is relative to the root of the site.
+        icons: [
+          {
+            src: `src/images/manifest/icon-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`
+          },
+          {
+            src: `src/images/manifest/icon-256x256.png`,
+            sizes: `256x256`,
+            type: `image/png`
+          },
+          {
+            src: `src/images/manifest/icon-384x384.png`,
+            sizes: `384x384`,
+            type: `image/png`
+          },
+          {
+            src: `src/images/manifest/icon-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`
+          }
+        ]
       },
 
     },
@@ -54,9 +77,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "UA-127569865-1", // Google Analytics / GA
+          `UA-127569865-1`, // Google Analytics / GA
         ],
       },
     },

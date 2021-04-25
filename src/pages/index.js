@@ -1,62 +1,18 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/structure/layout"
 import SEO from "../components/structure/seo"
-import MainPost from "../components/posts/mainPost"
-import FeaturedPostGrid from "../components/posts/featuredPostGrid"
-import { PostGrid } from "../components/posts/postGrid";
+import { Presentation } from "../components/about/presentation";
+import { AboutMe } from "../components/about/aboutMe";
 
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Juan Otálora | Blog de un Ingeniero Informático" />
+    <SEO title="Juan Otálora | Ingeniero Informático" />
     <div className="container-fluid homepage">
-      <MainPost posts={data} />
-      <PostGrid posts={data} init={1} end={5} />
-    </div>
-    <FeaturedPostGrid posts={data.allStrapiPost.edges} categoryName={'Tecnología'} categorySlug={'tecnologia'} />
-    <div className="container-fluid homepage mt-5">
-      <PostGrid posts={data} init={5} end={13} />
-    </div>
-    <FeaturedPostGrid posts={data.allStrapiPost.edges} categoryName={'Desarrollo'} categorySlug={'desarrollo'} />
-    <div className="container-fluid homepage mt-5">
-      <PostGrid posts={data} init={13} end={21} />
+      <Presentation />
+      <AboutMe />
     </div>
   </Layout>
 )
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allStrapiPost (filter: {homepage: {eq: true}}, sort: {order: DESC, fields: published_at}) {
-      edges {
-        node {
-          id
-          homepage
-          published_at(formatString: "d-M-yyyy")
-          title
-          category {
-            title
-            slug
-          }
-          slug
-          content
-          coverPhoto {
-            formats {
-              small {
-                url
-              }
-              medium {
-                url
-              }
-            }
-            localFile {
-              publicURL
-            }
-          }
-        }
-      }
-    }
-  }
-`

@@ -1,5 +1,6 @@
 // Base
 @import "./base/colors";
+@import "./base/fonts";
 @import "./base/bootstrap";
 @import "./base/highlight";
 @import "./base/layout";
@@ -12,4 +13,5 @@
 @import "./components/book";
 @import "./components/post";
 @import "./components/project";
-@import "components/contact";
+@import "./components/contact";
+@import "./components/about";

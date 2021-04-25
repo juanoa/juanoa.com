@@ -1,0 +1,88 @@
+/*
+  Globals
+ */
+.about__section {
+  margin-top: 80px;
+}
+
+.about__section-title {
+  font-size: 32px;
+}
+
+.about__section-number {
+  font-family: $font-monospace;
+  color: $primary;
+  font-weight: 400;
+}
+
+/*
+  Presentation Section
+ */
+.about__presentation-section {
+  height: 60vh;
+}
+
+.about__presentation-greeting {
+  color: $primary;
+  font-family: $font-monospace;
+  margin-bottom: 30px;
+}
+
+.about__presentation-name {
+  color: lighten($dark-gray, 5);
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.about__presentation-subtitle {
+  color: $primary-light;
+  font-size: 3rem;
+}
+
+.about__presentation-description {
+  max-width: 500px;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.about__presentation-button {
+  background: linear-gradient(90deg, $primary, #00dfd8);
+  border: none;
+  color: white;
+  padding: 12px 17px;
+  display: inline;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
+/*
+  About Me section
+ */
+.about__about-me-description p{
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.about__about-me-image {
+  width: 500px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.about__about-me-skill {
+  font-family: $font-monospace;
+  font-size: 13px;
+  list-style: none;
+}
+
+.about__about-me-skill::before {
+  content: "▹";
+  color: $primary;
+  padding-right: 10px;
+}

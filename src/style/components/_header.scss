@@ -1,5 +1,4 @@
 .header__navbar {
-  box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
   margin-bottom: 20px;
   background-color: white !important;
 }
@@ -10,8 +9,25 @@
 
 .nav-link {
   color: black !important;
+  padding-bottom: 0;
 }
 
 .header__nav-link-active {
   border-bottom: 2px solid $primary;
+}
+
+.header__brand {
+  background: #cccccc;
+  background: linear-gradient(90deg, #5564eb, #00dfd8);
+  font-weight: 800;
+  font-size: 2.5rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.header__brand-subtitle {
+  display: block;
+  font-size: 0.25rem;
+  transform: translateY(-15px);
+  text-align: right;
 }

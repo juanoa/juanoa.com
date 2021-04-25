@@ -3,20 +3,13 @@ import React from "react";
 import "react-icons/fa";
 import { Link } from "gatsby";
 
-import Logo from "../../images/logo.png";
-
 const Header = () => (
 
-  <nav className="navbar navbar-expand-lg navbar-light bg-light header__navbar">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm header__navbar">
     <div className="container d-flex header__nav-container">
-      <Link className="navbar-brand" to="/">
-        <img
-          src={Logo}
-          width="56"
-          height="56"
-          className="d-inline-block align-top"
-          alt="Juan Otálora"
-        />
+      <Link className="navbar-brand mr-0" to="/">
+        <span className="header__brand">juanoa</span>
+        <span className="header__brand-subtitle">Ingeniería informática</span>
       </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

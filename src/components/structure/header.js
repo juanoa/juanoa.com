@@ -9,7 +9,7 @@ const Header = () => (
     <div className="container d-flex header__nav-container">
       <Link className="navbar-brand" to="/">
         <span className="header__brand">juanoa</span>
-        <span className="header__brand-subtitle">Ingeniería informática</span>
+        <span className="header__brand-subtitle">ingeniero informático</span>
       </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

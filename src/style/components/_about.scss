@@ -2,7 +2,7 @@
   Globals
  */
 .about__section {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .about__section-title {
@@ -18,10 +18,6 @@
 /*
   Presentation Section
  */
-.about__presentation-section {
-  height: 60vh;
-}
-
 .about__presentation-greeting {
   color: $primary;
   font-family: $font-monospace;
@@ -50,7 +46,6 @@
   border: none;
   color: white;
   padding: 12px 17px;
-  display: inline;
 
   &:hover {
     color: white !important;
@@ -85,4 +80,69 @@
   content: "▹";
   color: $primary;
   padding-right: 10px;
+}
+
+/*
+  Experience section
+ */
+.about__experience-job-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about__experience-job-company {
+  color: $primary;
+}
+
+.about__experience-job-range {
+  font-family: $font-monospace;
+  font-size: 15px;
+}
+
+.about__experience-achievement {
+  font-size: 18px;
+  list-style: none;
+  line-height: 15px !important;
+}
+
+.about__experience-achievement::before {
+  content: "▹";
+  color: $primary;
+  padding-right: 10px;
+}
+
+.about__experience-card-header {
+  background-color: white;
+  border-bottom: none;
+}
+
+/*
+  Contact section
+ */
+.about__contact-fit {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__contact-description {
+  font-size: 1rem;
+  color: $dark-gray;
+}
+
+.about__contact-button {
+  background: linear-gradient(90deg, $primary, #00dfd8);
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  margin-top: 50px;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
+.about__contact-title {
+  color: $primary-light;
+  font-size: 3rem;
 }

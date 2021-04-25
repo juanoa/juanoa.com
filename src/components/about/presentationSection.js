@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export const Presentation = () => {
+export const PresentationSection = () => {
   return (
-    <div className="about__presentation-section about__section">
+    <div className="about__section">
       <span className="about__presentation-greeting">Hola buenas, soy</span>
       <h1 className="about__presentation-name">Juan Otálora.</h1>
       <h2 className="about__presentation-subtitle">Construyo cosas para Internet</h2>

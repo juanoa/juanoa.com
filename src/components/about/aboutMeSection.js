@@ -2,9 +2,9 @@ import React from "react";
 
 import FotoJuan from "../../images/juan.jpg";
 
-export const AboutMe = () => {
+export const AboutMeSection = () => {
   return (
-    <div className="mt-5 about__section">
+    <div className="about__section">
       <h2 className="about__section-title">
         <span className="about__section-number">01.</span> Sobre mi
       </h2>

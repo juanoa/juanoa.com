@@ -18,7 +18,7 @@
 
 .header__brand {
   background: #cccccc;
-  background: linear-gradient(90deg, #5564eb, #00dfd8);
+  background: linear-gradient(90deg, $primary, #00dfd8);
   font-weight: 800;
   font-size: 2.5rem;
   -webkit-text-fill-color: transparent;

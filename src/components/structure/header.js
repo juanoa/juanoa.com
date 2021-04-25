@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 const Header = () => (
 
-  <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm header__navbar">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm pt-0 pb-0 header__navbar">
     <div className="container d-flex header__nav-container">
       <Link className="navbar-brand mr-0" to="/">
         <span className="header__brand">juanoa</span>

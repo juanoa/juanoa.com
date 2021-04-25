@@ -7,7 +7,7 @@ const Header = () => (
 
   <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm pt-0 pb-0 header__navbar">
     <div className="container d-flex header__nav-container">
-      <Link className="navbar-brand mr-0" to="/">
+      <Link className="navbar-brand" to="/">
         <span className="header__brand">juanoa</span>
         <span className="header__brand-subtitle">Ingeniería informática</span>
       </Link>
@@ -18,23 +18,18 @@ const Header = () => (
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/desarrollo">
-              Desarrollo
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/">
+              Sobre mi
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/modelos-mentales">
-              Modelos mentales
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="/blog">
+              Blog
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/empresa">
-              Empresa
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" activeClassName="header__nav-link-active" to="/lean">
-              Lean
+            <Link className="nav-link" activeClassName="header__nav-link-active" to="#">
+              Proyectos
             </Link>
           </li>
           <li className="nav-item">
@@ -44,11 +39,6 @@ const Header = () => (
           </li>
         </ul>
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="https://cv.juanoa.com">
-              Sobre mi
-            </a>
-          </li>
           <li className="nav-item">
             <Link className="nav-link" activeClassName="header__nav-link-active" to="/contacto">
               Contacto

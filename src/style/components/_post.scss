@@ -3,7 +3,7 @@
 }
 
 .post__time-to-read > span {
-  background-color: $primary;
+  background: linear-gradient(90deg, $primary, $cyan-gradient);
   border-radius: 100px;
   color: $white;
   font-weight: 500;

@@ -42,7 +42,7 @@
 }
 
 .about__presentation-button {
-  background: linear-gradient(90deg, $primary, #00dfd8);
+  background: linear-gradient(90deg, $primary, $cyan-gradient);
   border: none;
   color: white;
   padding: 12px 17px;
@@ -138,7 +138,7 @@
     z-index: -1;
     margin: -$border;
     border-radius: inherit;
-    background: linear-gradient(90deg, $primary, #00dfd8);
+    background: linear-gradient(90deg, $primary, $cyan-gradient);
   }
 }
 
@@ -171,7 +171,7 @@
 }
 
 .about__contact-button {
-  background: linear-gradient(90deg, $primary, #00dfd8);
+  background: linear-gradient(90deg, $primary, $cyan-gradient);
   border: none;
   color: white;
   padding: 15px 20px;

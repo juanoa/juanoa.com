@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => {
         <div>
           {
             techs.split(", ").map((tech, i) => (
-              <span key={i} className="badge badge-pill badge-primary mr-2">{tech}</span>
+              <span key={i} className="badge badge-pill badge-primary mr-2 text-monospace">{tech}</span>
             ))
           }
         </div>

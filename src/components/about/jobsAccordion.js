@@ -9,7 +9,7 @@ export const JobsAccordion = ({data}) => {
     <>
       {
         jobs.map((job, index) => (
-          <div className="card" key={job.id}>
+          <div className="card" key={job.node.id}>
             <div className="card-header about__experience-card-header" id={`heading${index}`}>
               <h2 className="mb-0 pb-0">
                 <button className="btn btn-block text-left p-0 about__experience-job-title" type="button" data-toggle="collapse"

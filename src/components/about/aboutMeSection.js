@@ -37,11 +37,11 @@ export const AboutMeSection = () => {
             </div>
           </div>
         </div>
-        <div className="offset-md-1 col-md-4 text-center">
+        <div className="col-md-5 text-center">
           <img
             src={FotoJuan}
             alt="Juan Otálora"
-            className="rounded about__about-me-image"
+            className="rounded about__about-me-image mt-4 mt-md-0"
           />
         </div>
       </div>

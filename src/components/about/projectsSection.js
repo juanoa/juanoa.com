@@ -34,9 +34,9 @@ export const ProjectsSection = () => {
         render={data => <ProjectsCard data={data} />}
       />
 
-      <div className="text-center mt-3">
+      <div className="text-center mt-5">
         <Link className="about__projects-link" to="/projectos">
-          Ver todos los proyectos
+          ver todos los proyectos
         </Link>
       </div>
     </div>

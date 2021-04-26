@@ -125,8 +125,34 @@
   color: $primary;
 }
 
-.about__projects-card-body {
-  background: linear-gradient(135deg, $primary, #00dfd8);
+.about__projects-card {
+  $border: 3px;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: .7rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: linear-gradient(90deg, $primary, #00dfd8);
+  }
+}
+
+.about__projects-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about__projects-description {
+  font-size: 18px;
+}
+
+.about__projects-external-link {
+  font-size: 1.25rem;
 }
 
 /*

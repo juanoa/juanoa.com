@@ -117,6 +117,19 @@
 }
 
 /*
+  Projects section
+ */
+
+.about__projects-link {
+  font-family: $font-monospace;
+  color: $primary;
+}
+
+.about__projects-card-body {
+  background: linear-gradient(135deg, $primary, #00dfd8);
+}
+
+/*
   Contact section
  */
 .about__contact-fit {

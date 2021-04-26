@@ -35,7 +35,7 @@ export const ProjectsSection = () => {
       />
 
       <div className="text-center mt-5">
-        <Link className="about__projects-link" to="/projectos">
+        <Link className="about__projects-link" to="#">
           ver todos los proyectos
         </Link>
       </div>

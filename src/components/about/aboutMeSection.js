@@ -12,7 +12,7 @@ export const AboutMeSection = () => {
       <div className="row">
         <div className="col-md-7 about__about-me-description">
           <p>
-            ¡Hola! Soy Juan, estudiante de Ingeniería Informática en Murcia (🇪🇸).
+            ¡Hola! Soy Juan, estudiante de Ingeniería Informática en Murcia (<span role="img" aria-label="spain">🇪🇸</span>).
           </p>
           <p>
             Compagino mis estudios en la Universidad de Murcia con proyectos propios, trabajos de freelancer y formación.

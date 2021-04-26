@@ -12,7 +12,7 @@ export const PresentationSection = () => {
         y aplicaciones web de cualquier tipo.
       </p>
       <Link to="/contacto" className="btn about__presentation-button">
-        👋 Hablemos
+        <span role="img" aria-label="hand">👋</span> Hablemos
       </Link>
     </div>
   );

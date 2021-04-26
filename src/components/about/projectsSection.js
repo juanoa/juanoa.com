@@ -19,6 +19,7 @@ export const ProjectsSection = () => {
             ) {
               edges {
                 node {
+                  id
                   title
                   description
                   tech

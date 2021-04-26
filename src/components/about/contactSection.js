@@ -13,7 +13,7 @@ export const ContactSection = () => {
           Mi bandeja de entrada siempre está abierta para nuevas oportunidades, tanto personales como profesionales.
         </p>
         <Link to="/contacto" className="btn about__contact-button">
-          👋 Saludar
+          <span role="img" aria-label="hand">👋</span> Saludar
         </Link>
       </div>
     </div>

@@ -99,13 +99,13 @@
   font-size: 15px;
 }
 
-.about__experience-achievement {
+.about__experience-achievements ul li {
   font-size: 18px;
   list-style: none;
   margin-bottom: 5px;
 }
 
-.about__experience-achievement::before {
+.about__experience-achievements ul li::before {
   content: "▹";
   color: $primary;
   padding-right: 10px;

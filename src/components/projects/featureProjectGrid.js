@@ -1,15 +1,13 @@
 import React from "react";
 import { FaCode, FaGithub, MdWeb } from "react-icons/all";
 
-export const ProjectsCard = ({ data }) => {
-
-  const projects = data.allStrapiProjects.edges;
+export const FeatureProjectGrid = ({ projects = [] }) => {
 
   return (
     <div className="card-deck mt-3">
       {
         projects.map((project, index) => (
-          <div className="card about__projects-card" key={project.node.id}>
+          <div className="card about__feature-projects-card" key={project.node.id}>
             <div className="card-body d-flex align-content-between flex-wrap ">
               <h3 className="card-title h5 m-0 about__projects-title">
                 {project.node.title}

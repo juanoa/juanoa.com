@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link, StaticQuery } from "gatsby";
 
-import { ProjectsCard } from "./projectsCard";
+import { FeatureProjectGrid } from "../projects/featureProjectGrid";
 
 export const ProjectsSection = () => {
   return (
@@ -15,7 +15,7 @@ export const ProjectsSection = () => {
           query ProjectsQuery {
             allStrapiProjects (
               sort: {order: DESC, fields: date},
-              filter: {showInFeatures: {eq: true}}
+              filter: {isFeature: {eq: true}}
             ) {
               edges {
                 node {
@@ -32,11 +32,11 @@ export const ProjectsSection = () => {
             }
           }
         `}
-        render={data => <ProjectsCard data={data} />}
+        render={data => <FeatureProjectGrid projects={data.allStrapiProjects.edges} />}
       />
 
       <div className="text-center mt-5">
-        <Link className="about__projects-link" to="#">
+        <Link className="about__projects-link" to="/proyectos">
           ver todos los proyectos
         </Link>
       </div>

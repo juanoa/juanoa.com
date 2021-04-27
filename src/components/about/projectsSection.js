@@ -21,6 +21,7 @@ export const ProjectsSection = () => {
                 node {
                   id
                   title
+                  slug
                   description
                   tech
                   external

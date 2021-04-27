@@ -98,6 +98,54 @@ exports.createPages = ({ actions, graphql }) => {
     })
   });
 
+  const getProjects = makeRequest(graphql, `
+      {
+          allStrapiProjects {
+              edges {
+                  node {
+                      title
+                      slug
+                      cover {
+                        url
+                      }
+                      logo {
+                        url
+                      }
+                      content
+                      external
+                      github
+                      android
+                      ios
+                      isFeature
+                      tech
+                      description
+                  }
+              }
+          }
+      }
+  `).then(result => {
+    // Create pages for each categories.
+    result.data.allStrapiProjects.edges.forEach(({ node }) => {
+      createPage({
+        path: `/proyectos/${node.slug}`,
+        component: path.resolve(`src/templates/project.js`),
+        context: {
+          title: node.title,
+          slug: node.slug,
+          cover: node.cover?.url,
+          logo: node.logo?.url,
+          content: node.content,
+          external: node.external,
+          github: node.github,
+          android: node.android,
+          ios: node.ios,
+          tech: node.tech,
+          description: node.description,
+        },
+      })
+    })
+  });
+
   // Queries for articles and authors nodes to use in creating pages.
   return Promise.all([
     getPosts,

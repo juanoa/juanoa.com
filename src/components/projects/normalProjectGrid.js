@@ -1,5 +1,6 @@
 import React from "react";
-import { FaCode, FaGithub, MdWeb } from "react-icons/all";
+import {FaInfoCircle} from "react-icons/all";
+import { Link } from "gatsby";
 
 export const NormalProjectGrid = ({ projects = [] }) => {
 
@@ -26,39 +27,12 @@ export const NormalProjectGrid = ({ projects = [] }) => {
                   {project.node.description}
                 </span>
               </div>
-              {
-                project.node.external &&
-                <a
-                  href={project.node.external}
-                  className="card-link about__projects-external-link"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <MdWeb />
-                </a>
-              }
-              {
-                project.node.github &&
-                <a
-                  href={project.node.github}
-                  className="card-link about__projects-external-link"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <FaGithub />
-                </a>
-              }
-              {
-                project.node.docs &&
-                <a
-                  href={project.node.docs}
-                  className="card-link about__projects-external-link"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <FaCode />
-                </a>
-              }
+              <Link
+                to={`/proyectos/${project.node.slug}`}
+                className="stretched-link text-dark"
+              >
+                <FaInfoCircle /> Más información
+              </Link>
             </div>
           </div>
         ))

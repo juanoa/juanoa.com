@@ -27,7 +27,7 @@ const ProjectTemplate = ({data, pageContext}) => {
 
       <div className="container-fluid homepage mt-5">
         <div className="row">
-          <div className="col-md-4 mb-sm-4">
+          <div className="col-md-4 mb-4">
             <div className="card">
               {
                 isFeature &&

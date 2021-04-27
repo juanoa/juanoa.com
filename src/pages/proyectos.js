@@ -9,8 +9,8 @@ import { NormalProjectGrid } from "../components/projects/normalProjectGrid";
 const ProjectsPage = ({data}) => {
 
   const projects = data.allStrapiProjects.edges
-  const featureProjects = projects.filter(project => project.node.showInFeatures === true)
-  const normalProjects = projects.filter(project => project.node.showInFeatures === false)
+  const featureProjects = projects.filter(project => project.node.isFeature === true)
+  const normalProjects = projects.filter(project => project.node.isFeature === false)
 
   return (
     <Layout>

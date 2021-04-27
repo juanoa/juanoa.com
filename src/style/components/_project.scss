@@ -16,3 +16,30 @@
     display: none;
   }
 }
+
+.project__feature-star {
+  background: linear-gradient(90deg, $primary, $cyan-gradient);
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+  color:$white;
+  font-size: 20px;
+  height: 40px;
+  padding: 3px 10px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 10px;
+  width: 40px;
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.project__logo-div{
+  display: inline-block;
+  transform: translateY(-50px);
+}

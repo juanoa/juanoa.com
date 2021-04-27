@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 
 import Layout from "../components/structure/layout";
 import SEO from "../components/structure/seo";
-import { FaAndroid, FaApple, FaGithub, MdWeb } from "react-icons/all";
+import { FaAndroid, FaApple, FaGithub, FaStar, MdWeb } from "react-icons/all";
 
 const ProjectTemplate = ({data, pageContext}) => {
 
@@ -21,26 +21,37 @@ const ProjectTemplate = ({data, pageContext}) => {
     description
   } = pageContext
 
-  console.log(isFeature);
-
   return (
     <Layout>
       <SEO title={title} description={description.slice(0, 140)} />
 
       <div className="container-fluid homepage mt-5">
         <div className="row">
-          <div className="col-md-4">
-            <div className="card h-100">
+          <div className="col-md-4 mb-sm-4">
+            <div className="card">
+              {
+                isFeature &&
+                <span className="project__feature-star"><FaStar /></span>
+              }
               {
                 cover &&
-                <img src={cover} alt={title} className="card-img-top"/>
+                <img
+                  src={cover}
+                  alt={title}
+                  className="card-img-top"
+                />
               }
-              <div className="card-body bg-light text-center">
+              <div className="card-body bg-light text-center ">
                 {
                   logo &&
-                  <img src={logo} alt={title} className="rounded-circle" width={75}/>
+                  <div className="bg-white rounded-circle shadow p-4 project__logo-div">
+                    <img
+                      src={logo}
+                      alt={title}
+                      width={65}/>
+                  </div>
                 }
-                <h1 className="card-title mt-3 h3 font-weight-bold">
+                <h1 className="card-title h3 font-weight-bold">
                   {title}
                 </h1>
                 {

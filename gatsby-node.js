@@ -139,6 +139,7 @@ exports.createPages = ({ actions, graphql }) => {
           github: node.github,
           android: node.android,
           ios: node.ios,
+          isFeature: node.isFeature,
           tech: node.tech,
           description: node.description,
         },

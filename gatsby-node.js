@@ -135,8 +135,8 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           title: node.title,
           slug: node.slug,
-          cover: node.cover?.url,
-          logo: node.logo?.url,
+          cover: node.cover.url,
+          logo: node.logo.url,
           content: node.content,
           external: node.external,
           github: node.github,
@@ -155,5 +155,6 @@ exports.createPages = ({ actions, graphql }) => {
   return Promise.all([
     getPosts,
     getCategories,
+    getProjects
   ])
 };

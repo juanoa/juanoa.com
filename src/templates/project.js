@@ -25,7 +25,6 @@ const ProjectTemplate = ({ data, pageContext }) => {
   } = pageContext;
 
   const posts = data.allStrapiPost.edges;
-  console.log(posts);
 
   return (
     <Layout>

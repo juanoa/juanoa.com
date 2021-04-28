@@ -4,6 +4,8 @@ import ReactMarkdown from "react-markdown";
 import Layout from "../components/structure/layout";
 import SEO from "../components/structure/seo";
 import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-icons/all";
+import { graphql } from "gatsby";
+import { PostGrid } from "../components/posts/postGrid";
 
 const ProjectTemplate = ({data, pageContext}) => {
 
@@ -21,6 +23,9 @@ const ProjectTemplate = ({data, pageContext}) => {
     description,
     company
   } = pageContext
+
+  const posts = data.allStrapiPost.edges
+  console.log(posts);
 
   return (
     <Layout>
@@ -132,9 +137,50 @@ const ProjectTemplate = ({data, pageContext}) => {
             }
           </div>
         </div>
+        {
+          posts.length > 0 &&
+          <div className="mt-4">
+            <h3 className="mb-2">Artículos relacionados</h3>
+            <PostGrid col={3} posts={data} showCategory={true} />
+          </div>
+        }
       </div>
     </Layout>
   )
 }
 
 export default ProjectTemplate
+
+export const query = graphql`
+  query ProjectTemplate($slug: String!) {
+    allStrapiPost(
+      filter: {project: {slug: {eq: $slug}}},
+      sort: {fields: published_at, order: DESC},
+      limit: 4
+    ) {
+      edges {
+        node {
+          id
+          title
+          content
+          published_at
+          slug
+          category {
+            slug
+            title
+          }
+          coverPhoto {
+            formats {
+              small {
+                url
+              }
+            }
+            localFile {
+              publicURL
+            }
+          }
+        }    
+      }
+    }
+  }
+`

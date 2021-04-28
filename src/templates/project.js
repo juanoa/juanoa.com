@@ -7,7 +7,7 @@ import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-
 import { graphql } from "gatsby";
 import { PostGrid } from "../components/posts/postGrid";
 
-const ProjectTemplate = ({data, pageContext}) => {
+const ProjectTemplate = ({ data, pageContext }) => {
 
   const {
     title,
@@ -22,9 +22,9 @@ const ProjectTemplate = ({data, pageContext}) => {
     tech,
     description,
     company
-  } = pageContext
+  } = pageContext;
 
-  const posts = data.allStrapiPost.edges
+  const posts = data.allStrapiPost.edges;
   console.log(posts);
 
   return (
@@ -54,7 +54,7 @@ const ProjectTemplate = ({data, pageContext}) => {
                     <img
                       src={logo}
                       alt={title}
-                      width={65}/>
+                      width={65} />
                   </div>
                 }
                 <h1 className="card-title h3 font-weight-bold">
@@ -128,35 +128,34 @@ const ProjectTemplate = ({data, pageContext}) => {
           </div>
           <div className="col-md-8">
             {
-              content &&
-              <div className="card">
-                <div className="card-body bg-light">
-                  <ReactMarkdown source={content} escapeHtml={false} />
-                </div>
+              posts.length > 0 &&
+              <div>
+                <h3 className="mb-2">Artículos relacionados</h3>
+                <PostGrid col={4} posts={data} showCategory={true} showDescription={false} />
               </div>
+            }
+            {
+              content &&
+              <>
+                <hr />
+                <ReactMarkdown source={content} escapeHtml={false} />
+              </>
             }
           </div>
         </div>
-        {
-          posts.length > 0 &&
-          <div className="mt-4">
-            <h3 className="mb-2">Artículos relacionados</h3>
-            <PostGrid col={3} posts={data} showCategory={true} />
-          </div>
-        }
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default ProjectTemplate
+export default ProjectTemplate;
 
 export const query = graphql`
   query ProjectTemplate($slug: String!) {
     allStrapiPost(
       filter: {project: {slug: {eq: $slug}}},
       sort: {fields: published_at, order: DESC},
-      limit: 4
+      limit: 3
     ) {
       edges {
         node {
@@ -183,4 +182,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

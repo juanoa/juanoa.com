@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 import { createDescription } from "../../helpers/createDescription"
 
-const PostItem = ({post, showCategory, col}) => {
+const PostItem = ({post, showCategory, showDescription, col}) => {
 
   const thumbnail = post.node.coverPhoto.formats?.small.url || post.node.coverPhoto.localFile.publicURL;
   const link = `/${post.node.category.slug}/${post.node.slug}`;
@@ -27,9 +27,12 @@ const PostItem = ({post, showCategory, col}) => {
               {title}
             </div>
           </Link>
-          <p className="card-text index__post-description">
-            {description}
-          </p>
+          {
+            showDescription &&
+            <p className="card-text index__post-description">
+              {description}
+            </p>
+          }
         </div>
       </div>
     </div>

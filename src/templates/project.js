@@ -24,7 +24,7 @@ const ProjectTemplate = ({data, pageContext}) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description.slice(0, 140)} />
+      <SEO title={`${title} | Proyecto de Juan Otálora`} description={description.slice(0, 140)} />
 
       <div className="container-fluid homepage mt-5">
         <div className="row">

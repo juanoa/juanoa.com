@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 
 import Layout from "../components/structure/layout";
 import SEO from "../components/structure/seo";
-import { FaAndroid, FaApple, FaGithub, FaStar, MdWeb } from "react-icons/all";
+import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-icons/all";
 
 const ProjectTemplate = ({data, pageContext}) => {
 
@@ -18,7 +18,8 @@ const ProjectTemplate = ({data, pageContext}) => {
     ios,
     isFeature,
     tech,
-    description
+    description,
+    company
   } = pageContext
 
   return (
@@ -54,15 +55,22 @@ const ProjectTemplate = ({data, pageContext}) => {
                 <h1 className="card-title h3 font-weight-bold">
                   {title}
                 </h1>
-                {
-                  tech.split(", ").map((tech, i) => (
-                    <span key={i} className="badge badge-pill badge-primary mr-2 text-monospace">
-                    {tech}
-                  </span>
-                  ))
-                }
+                <div>
+                  {
+                    tech.split(", ").map((tech, i) => (
+                      <span key={i} className="badge badge-pill badge-primary mr-2 text-monospace">
+                      {tech}
+                    </span>
+                    ))
+                  }
+                </div>
                 <div className="mt-4 mb-4">
                   <small>{description}</small>
+                </div>
+                <div className="mt-4 mb-4">
+                  <span className="badge badge-pill badge-dark pt-2 pl-3 pr-3 pb-2">
+                    <FaBriefcase className="mr-2" /> {company}
+                  </span>
                 </div>
                 <div>
                   {

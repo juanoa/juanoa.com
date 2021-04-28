@@ -119,6 +119,9 @@ exports.createPages = ({ actions, graphql }) => {
                       isFeature
                       tech
                       description
+                      job {
+                        company
+                      }
                   }
               }
           }
@@ -142,6 +145,7 @@ exports.createPages = ({ actions, graphql }) => {
           isFeature: node.isFeature,
           tech: node.tech,
           description: node.description,
+          company: node.job.company
         },
       })
     })

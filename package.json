@@ -19,7 +19,6 @@
     "gatsby-source-strapi": "^1.0.0-alpha.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "jquery": "^3.5.1",
-    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-cookie-consent": "^6.2.1",
     "react-dom": "^16.12.0",
@@ -29,27 +28,13 @@
     "remove-markdown": "^0.3.0",
     "sass": "^1.32.5"
   },
-  "devDependencies": {
-    "prettier": "2.2.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

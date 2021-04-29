@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 import "react-icons/fa";
 import { Link } from "gatsby";
@@ -50,13 +49,5 @@ const Header = () => (
 
   </nav>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string
-};
-
-Header.defaultProps = {
-  siteTitle: ``
-};
 
 export default Header;

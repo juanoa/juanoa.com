@@ -6,8 +6,7 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import CookieConsent from "react-cookie-consent";
 
 import Header from "./header";
@@ -29,10 +28,6 @@ const Layout = ({ children }) => {
       </CookieConsent>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
 };
 
 export default Layout;

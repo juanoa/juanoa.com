@@ -31,13 +31,21 @@ const Footer = () => {
             </a>
           </div>
           <div className="col-md-3">
-
+            <h4 className="footer__heading">Blog</h4>
+            <ul className="footer__interest-links">
+              <li><Link to="/modelos-mentales">Modelos mentales</Link></li>
+              <li><Link to="/desarrollo">Desarrollo</Link></li>
+              <li><Link to="/empresa">Empresa</Link></li>
+              <li><Link to="/tecnologia">Tecnología</Link></li>
+            </ul>
           </div>
           <div className="col-md-3">
             <h4 className="footer__heading">Enlaces de interés</h4>
             <ul className="footer__interest-links">
               <li><Link to="/politica-privacidad">Política de privacidad</Link></li>
               <li><Link to="/libros">Libros recomendados</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/proyectos">Proyectos</Link></li>
               <li><Link to="/contacto">Contacto</Link></li>
             </ul>
           </div>

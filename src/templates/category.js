@@ -8,6 +8,7 @@ import { PostGrid } from "../components/posts/postGrid";
 const CategoryTemplate = ({data, pageContext}) => {
   const {description, title, index, currentUrl, previousUrl, nextUrl} = pageContext;
   const metaTitle = `Artículos sobre ${title}`
+  const posts = data.allStrapiPost.edges
 
   return (
     <Layout>
@@ -23,7 +24,7 @@ const CategoryTemplate = ({data, pageContext}) => {
           </div>
         }
 
-        <PostGrid posts={data} showCategory={false} col={4} />
+        <PostGrid posts={posts} showCategory={false} col={4} />
 
         <nav aria-label="Page navigation">
           <ul className="pagination">

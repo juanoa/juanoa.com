@@ -3,8 +3,7 @@ import { Link } from "gatsby";
 
 import { createDescription } from "../../helpers/createDescription"
 
-const MainPost = ({posts}) => {
-  const post = posts.allStrapiPost.edges[0].node
+const MainPost = ({post}) => {
 
   const thumbnail = post.coverPhoto.formats?.medium.url || post.coverPhoto.localFile.publicURL
   const link = `/${post.category.slug}/${post.slug}`

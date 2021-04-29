@@ -130,7 +130,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
               posts.length > 0 &&
               <div>
                 <h3 className="mb-2">Artículos relacionados</h3>
-                <PostGrid col={4} posts={data} showCategory={true} showDescription={false} />
+                <PostGrid col={4} posts={posts} showCategory={true} showDescription={false} />
               </div>
             }
             {

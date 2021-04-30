@@ -1,3 +1,7 @@
+/*
+  Post card
+ */
+
 .project__post-description {
   line-height: 1.35rem;
   font-size: 1rem;
@@ -16,6 +20,41 @@
     display: none;
   }
 }
+
+/*
+  Project grid
+ */
+
+.project__feature-card {
+  $border: 3px;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: .7rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: linear-gradient(90deg, $primary, $cyan-gradient);
+  }
+}
+
+.project__card-title {
+  font-size: 22px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.project__card-description {
+  font-size: 18px;
+}
+
+/*
+  Project page
+ */
 
 .project__feature-star {
   background: linear-gradient(90deg, $primary, $cyan-gradient);
@@ -42,4 +81,8 @@
 .project__logo-div{
   display: inline-block;
   transform: translateY(-50px);
+}
+
+.project__external-link {
+  font-size: 1.25rem;
 }

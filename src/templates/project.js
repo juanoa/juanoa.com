@@ -81,7 +81,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
                     external &&
                     <a
                       href={external}
-                      className="card-link about__projects-external-link"
+                      className="card-link project__external-link"
                       rel="noreferrer"
                       target="_blank"
                     >
@@ -92,7 +92,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
                     github &&
                     <a
                       href={github}
-                      className="card-link about__projects-external-link"
+                      className="card-link project__external-link"
                       rel="noreferrer"
                       target="_blank"
                     >
@@ -103,7 +103,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
                     android &&
                     <a
                       href={android}
-                      className="card-link about__projects-external-link"
+                      className="card-link project__external-link"
                       rel="noreferrer"
                       target="_blank"
                     >
@@ -114,7 +114,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
                     ios &&
                     <a
                       href={ios}
-                      className="card-link about__projects-external-link"
+                      className="card-link project__external-link"
                       rel="noreferrer"
                       target="_blank"
                     >
@@ -134,11 +134,12 @@ const ProjectTemplate = ({ data, pageContext }) => {
               </div>
             }
             {
+              posts.length > 0 && content &&
+              <hr />
+            }
+            {
               content &&
-              <>
-                <hr />
-                <ReactMarkdown source={content} escapeHtml={false} />
-              </>
+              <ReactMarkdown source={content} escapeHtml={false} />
             }
           </div>
         </div>

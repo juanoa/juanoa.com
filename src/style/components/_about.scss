@@ -15,6 +15,22 @@
   font-weight: 400;
 }
 
+.about__primary-light-title {
+  color: $primary-light;
+  font-size: 3rem;
+}
+
+.about__button {
+  background: linear-gradient(90deg, $primary, $cyan-gradient);
+  border: none;
+  color: white;
+  padding: 12px 17px;
+
+  &:hover {
+    color: white !important;
+  }
+}
+
 /*
   Presentation Section
  */
@@ -30,26 +46,10 @@
   margin-bottom: 0;
 }
 
-.about__presentation-subtitle {
-  color: $primary-light;
-  font-size: 3rem;
-}
-
 .about__presentation-description {
   max-width: 500px;
   margin-top: 20px;
   font-size: 1rem;
-}
-
-.about__presentation-button {
-  background: linear-gradient(90deg, $primary, $cyan-gradient);
-  border: none;
-  color: white;
-  padding: 12px 17px;
-
-  &:hover {
-    color: white !important;
-  }
 }
 
 /*
@@ -117,15 +117,6 @@
 }
 
 /*
-  Projects section
- */
-
-.about__projects-link {
-  font-family: $font-monospace;
-  color: $primary;
-}
-
-/*
   Contact section
  */
 .about__contact-fit {
@@ -135,23 +126,7 @@
 }
 
 .about__contact-description {
+  margin-top: 30px;
   font-size: 1rem;
   color: $dark-gray;
-}
-
-.about__contact-button {
-  background: linear-gradient(90deg, $primary, $cyan-gradient);
-  border: none;
-  color: white;
-  padding: 15px 20px;
-  margin-top: 50px;
-
-  &:hover {
-    color: white !important;
-  }
-}
-
-.about__contact-title {
-  color: $primary-light;
-  font-size: 3rem;
 }

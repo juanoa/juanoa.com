@@ -7,12 +7,12 @@ export const ContactSection = () => {
       <h2 className="about__section-title">
         <span className="about__section-number">04.</span> Contacto
       </h2>
-      <h3 className="about__contact-title">¿Por qué no charlamos?</h3>
+      <h3 className="about__primary-light-title">¿Por qué no charlamos?</h3>
       <div className="about__contact-fit">
         <p className="text-center about__contact-description">
           Mi bandeja de entrada siempre está abierta para nuevas oportunidades, tanto personales como profesionales.
         </p>
-        <Link to="/contacto" className="btn about__contact-button">
+        <Link to="/contacto" className="btn about__button">
           <span role="img" aria-label="hand">👋</span> Saludar
         </Link>
       </div>

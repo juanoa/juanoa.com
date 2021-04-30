@@ -1,12 +1,10 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-export const JobsAccordion = ({data}) => {
-
-  const jobs = data.allStrapiJobs.edges
+export const JobsAccordion = ({jobs}) => {
 
   return (
-    <>
+    <div className="accordion mt-3" id="accordion">
       {
         jobs.map((job, index) => (
           <div className="card" key={job.node.id}>
@@ -31,6 +29,6 @@ export const JobsAccordion = ({data}) => {
           </div>
         ))
       }
-    </>
+    </div>
   );
 };

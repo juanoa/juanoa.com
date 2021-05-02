@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import CookieConsent from "react-cookie-consent";
 
 import Header from "./header";

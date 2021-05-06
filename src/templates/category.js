@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby";
 
 import Layout from '../components/structure/layout'
-import SEO from "../components/structure/seo"
+import Seo from "../components/structure/seo"
 import { PostGrid } from "../components/posts/postGrid";
 
 const CategoryTemplate = ({data, pageContext}) => {
@@ -12,7 +12,7 @@ const CategoryTemplate = ({data, pageContext}) => {
 
   return (
     <Layout>
-      <SEO title={metaTitle} description={description?.slice(0, 140)} index={index} />
+      <Seo title={metaTitle} description={description?.slice(0, 140)} index={index} />
 
       <div className="page-content">
 

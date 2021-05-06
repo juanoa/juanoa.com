@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/structure/layout"
-import SEO from "../components/structure/seo"
+import Seo from "../components/structure/seo"
 import { PresentationSection } from "../components/about/presentationSection";
 import { AboutMeSection } from "../components/about/aboutMeSection";
 import { ContactSection } from "../components/about/contactSection";
@@ -10,7 +10,7 @@ import { ProjectsSection } from "../components/about/projectsSection";
 
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Juan Otálora | Ingeniero Informático" />
+    <Seo title="Juan Otálora | Ingeniero Informático" />
     <div className="container-fluid homepage">
       <PresentationSection />
       <AboutMeSection />

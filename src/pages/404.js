@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "gatsby";
 
 import Layout from "../components/structure/layout"
-import SEO from "../components/structure/seo"
+import Seo from "../components/structure/seo"
 import sad from '../images/sad.png'
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" index={false} />
+    <Seo title="404: Not found" index={false} />
     <div className="page-content text-center mt-5 mb-5">
         <h1>Error 404: página no encontrada</h1>
         <p>Vaya... Parece que has intentado acceder a una página que ya no existe o se ha movido de sitio. Mis disculpas.</p>

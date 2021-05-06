@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/structure/layout"
-import SEO from "../components/structure/seo"
+import Seo from "../components/structure/seo"
 import BookGrid from "../components/books/bookGrid"
 
 const BooksPage = ({data}) => {
@@ -15,7 +15,7 @@ const BooksPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Libros recomendados" />
+      <Seo title="Libros recomendados" />
       <div className="homepage">
         <h1>Libros recomendados</h1>
         <div className="alert alert-dark" role="alert">

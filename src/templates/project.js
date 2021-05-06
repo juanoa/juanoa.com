@@ -5,6 +5,7 @@ import Seo from "../components/structure/seo";
 import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-icons/all";
 import { graphql } from "gatsby";
 import { PostGrid } from "../components/posts/postGrid";
+import {Markdown} from "../components/structure/markdown";
 
 const ProjectTemplate = ({ data, pageContext }) => {
 
@@ -138,7 +139,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
             }
             {
               content &&
-              <div>{content}</div>
+              <Markdown content={content} />
             }
           </div>
         </div>

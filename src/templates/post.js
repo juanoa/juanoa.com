@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import { graphql, Link } from "gatsby";
 import { RiTimerFill } from "react-icons/all";
 
@@ -57,7 +56,7 @@ const PostTemplate = ({ data }) => {
       <div className="content">
         <BookCard book={book} />
         <ProjectCard project={project} />
-        <ReactMarkdown source={content} escapeHtml={false} />
+        <div>{content}</div>
       </div>
     </Layout>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/structure/layout";
-import SEO from "../components/structure/seo";
+import Seo from "../components/structure/seo";
 import MainPost from "../components/posts/mainPost";
 import FeaturedPostGrid from "../components/posts/featuredPostGrid";
 import { PostGrid } from "../components/posts/postGrid";
@@ -14,7 +14,7 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Blog de Juan Otálora" />
+      <Seo title="Blog de Juan Otálora" />
       <div className="container-fluid homepage">
         <MainPost post={firstPost} />
         <PostGrid posts={posts} init={1} end={5} />

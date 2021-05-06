@@ -1,14 +1,14 @@
 import React from "react"
 
 import Layout from "../components/structure/layout"
-import SEO from "../components/structure/seo"
+import Seo from "../components/structure/seo"
 import Map from "../components/map";
 
 const ContactPage = () => {
 
   return (
     <Layout>
-      <SEO title="Contacto" description="¿Quieres ponerte en contacto conmigo? Utiliza este formulario para hacerlo." />
+      <Seo title="Contacto" description="¿Quieres ponerte en contacto conmigo? Utiliza este formulario para hacerlo." />
       <div className="homepage">
         <h1>Contacto</h1>
         <div className="row">

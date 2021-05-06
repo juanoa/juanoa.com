@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby";
 import { RiTimerFill } from "react-icons/all";
 
 import Layout from "../components/structure/layout";
-import SEO from "../components/structure/seo";
+import Seo from "../components/structure/seo";
 import ProjectCard from "../components/projects/projectCard";
 import BookCard from "../components/books/bookCard";
 
@@ -27,7 +27,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={seoTitle || title} description={seoDescription || content.slice(0, 140)} />
+      <Seo title={seoTitle || title} description={seoDescription || content.slice(0, 140)} />
 
       <div className="page-content">
 

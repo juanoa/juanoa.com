@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 
 import Layout from "../components/structure/layout";
-import SEO from "../components/structure/seo";
+import Seo from "../components/structure/seo";
 import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-icons/all";
 import { graphql } from "gatsby";
 import { PostGrid } from "../components/posts/postGrid";
@@ -28,7 +28,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={`${title} | Proyecto de Juan Otálora`} description={description.slice(0, 140)} />
+      <Seo title={`${title} | Proyecto de Juan Otálora`} description={description.slice(0, 140)} />
 
       <div className="container-fluid homepage mt-5">
         <div className="row">

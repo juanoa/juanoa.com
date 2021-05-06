@@ -2,7 +2,7 @@
   "name": "juanoa.com",
   "private": true,
   "description": "Blog personal de Juan Otálora",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Juan Otálora <juan@juanoa.com>",
   "dependencies": {
     "@popperjs/core": "^2.9.2",

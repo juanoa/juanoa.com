@@ -1,4 +1,5 @@
 import React from "react";
+import {Markdown} from "../structure/markdown";
 
 export const JobsAccordion = ({jobs}) => {
 
@@ -18,11 +19,10 @@ export const JobsAccordion = ({jobs}) => {
             <div id={`collapse${index}`} className={`collapse ${index === 0 && 'show'}`} aria-labelledby={`heading${index}`} data-parent="#accordion">
               <div className="card-body pt-0">
                 <span className="about__experience-job-range">{job.node.range}</span>
-                <div
-                  className="about__experience-achievements mt-3"
-                >
-                  {job.node.achievements}
-                </div>
+                <Markdown
+                  content={job.node.achievements}
+                  className={"about__experience-achievements mt-3"}
+                />
               </div>
             </div>
           </div>

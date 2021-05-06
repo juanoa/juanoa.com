@@ -6,6 +6,7 @@ import Layout from "../components/structure/layout";
 import Seo from "../components/structure/seo";
 import ProjectCard from "../components/projects/projectCard";
 import BookCard from "../components/books/bookCard";
+import {Markdown} from "../components/structure/markdown";
 
 const PostTemplate = ({ data }) => {
 
@@ -56,7 +57,7 @@ const PostTemplate = ({ data }) => {
       <div className="content">
         <BookCard book={book} />
         <ProjectCard project={project} />
-        <div>{content}</div>
+        <Markdown content={content} />
       </div>
     </Layout>
   );

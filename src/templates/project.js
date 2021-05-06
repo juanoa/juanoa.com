@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 
 import Layout from "../components/structure/layout";
 import Seo from "../components/structure/seo";
@@ -139,7 +138,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
             }
             {
               content &&
-              <ReactMarkdown source={content} escapeHtml={false} />
+              <div>{content}</div>
             }
           </div>
         </div>

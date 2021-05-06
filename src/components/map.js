@@ -7,15 +7,14 @@ const Map = () => {
   for the Alpha-2 Country codes
    */
 
-  const visited = ["ES", "FR", "DE", "PL", "GB", "AT", "IT"]
-
   useEffect(() => {
+    const visited = ["ES", "FR", "DE", "PL", "GB", "AT", "IT"]
     visited.forEach(country => {
       let element = document.getElementById(country)
       console.log(element);
       element.classList.add("visited")
     })
-  }, [visited]);
+  }, []);
 
 
 

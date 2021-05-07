@@ -74,7 +74,7 @@ function Seo({description, lang, meta, title, index, langLinks}) {
     >
       {
         langLinks.languages.map((language, index) => (
-          <link rel="alternate" href={`${site.siteUrl}/${language.url}`} hrefLang={language.lang} key={index}/>
+          <link href={`${site.siteUrl}/${language.url}`} hrefLang={language.lang} key={index} rel="alternate"/>
         ))
       }
     </Helmet>

@@ -27,6 +27,15 @@ function Seo({description, lang, meta, title, index, langLinks}) {
 
   const metaDescription = description || site.siteMetadata.description;
 
+  const headLinks = []
+  langLinks.languages.map((language, index) => (
+    headLinks.push({
+      rel: 'alternate',
+      href: `${site.siteUrl}${language.url}`,
+      hrefLang: language.lang
+    })
+  ))
+
   return (
     <Helmet
       htmlAttributes={{
@@ -71,13 +80,8 @@ function Seo({description, lang, meta, title, index, langLinks}) {
           content: metaDescription
         }
       ].concat(meta)}
-    >
-      {
-        langLinks.languages.map((language, index) => (
-          <link href={`${site.siteUrl}/${language.url}`} hrefLang={language.lang} key={index} rel="alternate"/>
-        ))
-      }
-    </Helmet>
+      links={headLinks}
+    />
   )
 }
 

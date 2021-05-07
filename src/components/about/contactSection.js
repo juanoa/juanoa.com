@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export const ContactSection = () => {
+export const ContactSection = ({contactTitle, contactSubtitle, contactDescription, contactButton}) => {
   return (
     <div className="about__section text-center pb-5">
       <h2 className="about__section-title">
-        <span className="about__section-number">04.</span> Contacto
+        <span className="about__section-number">04.</span> {contactTitle}
       </h2>
-      <h3 className="about__primary-light-title">¿Por qué no charlamos?</h3>
+      <h3 className="about__primary-light-title">{contactSubtitle}</h3>
       <div className="about__contact-fit">
         <p className="text-center about__contact-description">
-          Mi bandeja de entrada siempre está abierta para nuevas oportunidades, tanto personales como profesionales.
+          {contactDescription}
         </p>
         <Link to="/contacto" className="btn about__button">
-          <span role="img" aria-label="hand">👋</span> Saludar
+          <span role="img" aria-label="hand">👋</span> {contactButton}
         </Link>
       </div>
     </div>

@@ -1,25 +1,18 @@
 import React from "react";
 
 import FotoJuan from "../../images/juan.jpg";
+import {Markdown} from "../structure/markdown";
 
-export const AboutMeSection = () => {
+export const AboutMeSection = ({aboutMeTitle, aboutMeDescription}) => {
   return (
     <div className="about__section">
       <h2 className="about__section-title">
-        <span className="about__section-number">01.</span> Sobre mi
+        <span className="about__section-number">01.</span> {aboutMeTitle}
       </h2>
 
       <div className="row">
         <div className="col-md-7 about__about-me-description">
-          <p>
-            ¡Hola! Soy Juan, estudiante de Ingeniería Informática en Murcia (<span role="img" aria-label="spain">🇪🇸</span>).
-          </p>
-          <p>
-            Compagino mis estudios en la Universidad de Murcia con proyectos propios, trabajos de freelancer y formación.
-          </p>
-          <p>
-            Aquí tienes algunas tecnologías con las que he trabajado recientemente:
-          </p>
+          <Markdown content={aboutMeDescription} />
           <div className="row">
             <div className="col-6 col-md-4">
               <ul>

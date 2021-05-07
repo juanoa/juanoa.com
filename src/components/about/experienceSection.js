@@ -2,7 +2,7 @@ import React from "react";
 import {graphql, useStaticQuery} from "gatsby";
 import {JobsAccordion} from "./jobsAccordion";
 
-export const ExperienceSection = () => {
+export const ExperienceSection = ({experienceTitle}) => {
 
   const {allStrapiJobs: {edges: jobs}} = useStaticQuery(
     graphql`
@@ -27,7 +27,7 @@ export const ExperienceSection = () => {
   return (
     <div className="about__section">
       <h2 className="about__section-title">
-        <span className="about__section-number">02.</span> Experiencia
+        <span className="about__section-number">02.</span> {experienceTitle}
       </h2>
       <JobsAccordion jobs={jobs}/>
     </div>

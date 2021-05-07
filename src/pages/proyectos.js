@@ -8,6 +8,8 @@ import { NormalProjectGrid } from "../components/projects/normalProjectGrid";
 
 const ProjectsPage = ({data}) => {
 
+  const {strapiProjectsPage: text} = data
+
   const projects = data.allStrapiProjects.edges
   const featureProjects = projects.filter(project => project.node.isFeature === true)
   const normalProjects = projects.filter(project => project.node.isFeature === false)
@@ -17,7 +19,7 @@ const ProjectsPage = ({data}) => {
       <Seo title="Proyectos" />
       <div className="container-fluid homepage mt-5">
         <FeatureProjectGrid projects={featureProjects} />
-        <h1 className="mt-5">Todos los proyectos</h1>
+        <h1 className="mt-5">{text.allProjects}</h1>
         <NormalProjectGrid projects={normalProjects} />
       </div>
     </Layout>
@@ -44,6 +46,9 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    strapiProjectsPage {
+      allProjects
     }
   }
 `

@@ -3,14 +3,17 @@ import React from "react"
 import Layout from "../components/structure/layout"
 import Seo from "../components/structure/seo"
 import Map from "../components/map";
+import {graphql} from "gatsby";
 
-const ContactPage = () => {
+const ContactPage = ({data}) => {
+
+  const {strapiContactPage: text} = data
 
   return (
     <Layout>
       <Seo title="Contacto" description="¿Quieres ponerte en contacto conmigo? Utiliza este formulario para hacerlo." />
       <div className="homepage">
-        <h1>Contacto</h1>
+        <h1>{text.title}</h1>
         <div className="row">
           <div className="col-md-6">
             <form
@@ -24,7 +27,7 @@ const ContactPage = () => {
               <input type="hidden" name="form-name" value="contact" />
 
               <div className="form-group">
-                <label htmlFor="nombre">Nombre</label>
+                <label htmlFor="nombre">{text.nameLabel}</label>
                 <input
                   type="text"
                   className="form-control"
@@ -33,7 +36,7 @@ const ContactPage = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">{text.emailLabel}</label>
                 <input
                   type="email"
                   className="form-control"
@@ -42,7 +45,7 @@ const ContactPage = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="asunto">Asunto</label>
+                <label htmlFor="asunto">{text.subjectLabel}</label>
                 <input
                   type="text"
                   className="form-control"
@@ -51,7 +54,7 @@ const ContactPage = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="mensaje">Mensaje</label>
+                <label htmlFor="mensaje">{text.messageLabel}</label>
                 <textarea
                   className="form-control"
                   rows="3"
@@ -59,12 +62,12 @@ const ContactPage = () => {
                   name="mensaje"
                 />
               </div>
-              <button type="submit" className="btn btn-primary">Enviar</button>
+              <button type="submit" className="btn btn-primary">{text.sendButton}</button>
             </form>
           </div>
           <div className="col-md-6">
             <div className="alert alert-light text-center" role="alert">
-              Como no soy una tienda, no puedo poner mi ubicación, pero sí los países en los que he estado.
+              {text.mapDescription}
               <span role="img" aria-label="plane"> 🛫️</span>️
             </div>
             <Map />
@@ -77,3 +80,17 @@ const ContactPage = () => {
 }
 
 export default ContactPage
+
+export const pageQuery = graphql`
+  query contactPage {
+    strapiContactPage {
+      emailLabel
+      mapDescription
+      messageLabel
+      nameLabel
+      sendButton
+      subjectLabel
+      title
+    }
+  }
+  `

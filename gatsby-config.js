@@ -30,7 +30,7 @@ module.exports = {
           'projects'
         ],
         queryLimit: 1000,
-        singleTypes: [`about-page`, `books-page`],
+        singleTypes: [`about-page`, `books-page`, `contact-page`],
       },
     },
     {

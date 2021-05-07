@@ -13,8 +13,22 @@ const IndexPage = ({data}) => {
 
   const text = data.strapiAboutPage
 
+  const langLinks = {
+    actual: 'es',
+    languages: [
+      {
+        lang: 'en',
+        url: '/en'
+      },
+      {
+        lang: 'es',
+        url: '/'
+      }
+    ]
+  }
+
   return (
-    <Layout>
+    <Layout langLinks={langLinks}>
       <Seo title="Juan Otálora | Ingeniero Informático"/>
       <div className="container-fluid homepage">
         <PresentationSection

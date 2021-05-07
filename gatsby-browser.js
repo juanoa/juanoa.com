@@ -6,5 +6,6 @@
 
 import './src/style/styles.scss'
 import 'jquery/dist/jquery.min'
-import '@popperjs/core/dist/esm/popper'
+import 'popper.js/dist/popper.min'
 import 'bootstrap/js/src/collapse'
+import 'bootstrap/js/src/dropdown'

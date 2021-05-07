@@ -11,11 +11,13 @@ import CookieConsent from "react-cookie-consent";
 
 import Header from "./header";
 import Footer from "./footer";
+import PropTypes from "prop-types";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, langLinks }) => {
+
   return (
     <>
-      <Header />
+      <Header langLinks={langLinks} />
       <main>{children}</main>
       <Footer />
       <CookieConsent
@@ -28,6 +30,16 @@ const Layout = ({ children }) => {
       </CookieConsent>
     </>
   );
+};
+
+Layout.defaultProps = {
+  langLinks: {
+    destinations: []
+  },
+};
+
+Layout.propTypes = {
+  esLangLink: PropTypes.object
 };
 
 export default Layout;

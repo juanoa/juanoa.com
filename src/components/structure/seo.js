@@ -7,17 +7,18 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import {Helmet} from "react-helmet";
+import {useStaticQuery, graphql} from "gatsby";
 
-function Seo({ description, lang, meta, title, index }) {
-  const { site } = useStaticQuery(
+function Seo({description, lang, meta, title, index, langLinks}) {
+  const {site} = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             description
             author
+            siteUrl
           }
         }
       }
@@ -70,15 +71,25 @@ function Seo({ description, lang, meta, title, index }) {
           content: metaDescription
         }
       ].concat(meta)}
-    />
-  );
+    >
+      {
+        langLinks.languages.map((language, index) => (
+          <link rel="alternate" href={`${site.siteUrl}/${language.url}`} hrefLang={language.lang} key={index}/>
+        ))
+      }
+    </Helmet>
+  )
 }
 
 Seo.defaultProps = {
   lang: `es`,
   meta: [],
   description: ``,
-  index: true
+  index: true,
+  langLinks: {
+    actual: 'es',
+    languages: []
+  }
 };
 
 Seo.propTypes = {
@@ -86,7 +97,8 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  robots: PropTypes.string
+  robots: PropTypes.string,
+  langLinks: PropTypes.object
 };
 
 export default Seo;

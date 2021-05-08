@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const Header = ({langLinks}) => {
 
-  const navLinks = {
+  const navBarLinks = {
     es:[
       {name: 'Sobre mi', url: '/'},
       {name: 'Blog', url: '/blog'},
@@ -34,7 +34,7 @@ const Header = ({langLinks}) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             {
-              navLinks[langLinks.actual].map(link => (
+              navBarLinks[langLinks.actual].map(link => (
                 <li className="nav-item">
                   <Link className="nav-link" activeClassName="header__nav-link-active" to={link.url}>
                     {link.name}

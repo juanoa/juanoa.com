@@ -11,14 +11,14 @@ import {ProjectsSection} from "../../components/about/projectsSection";
 const IndexPageEn = () => {
 
   const langLinks = {
-    actual: 'EN',
+    actual: 'en',
     languages: [
       {
-        lang: 'ES',
+        lang: 'es',
         url: '/'
       },
       {
-        lang: 'EN',
+        lang: 'en',
         url: '/en'
       }
     ]

@@ -17,7 +17,7 @@ const Layout = ({ children, langLinks }) => {
 
   return (
     <>
-      <Header langLinks={langLinks} />
+      <Header langLinks={langLinks}/>
       <main>{children}</main>
       <Footer />
       <CookieConsent
@@ -34,6 +34,7 @@ const Layout = ({ children, langLinks }) => {
 
 Layout.defaultProps = {
   langLinks: {
+    actual: 'es',
     destinations: []
   },
 };

@@ -18,7 +18,7 @@ export const AboutMeSection = ({aboutMeTitle, aboutMeDescription}) => {
               <ul>
                 <li className="about__about-me-skill">PHP</li>
                 <li className="about__about-me-skill">WordPress</li>
-                <li className="about__about-me-skill">HTML y CSS</li>
+                <li className="about__about-me-skill">HTML & CSS</li>
               </ul>
             </div>
             <div className="col-6 col-md-4">

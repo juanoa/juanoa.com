@@ -19,7 +19,7 @@ const Layout = ({ children, langLinks }) => {
     <>
       <Header langLinks={langLinks}/>
       <main>{children}</main>
-      <Footer />
+      <Footer lang={langLinks.actual} />
       <CookieConsent
         buttonText="Las acepto"
         containerClasses="layout__cookie-banner"

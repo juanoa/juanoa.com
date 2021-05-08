@@ -74,12 +74,7 @@ module.exports = {
       },
 
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      exclude: [
-        `/politica-privacidad`,
-      ],
-    },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

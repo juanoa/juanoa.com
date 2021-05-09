@@ -4,7 +4,7 @@ import {Link} from "gatsby";
 import PropTypes from "prop-types";
 import {LanguageSelect} from "./languageSelect";
 
-const Header = ({langLinks}) => {
+const Header = ({i18n}) => {
 
   const navBarLinks = {
     es:[
@@ -22,10 +22,10 @@ const Header = ({langLinks}) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm pt-0 pb-0 header__navbar">
       <div className="container d-flex header__nav-container">
-        <Link className="navbar-brand" to={(langLinks.actual === 'es') ? '/' : '/en'}>
+        <Link className="navbar-brand" to={(i18n.actual === 'es') ? '/' : '/en'}>
           <span className="header__brand">juanoa</span>
           <span className="header__brand-subtitle">
-            {(langLinks.actual === 'es') ? 'ingeniero informático' : 'computer engineer'}
+            {(i18n.actual === 'es') ? 'ingeniero informático' : 'computer engineer'}
           </span>
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,7 +35,7 @@ const Header = ({langLinks}) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             {
-              navBarLinks[langLinks.actual].map(link => (
+              navBarLinks[i18n.actual].map(link => (
                 <li className="nav-item">
                   <Link className="nav-link" activeClassName="header__nav-link-active" to={link.url}>
                     {link.name}
@@ -44,7 +44,7 @@ const Header = ({langLinks}) => {
               ))
             }
           </ul>
-          <LanguageSelect langLinks={langLinks} />
+          <LanguageSelect i18n={i18n} />
         </div>
       </div>
     </nav>

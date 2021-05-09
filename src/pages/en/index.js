@@ -10,7 +10,7 @@ import {ProjectsSection} from "../../components/about/projectsSection";
 
 const IndexPageEn = () => {
 
-  const langLinks = {
+  const i18n = {
     actual: 'en',
     languages: [
       {
@@ -25,8 +25,8 @@ const IndexPageEn = () => {
   }
 
   return (
-    <Layout langLinks={langLinks}>
-      <Seo title="Juan Otálora | Computer Engineer" lang="en" langLinks={langLinks}/>
+    <Layout i18n={i18n}>
+      <Seo title="Juan Otálora | Computer Engineer" lang="en" i18n={i18n}/>
       <div className="container-fluid homepage">
         <PresentationSection
           greeting="Hi, I'm"

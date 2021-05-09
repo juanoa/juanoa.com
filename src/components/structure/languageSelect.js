@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from "gatsby";
 
-export const LanguageSelect = ({langLinks}) => {
+export const LanguageSelect = ({i18n}) => {
 
-  const {actual, languages} = langLinks
+  const {actual, languages} = i18n
 
   return (
     <>

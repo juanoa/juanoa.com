@@ -13,13 +13,13 @@ import Header from "./header";
 import Footer from "./footer";
 import PropTypes from "prop-types";
 
-const Layout = ({ children, langLinks }) => {
+const Layout = ({ children, i18n }) => {
 
   return (
     <>
-      <Header langLinks={langLinks}/>
+      <Header i18n={i18n}/>
       <main>{children}</main>
-      <Footer lang={langLinks.actual} />
+      <Footer lang={i18n.actual} />
       <CookieConsent
         buttonText="Las acepto"
         containerClasses="layout__cookie-banner"
@@ -33,7 +33,7 @@ const Layout = ({ children, langLinks }) => {
 };
 
 Layout.defaultProps = {
-  langLinks: {
+  i18n: {
     actual: 'es',
     destinations: []
   },

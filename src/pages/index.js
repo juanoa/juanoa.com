@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
 
   const text = data.strapiAboutPage
 
-  const langLinks = {
+  const i18n = {
     actual: 'es',
     languages: [
       {
@@ -28,8 +28,8 @@ const IndexPage = ({data}) => {
   }
 
   return (
-    <Layout langLinks={langLinks}>
-      <Seo title="Juan Otálora | Ingeniero Informático" langLinks={langLinks}/>
+    <Layout i18n={i18n}>
+      <Seo title="Juan Otálora | Ingeniero Informático" i18n={i18n}/>
       <div className="container-fluid homepage">
         <PresentationSection
           greeting={text.greeting}

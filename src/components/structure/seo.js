@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import {Helmet} from "react-helmet";
 import {useStaticQuery, graphql} from "gatsby";
 
-function Seo({description, lang, meta, title, index, langLinks}) {
+function Seo({description, lang, meta, title, index, i18n}) {
   const {site} = useStaticQuery(
     graphql`
       query {
@@ -28,9 +28,9 @@ function Seo({description, lang, meta, title, index, langLinks}) {
   const metaDescription = description || site.siteMetadata.description;
 
   const alternateLinks = []
-  langLinks.languages.map(langLink => {
+  i18n.languages.map(langLink => {
     alternateLinks.push({
-      link: `${site.siteMetadata.siteUrl}${langLink.url}`,
+      href: `${site.siteMetadata.siteUrl}${langLink.url}`,
       rel: 'alternate',
       hreflang: langLink.lang
     })
@@ -90,7 +90,7 @@ Seo.defaultProps = {
   meta: [],
   description: ``,
   index: true,
-  langLinks: {
+  i18n: {
     actual: 'es',
     languages: []
   }
@@ -102,7 +102,7 @@ Seo.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
   robots: PropTypes.string,
-  langLinks: PropTypes.object
+  i18n: PropTypes.object
 };
 
 export default Seo;

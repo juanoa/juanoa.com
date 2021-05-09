@@ -19,7 +19,7 @@ const IndexPageEn = () => {
       },
       {
         lang: 'en',
-        url: '/en'
+        url: '/en/'
       }
     ]
   }

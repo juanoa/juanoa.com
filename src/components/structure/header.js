@@ -9,20 +9,20 @@ const Header = ({i18n}) => {
   const navBarLinks = {
     es:[
       {name: 'Sobre mi', url: '/'},
-      {name: 'Blog', url: '/blog'},
-      {name: 'Proyectos', url: '/proyectos'},
-      {name: 'Libros', url: '/libros'},
-      {name: 'Contacto', url: '/contacto'},
+      {name: 'Blog', url: '/blog/'},
+      {name: 'Proyectos', url: '/proyectos/'},
+      {name: 'Libros', url: '/libros/'},
+      {name: 'Contacto', url: '/contacto/'},
     ],
     en: [
-      {name: 'About me', url: '/en'},
+      {name: 'About me', url: '/en/'},
     ]
   }
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm pt-0 pb-0 header__navbar">
       <div className="container d-flex header__nav-container">
-        <Link className="navbar-brand" to={(i18n.actual === 'es') ? '/' : '/en'}>
+        <Link className="navbar-brand" to={(i18n.actual === 'es') ? '/' : '/en/'}>
           <span className="header__brand">juanoa</span>
           <span className="header__brand-subtitle">
             {(i18n.actual === 'es') ? 'ingeniero informático' : 'computer engineer'}

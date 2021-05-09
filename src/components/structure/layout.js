@@ -25,7 +25,7 @@ const Layout = ({ children, i18n }) => {
         containerClasses="layout__cookie-banner"
         buttonClasses="layout__cookie-banner-button"
       >
-        Este sitio web utiliza cookies para mejorar tu experiencia de uso. <Link to="/politica-privacidad">Política de
+        Este sitio web utiliza cookies para mejorar tu experiencia de uso. <Link to="/politica-privacidad/">Política de
         privacidad</Link>
       </CookieConsent>
     </>

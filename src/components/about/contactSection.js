@@ -12,7 +12,7 @@ export const ContactSection = ({contactTitle, contactSubtitle, contactDescriptio
         <p className="text-center about__contact-description">
           {contactDescription}
         </p>
-        <Link to="/contacto" className="btn about__button">
+        <Link to="/contacto/" className="btn about__button">
           <span role="img" aria-label="hand">👋</span> {contactButton}
         </Link>
       </div>

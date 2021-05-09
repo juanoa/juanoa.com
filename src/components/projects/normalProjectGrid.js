@@ -32,7 +32,7 @@ export const NormalProjectGrid = ({ projects = [] }) => {
                 </span>
                 </div>
                 <Link
-                  to={`/proyectos/${slug}`}
+                  to={`/proyectos/${slug}/`}
                   className="stretched-link text-dark"
                 >
                   <FaInfoCircle /> Más información

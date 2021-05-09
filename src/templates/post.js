@@ -31,7 +31,7 @@ const PostTemplate = ({ data }) => {
 
       <div className="page-content">
 
-        <Link to={`/${category.slug}`} className="post__category-link">
+        <Link to={`/${category.slug}/`} className="post__category-link">
           <span className="post__category-title">
             {category.title}
           </span>

@@ -8,23 +8,23 @@ const Footer = ({lang}) => {
   const featuredLinks = {
     es: [
       {name: 'Sobre mi', url: '/'},
-      {name: 'Blog', url: '/blog'},
-      {name: 'Proyectos', url: '/proyectos'},
-      {name: 'Contacto', url: '/contacto'},
-      {name: 'Libros recomendados', url: '/libros'},
-      {name: 'Política de privacidad', url: '/'},
+      {name: 'Blog', url: '/blog/'},
+      {name: 'Proyectos', url: '/proyectos/'},
+      {name: 'Contacto', url: '/contacto/'},
+      {name: 'Libros recomendados', url: '/libros/'},
+      {name: 'Política de privacidad', url: '/politica-privacidad/'},
     ],
     en: [
-      {name: 'About me', url: '/en'},
+      {name: 'About me', url: '/en/'},
     ]
   }
 
   const categoriesLink = {
     es: [
-      {name: 'Modelos mentales', url: '/modelos-mentales'},
-      {name: 'Desarrollo', url: '/desarrollo'},
-      {name: 'Empresa', url: '/empresa'},
-      {name: 'Tecnología', url: '/tecnologia'},
+      {name: 'Modelos mentales', url: '/modelos-mentales/'},
+      {name: 'Desarrollo', url: '/desarrollo/'},
+      {name: 'Empresa', url: '/empresa/'},
+      {name: 'Tecnología', url: '/tecnologia/'},
     ],
     en: []
   }

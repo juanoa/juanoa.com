@@ -11,7 +11,7 @@ export const PresentationSection = ({greeting, subtitle, presentation, contactBu
       <p className="about__presentation-description">
         {presentation}
       </p>
-      <Link to="/contacto" className="btn about__button">
+      <Link to="/contacto/" className="btn about__button">
         <span role="img" aria-label="hand">👋</span> {contactButton}
       </Link>
     </div>

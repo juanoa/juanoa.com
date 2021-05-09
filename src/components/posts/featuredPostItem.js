@@ -5,7 +5,7 @@ import { createDescription } from "../../helpers/createDescription";
 
 const FeaturedPostItem = ({ post }) => {
   const thumbnail = post.node.coverPhoto.formats?.small.url || post.node.coverPhoto.localFile.publicURL;
-  const link = `/${post.node.category.slug}/${post.node.slug}`;
+  const link = `/${post.node.category.slug}/${post.node.slug}/`;
   const title = post.node.title;
   const description = createDescription(post.node.content, 150);
 

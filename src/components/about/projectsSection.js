@@ -37,7 +37,7 @@ export const ProjectsSection = ({projectsTitle, projectsAnchorTitle}) => {
       </h2>
       <FeatureProjectGrid projects={featureProjects}/>
       <div className="text-center mt-5">
-        <Link className="text-monospace" to="/proyectos">
+        <Link className="text-monospace" to="/proyectos/">
           {projectsAnchorTitle}
         </Link>
       </div>

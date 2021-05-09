@@ -32,7 +32,7 @@ export const FeatureProjectGrid = ({ projects = []}) => {
                 </span>
                 </div>
                 <Link
-                  to={`/proyectos/${slug}`}
+                  to={`/proyectos/${slug}/`}
                   className="stretched-link "
                 >
                   <FaInfoCircle /> Más información

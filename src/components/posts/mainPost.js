@@ -6,7 +6,7 @@ import { createDescription } from "../../helpers/createDescription"
 const MainPost = ({post}) => {
 
   const thumbnail = post.coverPhoto.formats?.medium.url || post.coverPhoto.localFile.publicURL
-  const link = `/${post.category.slug}/${post.slug}`
+  const link = `/${post.category.slug}/${post.slug}/`
   const title = post.title
   const description = createDescription(post.content, 150)
   const category = post.category.title

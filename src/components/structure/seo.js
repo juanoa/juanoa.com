@@ -28,7 +28,7 @@ function Seo({description, lang, meta, title, index, i18n}) {
   const metaDescription = description || site.siteMetadata.description;
 
   const alternateLinks = []
-  i18n.languages.map(langLink => {
+  i18n.languages.forEach(langLink => {
     alternateLinks.push({
       href: `${site.siteMetadata.siteUrl}${langLink.url}`,
       rel: 'alternate',

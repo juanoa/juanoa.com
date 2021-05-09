@@ -18,7 +18,7 @@ const IndexPage = ({data}) => {
     languages: [
       {
         lang: 'en',
-        url: '/en'
+        url: '/en/'
       },
       {
         lang: 'es',

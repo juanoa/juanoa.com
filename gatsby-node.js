@@ -35,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiPost.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.category.slug}/${node.slug}`,
+        path: `/${node.category.slug}/${node.slug}/`,
         component: path.resolve(`src/templates/post.js`),
         context: {
           slug: node.slug,
@@ -68,19 +68,19 @@ exports.createPages = ({ actions, graphql }) => {
       const pagesLength = Math.ceil(postLength/postPerPage)
 
       const previousUrl = (pageNumber) => {
-        if (pageNumber === 0 || pageNumber === 1) return `/${node.slug}`
-        else return `/${node.slug}/${pageNumber}`
+        if (pageNumber === 0 || pageNumber === 1) return `/${node.slug}/`
+        else return `/${node.slug}/${pageNumber}/`
       }
 
       const nextUrl = (pageNumber) => {
-        if (pagesLength === 1) return `/${node.slug}`
-        else if ((pageNumber+1) === pagesLength) return `/${node.slug}/${pageNumber+1}`
-        else return `/${node.slug}/${pageNumber+2}`
+        if (pagesLength === 1) return `/${node.slug}/`
+        else if ((pageNumber+1) === pagesLength) return `/${node.slug}/${pageNumber+1}/`
+        else return `/${node.slug}/${pageNumber+2}/`
       }
 
       for (let pageNumber = 0; pageNumber < pagesLength; pageNumber++) {
         createPage({
-          path: pageNumber === 0 ? `/${node.slug}` : `/${node.slug}/${pageNumber+1}`,
+          path: pageNumber === 0 ? `/${node.slug}/` : `/${node.slug}/${pageNumber+1}/`,
           component: path.resolve(`src/templates/category.js`),
           context: {
             slug: node.slug,
@@ -89,7 +89,7 @@ exports.createPages = ({ actions, graphql }) => {
             skip: pageNumber*postPerPage,
             limit: postPerPage,
             index: pageNumber === 0,
-            currentUrl: pageNumber === 0 ? `/${node.slug}` : `/${node.slug}/${pageNumber+1}`,
+            currentUrl: pageNumber === 0 ? `/${node.slug}/` : `/${node.slug}/${pageNumber+1}/`,
             previousUrl: previousUrl(pageNumber),
             nextUrl: nextUrl(pageNumber),
           },
@@ -130,7 +130,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each categories.
     result.data.allStrapiProjects.edges.forEach(({ node }) => {
       createPage({
-        path: `/proyectos/${node.slug}`,
+        path: `/proyectos/${node.slug}/`,
         component: path.resolve(`src/templates/project.js`),
         context: {
           title: node.title,

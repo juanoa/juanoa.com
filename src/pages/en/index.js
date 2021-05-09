@@ -26,7 +26,7 @@ const IndexPageEn = () => {
 
   return (
     <Layout langLinks={langLinks}>
-      <Seo title="Juan Otálora | Computer Engineer" lang="en"/>
+      <Seo title="Juan Otálora | Computer Engineer" lang="en" langLinks={langLinks}/>
       <div className="container-fluid homepage">
         <PresentationSection
           greeting="Hi, I'm"

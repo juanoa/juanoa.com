@@ -27,12 +27,22 @@ function Seo({description, lang, meta, title, index, langLinks}) {
 
   const metaDescription = description || site.siteMetadata.description;
 
+  const alternateLinks = []
+  langLinks.languages.map(langLink => {
+    alternateLinks.push({
+      link: `${site.siteMetadata.siteUrl}${langLink.url}`,
+      rel: 'alternate',
+      hreflang: langLink.lang
+    })
+  })
+
   return (
     <Helmet
       htmlAttributes={{
         lang
       }}
       title={title}
+      link={alternateLinks}
       meta={[
         {
           name: `description`,

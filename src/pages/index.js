@@ -29,7 +29,7 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout langLinks={langLinks}>
-      <Seo title="Juan Otálora | Ingeniero Informático"/>
+      <Seo title="Juan Otálora | Ingeniero Informático" langLinks={langLinks}/>
       <div className="container-fluid homepage">
         <PresentationSection
           greeting={text.greeting}

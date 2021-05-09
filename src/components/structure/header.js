@@ -2,6 +2,7 @@ import React from "react";
 import "react-icons/fa";
 import {Link} from "gatsby";
 import PropTypes from "prop-types";
+import {LanguageSelect} from "./languageSelect";
 
 const Header = ({langLinks}) => {
 
@@ -43,26 +44,7 @@ const Header = ({langLinks}) => {
               ))
             }
           </ul>
-          {
-            langLinks.languages &&
-            <ul className="navbar-nav">
-              <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                  {langLinks.actual.toUpperCase()}
-                </Link>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  {
-                    langLinks.languages.filter(l => l.lang !== langLinks.actual).map(dest => (
-                      <Link className="dropdown-item" key={dest.lang} to={dest.url}>
-                        {dest.lang.toUpperCase()}
-                      </Link>
-                    ))
-                  }
-                </div>
-              </li>
-            </ul>
-          }
+          <LanguageSelect langLinks={langLinks} />
         </div>
       </div>
     </nav>

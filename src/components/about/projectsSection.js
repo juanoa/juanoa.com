@@ -1,5 +1,5 @@
 import React from "react";
-import {graphql, Link, useStaticQuery} from "gatsby";
+import {Link} from "gatsby";
 
 import {FeatureProjectGrid} from "../projects/featureProjectGrid";
 

@@ -16,6 +16,7 @@ const Footer = ({lang}) => {
     ],
     en: [
       {name: 'About me', url: '/en/'},
+      {name: 'Projects', url: '/en/projects/'},
       {name: 'Contact', url: '/en/contact/'},
     ]
   }

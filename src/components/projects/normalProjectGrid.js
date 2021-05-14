@@ -2,7 +2,7 @@ import React from "react";
 import {FaInfoCircle} from "react-icons/all";
 import { Link } from "gatsby";
 
-export const NormalProjectGrid = ({ projects = [] }) => {
+export const NormalProjectGrid = ({ projects = [] , lang="es"}) => {
 
   return (
     <div className="card-columns mt-3">
@@ -32,10 +32,10 @@ export const NormalProjectGrid = ({ projects = [] }) => {
                 </span>
                 </div>
                 <Link
-                  to={`/proyectos/${slug}/`}
+                  to={`/${(lang === 'es') ? 'proyectos' : 'projects'}/${slug}/`}
                   className="stretched-link text-dark"
                 >
-                  <FaInfoCircle /> Más información
+                  <FaInfoCircle /> {(lang === 'es') ? 'Más información' : 'More info'}
                 </Link>
               </div>
             </div>

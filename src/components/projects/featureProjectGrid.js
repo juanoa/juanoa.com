@@ -32,11 +32,10 @@ export const FeatureProjectGrid = ({ projects = [], lang= 'es'} ) => {
                 </span>
                 </div>
                 <Link
-                  to={`/proyectos/${slug}/`}
+                  to={`/${(lang === 'es') ? 'proyectos' : 'projects'}/${slug}/`}
                   className="stretched-link "
                 >
-                  <FaInfoCircle /> {(lang === 'es') ? 'Más información' : 'More info'
-                }
+                  <FaInfoCircle /> {(lang === 'es') ? 'Más información' : 'More info'}
                 </Link>
               </div>
             </div>

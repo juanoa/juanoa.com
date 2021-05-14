@@ -37,7 +37,10 @@ export default BooksPage
 
 export const pageQuery = graphql`
   query BookQuery {
-    allStrapiBook (sort: {order: DESC, fields: readDate}) {
+    allStrapiBook (
+      filter: { locale: {eq: "es"} },
+      sort: {order: DESC, fields: readDate}
+    ) {
       edges {
         node {
           id

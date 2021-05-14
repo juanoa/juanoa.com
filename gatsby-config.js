@@ -23,18 +23,45 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL,
         queryLimit: 1000,
-        contentTypes: [
-          'post',
-          'category',
-          'book',
-          'jobs',
-          'projects'
+        collectionTypes: [
+          {
+            name: `post`,
+            api: { qs: { _locale: 'all' } }
+          },
+          {
+            name: `category`,
+            api: { qs: { _locale: 'all' } }
+          },
+          {
+            name: `book`,
+            api: { qs: { _locale: 'all' } }
+          },
+          {
+            name: `jobs`,
+            api: { qs: { _locale: 'all' } }
+          },
+          {
+            name: `projects`,
+            api: { qs: { _locale: 'all' } }
+          },
         ],
         singleTypes: [
-          `about-page`,
-          `books-page`,
-          `contact-page`,
-          `projects-page`
+          {
+            name: `about-page`,
+            api: { qs: { _locale: 'all' } }
+          },
+          {
+            name: `books-page`,
+            api: { qs: { _locale: 'all' } }
+          },
+          {
+            name: `contact-page`,
+            api: { qs: { _locale: 'all' } }
+          },
+          {
+            name: `projects-page`,
+            api: { qs: { _locale: 'all' } }
+          },
         ],
       },
     },

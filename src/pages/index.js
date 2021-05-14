@@ -12,6 +12,8 @@ import {ProjectsSection} from "../components/about/projectsSection";
 const IndexPage = ({data}) => {
 
   const text = data.strapiAboutPage
+  const jobs = data.allStrapiJobs.edges
+  const featureProjects = data.allStrapiProjects.edges
 
   const i18n = {
     actual: 'es',
@@ -43,10 +45,12 @@ const IndexPage = ({data}) => {
         />
         <ExperienceSection
           experienceTitle={text.experienceTitle}
+          jobs={jobs}
         />
         <ProjectsSection
           projectsTitle={text.projectsTitle}
           projectsAnchorTitle={text.projectsAnchorTitle}
+          featureProjects={featureProjects}
         />
         <ContactSection
           contactTitle={text.contactTitle}
@@ -77,6 +81,40 @@ export const pageQuery = graphql`
       projectsAnchorTitle
       projectsTitle
       subtitle
+    }
+    allStrapiJobs (
+      filter: { locale: {eq: "es"} },
+      sort: {order: DESC, fields: date}
+    ) {
+      edges {
+        node {
+          id
+          title
+          company
+          location
+          url
+          range
+          achievements
+        }
+      }
+    }
+    allStrapiProjects (
+      sort: {order: DESC, fields: date},
+      filter: {isFeature: {eq: true}, locale: {eq: "es"}}
+    ) {
+      edges {
+        node {
+          id
+          title
+          slug
+          description
+          tech
+          external
+          github
+          ios
+          android
+        }
+      }
     }
   }
   `

@@ -3,33 +3,7 @@ import {graphql, Link, useStaticQuery} from "gatsby";
 
 import {FeatureProjectGrid} from "../projects/featureProjectGrid";
 
-export const ProjectsSection = ({projectsTitle, projectsAnchorTitle}) => {
-
-  const { allStrapiProjects: {edges: featureProjects}} = useStaticQuery(
-    graphql`
-      query ProjectsQuery {
-        allStrapiProjects (
-          sort: {order: DESC, fields: date},
-          filter: {isFeature: {eq: true}}
-        ) {
-          edges {
-            node {
-              id
-              title
-              slug
-              description
-              tech
-              external
-              github
-              ios
-              android
-            }
-          }
-        }
-      }
-    `
-  )
-
+export const ProjectsSection = ({projectsTitle, projectsAnchorTitle, featureProjects}) => {
   return (
     <div className="about__section">
       <h2 className="about__section-title">

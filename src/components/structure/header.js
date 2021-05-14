@@ -35,8 +35,8 @@ const Header = ({i18n}) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             {
-              navBarLinks[i18n.actual].map(link => (
-                <li className="nav-item">
+              navBarLinks[i18n.actual].map((link, index) => (
+                <li className="nav-item" key={index}>
                   <Link className="nav-link" activeClassName="header__nav-link-active" to={link.url}>
                     {link.name}
                   </Link>

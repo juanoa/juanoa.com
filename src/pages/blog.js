@@ -35,7 +35,10 @@ export default BlogPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allStrapiPost (filter: {homepage: {eq: true}}, sort: {order: DESC, fields: published_at}) {
+    allStrapiPost (
+      filter: {homepage: {eq: true}, locale: {eq: "es"}},
+      sort: {order: DESC, fields: published_at}
+     ) {
       edges {
         node {
           id

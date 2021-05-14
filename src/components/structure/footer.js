@@ -67,8 +67,8 @@ const Footer = ({lang}) => {
             <h4 className="footer__heading">Blog</h4>
             <ul className="footer__interest-links">
               {
-                categoriesLink[lang].map(link => (
-                  <li><Link to={link.url}>{link.name}</Link></li>
+                categoriesLink[lang].map((link, index) => (
+                  <li key={index}><Link to={link.url}>{link.name}</Link></li>
                 ))
               }
             </ul>
@@ -83,8 +83,8 @@ const Footer = ({lang}) => {
             </h4>
             <ul className="footer__interest-links">
               {
-                featuredLinks[lang].map(link => (
-                  <li><Link to={link.url}>{link.name}</Link></li>
+                featuredLinks[lang].map((link, index) => (
+                  <li key={index}><Link to={link.url}>{link.name}</Link></li>
                 ))
               }
             </ul>

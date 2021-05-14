@@ -1,28 +1,7 @@
 import React from "react";
-import {graphql, useStaticQuery} from "gatsby";
 import {JobsAccordion} from "./jobsAccordion";
 
-export const ExperienceSection = ({experienceTitle}) => {
-
-  const {allStrapiJobs: {edges: jobs}} = useStaticQuery(
-    graphql`
-      query JobQuery {
-        allStrapiJobs (sort: {order: DESC, fields: date}) {
-          edges {
-            node {
-              id
-              title
-              company
-              location
-              url
-              range
-              achievements
-            }
-          }
-        }
-      }
-    `
-  )
+export const ExperienceSection = ({experienceTitle, jobs}) => {
 
   return (
     <div className="about__section">

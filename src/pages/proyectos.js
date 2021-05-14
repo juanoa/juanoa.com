@@ -32,7 +32,10 @@ export default ProjectsPage
 
 export const pageQuery = graphql`
   query ProjectQuery {
-    allStrapiProjects (sort: {order: DESC, fields: date}) {
+    allStrapiProjects (
+      filter: { locale: {eq: "es"} },
+      sort: {order: DESC, fields: date}
+    ) {
       edges {
         node {
           id

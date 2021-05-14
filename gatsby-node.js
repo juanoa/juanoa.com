@@ -20,7 +20,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   const getPosts = makeRequest(graphql, `
     {
-      allStrapiPost {
+      allStrapiPost (
+        filter: {locale: {eq: "es"}}
+      ) {
         edges {
           node {
             slug
@@ -46,7 +48,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   const getCategories = makeRequest(graphql, `
       {
-          allStrapiCategory {
+          allStrapiCategory (
+            filter: {locale: {eq: "es"}}
+          ) {
               edges {
                   node {
                       slug
@@ -100,7 +104,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   const getProjects = makeRequest(graphql, `
       {
-          allStrapiProjects {
+          allStrapiProjects (
+            filter: {locale: {eq: "es"}}
+          ) {
               edges {
                   node {
                       title

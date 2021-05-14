@@ -11,7 +11,6 @@ import {ProjectsSection} from "../components/about/projectsSection";
 
 const IndexPage = ({data}) => {
 
-  const text = data.strapiAboutPage
   const jobs = data.allStrapiJobs.edges
   const featureProjects = data.allStrapiProjects.edges
 

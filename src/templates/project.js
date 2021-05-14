@@ -21,14 +21,22 @@ const ProjectTemplate = ({ data, pageContext }) => {
     isFeature,
     tech,
     description,
-    company
+    company,
+    locale
   } = pageContext;
+
+  const i18n = {
+    actual: locale,
+    languages: []
+  }
+
+  console.log(locale)
 
   const posts = data.allStrapiPost.edges;
 
   return (
-    <Layout>
-      <Seo title={`${title} | Proyecto de Juan Otálora`} description={description.slice(0, 140)} />
+    <Layout i18n={i18n}>
+      <Seo title={`${title} | Proyecto de Juan Otálora`} description={description.slice(0, 140)} i18n={i18n} />
 
       <div className="container-fluid homepage mt-5">
         <div className="row">

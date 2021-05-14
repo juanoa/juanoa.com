@@ -28,7 +28,7 @@ const ProjectsPageEn = ({data}) => {
 
   return (
     <Layout i18n={i18n}>
-      <Seo title="Proyectos" i18n={i18n} />
+      <Seo title="Projects" i18n={i18n} />
       <div className="container-fluid homepage mt-5">
         <FeatureProjectGrid projects={featureProjects} lang="en" />
         <h1 className="mt-5">All projects</h1>

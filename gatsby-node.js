@@ -104,9 +104,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   const getProjects = makeRequest(graphql, `
       {
-          allStrapiProjects (
-            filter: {locale: {eq: "es"}}
-          ) {
+          allStrapiProjects {
               edges {
                   node {
                       title
@@ -128,6 +126,7 @@ exports.createPages = ({ actions, graphql }) => {
                       job {
                         company
                       }
+                      locale
                   }
               }
           }
@@ -136,7 +135,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each categories.
     result.data.allStrapiProjects.edges.forEach(({ node }) => {
       createPage({
-        path: `/proyectos/${node.slug}/`,
+        path: `/${(node.locale === 'es') ? 'proyectos' : 'en/projects'}/${node.slug}/`,
         component: path.resolve(`src/templates/project.js`),
         context: {
           title: node.title,
@@ -151,7 +150,8 @@ exports.createPages = ({ actions, graphql }) => {
           isFeature: node.isFeature,
           tech: node.tech,
           description: node.description,
-          company: node.job.company
+          company: node.job.company,
+          locale:node.locale
         },
       })
     })

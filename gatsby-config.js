@@ -45,24 +45,6 @@ module.exports = {
             api: { qs: { _locale: 'all' } }
           },
         ],
-        singleTypes: [
-          {
-            name: `about-page`,
-            api: { qs: { _locale: 'all' } }
-          },
-          {
-            name: `books-page`,
-            api: { qs: { _locale: 'all' } }
-          },
-          {
-            name: `contact-page`,
-            api: { qs: { _locale: 'all' } }
-          },
-          {
-            name: `projects-page`,
-            api: { qs: { _locale: 'all' } }
-          },
-        ],
       },
     },
     {

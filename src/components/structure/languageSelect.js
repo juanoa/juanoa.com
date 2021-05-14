@@ -8,7 +8,7 @@ export const LanguageSelect = ({i18n}) => {
   return (
     <>
       {
-        languages &&
+        languages && languages.length > 0 &&
         <ul className="navbar-nav">
           <li className="nav-item dropdown">
             <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdownMenuLink" data-toggle="dropdown"

@@ -33,7 +33,7 @@ export const PresentationSection = ({lang}) => {
         to={
           (lang === 'es')
             ? '/contacto/'
-            : '/en/contacto/'
+            : '/en/contact/'
 
         }
         className="btn about__button"

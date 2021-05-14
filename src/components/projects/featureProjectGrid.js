@@ -2,7 +2,7 @@ import React from "react";
 import {FaInfoCircle} from "react-icons/all";
 import { Link } from "gatsby";
 
-export const FeatureProjectGrid = ({ projects = []}) => {
+export const FeatureProjectGrid = ({ projects = [], lang= 'es'} ) => {
 
   return (
     <div className="card-deck mt-3">
@@ -35,7 +35,8 @@ export const FeatureProjectGrid = ({ projects = []}) => {
                   to={`/proyectos/${slug}/`}
                   className="stretched-link "
                 >
-                  <FaInfoCircle /> Más información
+                  <FaInfoCircle /> {(lang === 'es') ? 'Más información' : 'More info'
+                }
                 </Link>
               </div>
             </div>

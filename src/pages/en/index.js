@@ -32,31 +32,17 @@ const IndexPageEn = ({data}) => {
     <Layout i18n={i18n}>
       <Seo title="Juan Otálora | Computer Engineer" lang="en" i18n={i18n}/>
       <div className="container-fluid homepage">
-        <PresentationSection
-          greeting="Hi, I'm"
-          subtitle="I build things for Internet"
-          presentation="I am a student of Computer Engineering at the University of Murcia and I develop websites and web applications of any type."
-          contactButton="Contact"
-        />
-        <AboutMeSection
-          aboutMeTitle="About me"
-          aboutMeDescription={`Hi, I'm Juan, a student of Computer Engineering in Murcia (🇪🇸).\n\nI combine my studies at the University of Murcia with my own projects, freelancer jobs and self-education.\n\nHere are some of the technologies I have worked with recently:`}
-        />
+        <PresentationSection lang="en"/>
+        <AboutMeSection lang="en"/>
         <ExperienceSection
-          experienceTitle="Where I’ve Worked"
+          lang="en"
           jobs={jobs}
         />
         <ProjectsSection
-          projectsTitle="Projects"
-          projectsAnchorTitle="show all projects"
+          lang="en"
           featureProjects={featureProjects}
         />
-        <ContactSection
-          contactTitle="Contact"
-          contactSubtitle="Let's get in touch!"
-          contactDescription="My inbox is always open for new opportunities, personal and professional."
-          contactButton="Contact"
-        />
+        <ContactSection lang="en"/>
       </div>
     </Layout>
   )

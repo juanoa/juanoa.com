@@ -33,31 +33,17 @@ const IndexPage = ({data}) => {
     <Layout i18n={i18n}>
       <Seo title="Juan Otálora | Ingeniero Informático" i18n={i18n}/>
       <div className="container-fluid homepage">
-        <PresentationSection
-          greeting={text.greeting}
-          subtitle={text.subtitle}
-          presentation={text.presentation}
-          contactButton={text.contactButton}
-        />
-        <AboutMeSection
-          aboutMeTitle={text.aboutMeTitle}
-          aboutMeDescription={text.aboutMeDescription}
-        />
+        <PresentationSection lang="es"/>
+        <AboutMeSection lang="es"/>
         <ExperienceSection
-          experienceTitle={text.experienceTitle}
+          lang="es"
           jobs={jobs}
         />
         <ProjectsSection
-          projectsTitle={text.projectsTitle}
-          projectsAnchorTitle={text.projectsAnchorTitle}
+          lang="es"
           featureProjects={featureProjects}
         />
-        <ContactSection
-          contactTitle={text.contactTitle}
-          contactSubtitle={text.contactSubtitle}
-          contactDescription={text.contactDescription}
-          contactButton={text.contactButton}
-        />
+        <ContactSection lang="es"/>
       </div>
     </Layout>
   )
@@ -67,21 +53,6 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query indexPage {
-    strapiAboutPage {
-      id
-      aboutMeDescription
-      aboutMeTitle
-      contactButton
-      contactDescription
-      contactSubtitle
-      contactTitle
-      experienceTitle
-      greeting
-      presentation
-      projectsAnchorTitle
-      projectsTitle
-      subtitle
-    }
     allStrapiJobs (
       filter: { locale: {eq: "es"} },
       sort: {order: DESC, fields: date}

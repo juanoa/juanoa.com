@@ -33,7 +33,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout i18n={i18n}>
-      <Seo title={`${title} | Proyecto de Juan Otálora`} description={description.slice(0, 140)} i18n={i18n} />
+      <Seo title={`${title} | ${(locale === "es") ? 'Proyecto de Juan Otálora' : 'Juan Otálora project'}`} description={description.slice(0, 140)} i18n={i18n} />
 
       <div className="container-fluid homepage mt-5">
         <div className="row">
@@ -134,7 +134,13 @@ const ProjectTemplate = ({ data, pageContext }) => {
             {
               posts.length > 0 &&
               <div>
-                <h3 className="mb-2">Artículos relacionados</h3>
+                <h3 className="mb-2">
+                  {
+                    (locale === "es")
+                      ? 'Artículos relacionados'
+                      : 'Related posts'
+                  }
+                </h3>
                 <PostGrid col={4} posts={posts} showCategory={true} showDescription={false} lang={i18n.actual} />
               </div>
             }

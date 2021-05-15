@@ -107,6 +107,7 @@ exports.createPages = ({ actions, graphql }) => {
           allStrapiProjects {
               edges {
                   node {
+                      strapiId
                       title
                       slug
                       cover {
@@ -142,6 +143,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: `/${(node.locale === 'es') ? 'proyectos' : 'en/projects'}/${node.slug}/`,
         component: path.resolve(`src/templates/project.js`),
         context: {
+          id: node.strapiId,
           title: node.title,
           slug: node.slug,
           cover: node.cover.url,

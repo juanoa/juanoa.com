@@ -6,7 +6,7 @@ import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-
 import { graphql } from "gatsby";
 import { PostGrid } from "../components/posts/postGrid";
 import {Markdown} from "../components/structure/markdown";
-import {createProjectSlug} from "../helpers/createSlugs";
+import {getI18nForProject} from "../helpers/i18n";
 
 const ProjectTemplate = ({ data, pageContext }) => {
 
@@ -29,28 +29,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
 
   const posts = data.allStrapiPost.edges;
 
-  const i18n = {
-    actual: locale,
-    languages: []
-  }
-
-  if (data.strapiProjects) {
-    const {locale: localizationsLocale, slug: localizationsSlug} = data.strapiProjects
-    i18n.languages.push(
-      {
-        lang: locale,
-        url: createProjectSlug(slug, locale)
-      }
-    )
-    i18n.languages.push(
-      {
-        lang: localizationsLocale,
-        url: createProjectSlug(localizationsSlug, localizationsLocale)
-      }
-    )
-  }
-
-  console.log(i18n)
+  const i18n = getI18nForProject(locale, slug, data.otherLangProject)
 
   return (
     <Layout i18n={i18n}>
@@ -177,9 +156,9 @@ const ProjectTemplate = ({ data, pageContext }) => {
 export default ProjectTemplate;
 
 export const query = graphql`
-  query ProjectTemplate($slug: String!, $otherLangProjectId: String!) {
+  query ProjectTemplate($id: String!, $otherLangProjectId: String!) {
     allStrapiPost(
-      filter: {project: {slug: {eq: $slug}}},
+      filter: {project: {id: {eq: $id}}},
       sort: {fields: published_at, order: DESC},
       limit: 3
     ) {
@@ -207,7 +186,7 @@ export const query = graphql`
         }    
       }
     }
-    strapiProjects(strapiId: {eq: $otherLangProjectId}) {
+    otherLangProject: strapiProjects(strapiId: {eq: $otherLangProjectId}) {
       slug
       locale
     }

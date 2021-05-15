@@ -158,7 +158,7 @@ exports.createPages = ({ actions, graphql }) => {
           description: node.description,
           company: node.job.company,
           locale: node.locale,
-          otherLangProjectId: node.localizations[0]?.id,
+          otherLangProjectId: node.localizations[0].id,
         },
       })
     })

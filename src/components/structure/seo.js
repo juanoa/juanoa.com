@@ -39,7 +39,7 @@ function Seo({description, lang, meta, title, index, i18n}) {
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang: i18n.actual
       }}
       title={title}
       link={alternateLinks}

@@ -127,6 +127,10 @@ exports.createPages = ({ actions, graphql }) => {
                         company
                       }
                       locale
+                      localizations {
+                        id
+                        locale
+                      }
                   }
               }
           }
@@ -151,7 +155,8 @@ exports.createPages = ({ actions, graphql }) => {
           tech: node.tech,
           description: node.description,
           company: node.job.company,
-          locale:node.locale
+          locale: node.locale,
+          otherLangProjectId: node.localizations[0]?.id,
         },
       })
     })

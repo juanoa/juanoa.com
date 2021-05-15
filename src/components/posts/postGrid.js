@@ -2,7 +2,7 @@ import React from "react";
 
 import PostItem from "./postItem";
 
-export const PostGrid = ({ posts, init = 0, end = 0, showCategory = true, col = 3, showDescription = true }) => {
+export const PostGrid = ({ posts, init = 0, end = 0, showCategory = true, col = 3, showDescription = true, lang = 'es' }) => {
 
   let slicePosts = posts
   if (init > 0 || end > 0) {
@@ -18,6 +18,7 @@ export const PostGrid = ({ posts, init = 0, end = 0, showCategory = true, col = 
           showDescription={showDescription}
           col={col}
           key={post.node.id}
+          lang={lang}
         />
       ))}
     </div>

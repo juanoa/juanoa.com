@@ -6,11 +6,13 @@ import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-
 import { graphql } from "gatsby";
 import { PostGrid } from "../components/posts/postGrid";
 import {Markdown} from "../components/structure/markdown";
+import {createProjectSlug} from "../helpers/createSlugs";
 
 const ProjectTemplate = ({ data, pageContext }) => {
 
   const {
     title,
+    slug,
     cover,
     logo,
     content,
@@ -22,17 +24,33 @@ const ProjectTemplate = ({ data, pageContext }) => {
     tech,
     description,
     company,
-    locale
+    locale,
   } = pageContext;
+
+  const posts = data.allStrapiPost.edges;
 
   const i18n = {
     actual: locale,
     languages: []
   }
 
-  console.log(locale)
+  if (data.strapiProjects) {
+    const {locale: localizationsLocale, slug: localizationsSlug} = data.strapiProjects
+    i18n.languages.push(
+      {
+        lang: locale,
+        url: createProjectSlug(slug, locale)
+      }
+    )
+    i18n.languages.push(
+      {
+        lang: localizationsLocale,
+        url: createProjectSlug(localizationsSlug, localizationsLocale)
+      }
+    )
+  }
 
-  const posts = data.allStrapiPost.edges;
+  console.log(i18n)
 
   return (
     <Layout i18n={i18n}>
@@ -138,7 +156,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
               posts.length > 0 &&
               <div>
                 <h3 className="mb-2">Artículos relacionados</h3>
-                <PostGrid col={4} posts={posts} showCategory={true} showDescription={false} />
+                <PostGrid col={4} posts={posts} showCategory={true} showDescription={false} lang={i18n.actual} />
               </div>
             }
             {
@@ -159,7 +177,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
 export default ProjectTemplate;
 
 export const query = graphql`
-  query ProjectTemplate($slug: String!) {
+  query ProjectTemplate($slug: String!, $otherLangProjectId: String!) {
     allStrapiPost(
       filter: {project: {slug: {eq: $slug}}},
       sort: {fields: published_at, order: DESC},
@@ -188,6 +206,10 @@ export const query = graphql`
           }
         }    
       }
+    }
+    strapiProjects(strapiId: {eq: $otherLangProjectId}) {
+      slug
+      locale
     }
   }
 `;

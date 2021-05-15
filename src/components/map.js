@@ -11,7 +11,6 @@ const Map = () => {
     const visited = ["ES", "FR", "DE", "PL", "GB", "AT", "IT"]
     visited.forEach(country => {
       let element = document.getElementById(country)
-      console.log(element);
       element.classList.add("visited")
     })
   }, []);

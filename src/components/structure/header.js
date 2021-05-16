@@ -27,7 +27,7 @@ const Header = ({i18n}) => {
         <Link className="navbar-brand" to={(i18n.actual === 'es') ? '/' : '/en/'}>
           <span className="header__brand">juanoa</span>
           <span className="header__brand-subtitle">
-            {(i18n.actual === 'es') ? 'ingeniero informático' : 'computer engineer'}
+            Juan Otálora Alarcón
           </span>
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

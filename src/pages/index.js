@@ -8,25 +8,14 @@ import {AboutMeSection} from "../components/about/aboutMeSection";
 import {ContactSection} from "../components/about/contactSection";
 import {ExperienceSection} from "../components/about/experienceSection";
 import {ProjectsSection} from "../components/about/projectsSection";
+import {getI18nForPage} from "../helpers/i18n";
 
 const IndexPage = ({data}) => {
 
   const jobs = data.allStrapiJobs.edges
   const featureProjects = data.allStrapiProjects.edges
 
-  const i18n = {
-    actual: 'es',
-    languages: [
-      {
-        lang: 'en',
-        url: '/en/'
-      },
-      {
-        lang: 'es',
-        url: '/'
-      }
-    ]
-  }
+  const i18n = getI18nForPage('es', '/', 'en', '/en/')
 
   return (
     <Layout i18n={i18n}>

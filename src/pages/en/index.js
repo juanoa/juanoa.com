@@ -8,25 +8,14 @@ import {ContactSection} from "../../components/about/contactSection";
 import {ExperienceSection} from "../../components/about/experienceSection";
 import {ProjectsSection} from "../../components/about/projectsSection";
 import {graphql} from "gatsby";
+import {getI18nForPage} from "../../helpers/i18n";
 
 const IndexPageEn = ({data}) => {
 
   const jobs = data.allStrapiJobs.edges
   const featureProjects = data.allStrapiProjects.edges
 
-  const i18n = {
-    actual: 'en',
-    languages: [
-      {
-        lang: 'es',
-        url: '/'
-      },
-      {
-        lang: 'en',
-        url: '/en/'
-      }
-    ]
-  }
+  const i18n = getI18nForPage('en', '/en/', 'es', '/')
 
   return (
     <Layout i18n={i18n}>

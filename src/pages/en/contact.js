@@ -3,22 +3,11 @@ import React from "react"
 import Layout from "../../components/structure/layout"
 import Seo from "../../components/structure/seo"
 import Map from "../../components/map";
+import {getI18nForPage} from "../../helpers/i18n";
 
 const ContactPageEn = () => {
 
-  const i18n = {
-    actual: 'en',
-    languages: [
-      {
-        lang: 'es',
-        url: '/contacto/'
-      },
-      {
-        lang: 'en',
-        url: '/en/contact/'
-      }
-    ]
-  }
+  const i18n = getI18nForPage('en', '/en/contact/', 'es', '/contacto/')
 
   return (
     <Layout i18n={i18n}>

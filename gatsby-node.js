@@ -20,14 +20,17 @@ exports.createPages = ({ actions, graphql }) => {
 
   const getPosts = makeRequest(graphql, `
     {
-      allStrapiPost (
-        filter: {locale: {eq: "es"}}
-      ) {
+      allStrapiPost {
         edges {
           node {
             slug
             category {
                 slug
+            }
+            locale
+            localizations {
+              id
+              locale
             }
           }
         }
@@ -37,10 +40,11 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiPost.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.category.slug}/${node.slug}/`,
+        path: `/${(node.locale === 'es') ? '' : 'en/'}${node.category.slug}/${node.slug}/`,
         component: path.resolve(`src/templates/post.js`),
         context: {
           slug: node.slug,
+          otherLangPostId: (_node$localizations$ = node.localizations[0]) === null || _node$localizations$ === void 0 ? void 0 : _node$localizations$.id
         },
       })
     })

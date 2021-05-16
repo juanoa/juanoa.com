@@ -2,7 +2,7 @@ import React  from "react"
 
 import FeaturedPostItem from "./featuredPostItem"
 
-const FeaturedPostGrid = ({posts, categoryName, categorySlug}) => {
+const FeaturedPostGrid = ({posts, categoryName, categorySlug, lang}) => {
 
   let categoryPosts = [];
   let index = 0;
@@ -19,7 +19,7 @@ const FeaturedPostGrid = ({posts, categoryName, categorySlug}) => {
         <h2>{categoryName}</h2>
         <div className="row mt-3">
           {categoryPosts.map(post => (
-            <FeaturedPostItem post={post} key={post.node.id} />
+            <FeaturedPostItem post={post} key={post.node.id} lang="es"/>
           ))}
         </div>
       </div>

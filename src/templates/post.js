@@ -7,6 +7,9 @@ import Seo from "../components/structure/seo";
 import ProjectCard from "../components/projects/projectCard";
 import BookCard from "../components/books/bookCard";
 import {Markdown} from "../components/structure/markdown";
+import {getI18nForPost} from "../helpers/i18n";
+import {timeToRead} from "../helpers/timeToRead";
+import {createCategorySlug} from "../helpers/createSlugs";
 
 const PostTemplate = ({ data }) => {
 
@@ -14,24 +17,26 @@ const PostTemplate = ({ data }) => {
     seoTitle,
     seoDescription,
     title,
+    slug,
     content,
     category,
     book,
     project,
-    coverPhoto: { localFile: { publicURL: coverPhoto } }
+    coverPhoto: { localFile: { publicURL: coverPhoto } },
+    locale
   } = data.strapiPost;
 
-  const wom = data.strapiPost.content.match(/\S+/g);
-  const words = wom ? wom.length : 0;
-  const timeToRead = Math.round(words / 250);
+  const TTR = timeToRead(data.strapiPost.content)
+
+  const i18n = getI18nForPost(locale, category.slug, slug, data.otherLangPost)
 
   return (
-    <Layout>
-      <Seo title={seoTitle || title} description={seoDescription || content.slice(0, 140)} />
+    <Layout i18n={i18n}>
+      <Seo title={seoTitle || title} description={seoDescription || content.slice(0, 140)} i18n={i18n} />
 
       <div className="page-content">
 
-        <Link to={`/${category.slug}/`} className="post__category-link">
+        <Link to={createCategorySlug(category.slug, locale)} className="post__category-link">
           <span className="post__category-title">
             {category.title}
           </span>
@@ -43,7 +48,7 @@ const PostTemplate = ({ data }) => {
 
         <div className="post__time-to-read">
           <span>
-            <RiTimerFill /> {timeToRead} min
+            <RiTimerFill /> {TTR} min
           </span>
         </div>
 
@@ -67,10 +72,11 @@ const PostTemplate = ({ data }) => {
 export default PostTemplate;
 
 export const query = graphql`
-  query PostTemplate($slug: String!) {
+  query PostTemplate($slug: String!, $otherLangPostId: String) {
     strapiPost(slug: {eq: $slug}) {
       title
       content
+      slug
       category {
           id
           slug
@@ -104,6 +110,14 @@ export const query = graphql`
       }
       seoDescription
       seoTitle
+      locale
+    }
+    otherLangPost: strapiPost(strapiId: {eq: $otherLangPostId}) {
+      slug
+      locale
+      category{
+        slug
+      }
     }
   }
 `;

@@ -5,3 +5,7 @@ export const createProjectSlug = (projectSlug, lang) => {
 export const createPostSlug = (postSlug, categorySlug, lang) => {
   return `/${(lang === 'es') ? '' : 'en/'}${categorySlug}/${postSlug}/`
 }
+
+export const createCategorySlug = (categorySlug, lang) => {
+  return `/${(lang === 'es') ? '' : 'en/'}${categorySlug}/`
+}

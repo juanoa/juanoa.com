@@ -16,6 +16,7 @@ const Header = ({i18n}) => {
     ],
     en: [
       {name: 'About me', url: '/en/'},
+      {name: 'Blog', url: '/en/blog/'},
       {name: 'Projects', url: '/en/projects/'},
       {name: 'Contact', url: '/en/contact/'},
     ]

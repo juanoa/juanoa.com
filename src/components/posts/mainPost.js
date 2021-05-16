@@ -2,11 +2,12 @@ import React from "react"
 import { Link } from "gatsby";
 
 import { createDescription } from "../../helpers/createDescription"
+import {createPostSlug} from "../../helpers/createSlugs";
 
-const MainPost = ({post}) => {
+const MainPost = ({post, lang}) => {
 
   const thumbnail = post.coverPhoto.formats?.medium.url || post.coverPhoto.localFile.publicURL
-  const link = `/${post.category.slug}/${post.slug}/`
+  const link = createPostSlug(post.slug, post.category.slug, lang)
   const title = post.title
   const description = createDescription(post.content, 150)
   const category = post.category.title

@@ -52,9 +52,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   const getCategories = makeRequest(graphql, `
       {
-          allStrapiCategory (
-            filter: {locale: {eq: "es"}}
-          ) {
+          allStrapiCategory {
               edges {
                   node {
                       slug
@@ -62,6 +60,11 @@ exports.createPages = ({ actions, graphql }) => {
                       description
                       posts {
                         id
+                      }
+                      locale
+                      localizations {
+                        id
+                        locale
                       }
                   }
               }
@@ -76,19 +79,21 @@ exports.createPages = ({ actions, graphql }) => {
       const pagesLength = Math.ceil(postLength/postPerPage)
 
       const previousUrl = (pageNumber) => {
-        if (pageNumber === 0 || pageNumber === 1) return `/${node.slug}/`
-        else return `/${node.slug}/${pageNumber}/`
+        if (pageNumber === 0 || pageNumber === 1) return `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/`
+        else return `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/${pageNumber}/`
       }
 
       const nextUrl = (pageNumber) => {
-        if (pagesLength === 1) return `/${node.slug}/`
-        else if ((pageNumber+1) === pagesLength) return `/${node.slug}/${pageNumber+1}/`
-        else return `/${node.slug}/${pageNumber+2}/`
+        if (pagesLength === 1) return `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/`
+        else if ((pageNumber+1) === pagesLength) return `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/${pageNumber+1}/`
+        else return `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/${pageNumber+2}/`
       }
 
       for (let pageNumber = 0; pageNumber < pagesLength; pageNumber++) {
         createPage({
-          path: pageNumber === 0 ? `/${node.slug}/` : `/${node.slug}/${pageNumber+1}/`,
+          path: pageNumber === 0
+            ? `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/`
+            : `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/${pageNumber+1}/`,
           component: path.resolve(`src/templates/category.js`),
           context: {
             slug: node.slug,
@@ -97,9 +102,13 @@ exports.createPages = ({ actions, graphql }) => {
             skip: pageNumber*postPerPage,
             limit: postPerPage,
             index: pageNumber === 0,
-            currentUrl: pageNumber === 0 ? `/${node.slug}/` : `/${node.slug}/${pageNumber+1}/`,
+            currentUrl: pageNumber === 0
+              ? `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/`
+              : `/${(node.locale === 'es') ? '' : 'en/'}${node.slug}/${pageNumber+1}/`,
             previousUrl: previousUrl(pageNumber),
             nextUrl: nextUrl(pageNumber),
+            locale: node.locale,
+            otherLangCategoryId: (_node$localizations$ = node.localizations[0]) === null || _node$localizations$ === void 0 ? void 0 : _node$localizations$.id
           },
         })
       }

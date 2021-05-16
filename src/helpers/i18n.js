@@ -1,4 +1,4 @@
-import {createPostSlug, createProjectSlug} from "./createSlugs";
+import {createCategorySlug, createPostSlug, createProjectSlug} from "./createSlugs";
 
 export const getI18nForProject = (locale, currentSlug, otherLangProject) => {
   const i18n = {
@@ -67,6 +67,31 @@ export const getI18nForPage = (locale, currentSlug, otherLocale, otherSlug) => {
       {
         lang: otherLocale,
         url: otherSlug
+      }
+    )
+  }
+
+  return i18n
+}
+
+export const getI18nForCategory = (locale, currentSlug, otherLangCategory) => {
+  const i18n = {
+    actual: locale,
+    languages: []
+  }
+
+  if (otherLangCategory) {
+    const {locale: localizationsLocale, slug: localizationsSlug} = otherLangCategory
+    i18n.languages.push(
+      {
+        lang: locale,
+        url: createCategorySlug(currentSlug, locale)
+      }
+    )
+    i18n.languages.push(
+      {
+        lang: localizationsLocale,
+        url: createCategorySlug(localizationsSlug, localizationsLocale)
       }
     )
   }

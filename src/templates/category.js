@@ -4,15 +4,30 @@ import { graphql, Link } from "gatsby";
 import Layout from '../components/structure/layout'
 import Seo from "../components/structure/seo"
 import { PostGrid } from "../components/posts/postGrid";
+import {getI18nForCategory} from "../helpers/i18n";
 
 const CategoryTemplate = ({data, pageContext}) => {
-  const {description, title, index, currentUrl, previousUrl, nextUrl} = pageContext;
-  const metaTitle = `Artículos sobre ${title}`
+  const {
+    description,
+    title,
+    slug,
+    index,
+    currentUrl,
+    previousUrl,
+    nextUrl,
+    locale
+  } = pageContext;
+
   const posts = data.allStrapiPost.edges
 
+  const otherLangCategory = data.otherLangCategory
+  const i18n = getI18nForCategory(locale, slug, otherLangCategory)
+
+  console.log(locale)
+
   return (
-    <Layout>
-      <Seo title={metaTitle} description={description?.slice(0, 140)} index={index} />
+    <Layout i18n={i18n}>
+      <Seo title={title} description={description?.slice(0, 140)} index={index} i18n={i18n}/>
 
       <div className="page-content">
 
@@ -40,7 +55,7 @@ const CategoryTemplate = ({data, pageContext}) => {
 export default CategoryTemplate
 
 export const query = graphql`
-  query CategoryTemplate($slug: String!, $skip: Int!, $limit: Int!) {
+  query CategoryTemplate($slug: String!, $skip: Int!, $limit: Int!, $otherLangCategoryId: String) {
     allStrapiPost(
       filter: {category: {slug: {eq: $slug}}},
       sort: {fields: published_at, order: DESC},
@@ -69,6 +84,10 @@ export const query = graphql`
           }
         }    
       }
+    }
+    otherLangCategory: strapiCategory(strapiId: {eq: $otherLangCategoryId}) {
+      slug
+      locale
     }
   }
 `

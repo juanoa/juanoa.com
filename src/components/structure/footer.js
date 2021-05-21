@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "gatsby";
 
 import FotoJuan from "../../images/juan.jpg";
+import {FaGithub, FaGoodreads, FaLinkedin, FaTwitter} from "react-icons/all";
 
 const Footer = ({lang}) => {
 
@@ -11,7 +12,6 @@ const Footer = ({lang}) => {
       {name: 'Blog', url: '/blog/'},
       {name: 'Proyectos', url: '/proyectos/'},
       {name: 'Contacto', url: '/contacto/'},
-      {name: 'Libros recomendados', url: '/libros/'},
       {name: 'Política de privacidad', url: '/politica-privacidad/'},
     ],
     en: [
@@ -20,16 +20,6 @@ const Footer = ({lang}) => {
       {name: 'Projects', url: '/en/projects/'},
       {name: 'Contact', url: '/en/contact/'},
     ]
-  }
-
-  const categoriesLink = {
-    es: [
-      {name: 'Modelos mentales', url: '/modelos-mentales/'},
-      {name: 'Desarrollo', url: '/desarrollo/'},
-      {name: 'Empresa', url: '/empresa/'},
-      {name: 'Tecnología', url: '/tecnologia/'},
-    ],
-    en: []
   }
 
   return (
@@ -67,13 +57,18 @@ const Footer = ({lang}) => {
             </a>
           </div>
           <div className="col-md-3">
-            <h4 className="footer__heading">Blog</h4>
-            <ul className="footer__interest-links">
+            <h4 className="footer__heading">
               {
-                categoriesLink[lang].map((link, index) => (
-                  <li key={index}><Link to={link.url}>{link.name}</Link></li>
-                ))
+                (lang === 'es')
+                  ? 'Redes sociales'
+                  : 'Social links'
               }
+            </h4>
+            <ul className="footer__interest-links">
+              <li><a href="https://github.com/juanoa" target="_blank"><FaGithub/> GitHub</a></li>
+              <li><a href="https://twitter.com/juanoa_" target="_blank"><FaTwitter/> Twitter</a></li>
+              <li><a href="https://linkedin.com/in/juanoa" target="_blank"><FaLinkedin/> LinkedIn</a></li>
+              <li><a href="https://goodreads.com/juanoa" target="_blank"><FaGoodreads/> Goodreads</a></li>
             </ul>
           </div>
           <div className="col-md-3">

@@ -1,7 +1,7 @@
 import React from "react"
 import { FaAmazon } from "react-icons/all";
 
-const BookCard = ({book}) => {
+const BookCard = ({book, lang}) => {
 
   if (!book) return (<></>);
 
@@ -31,7 +31,7 @@ const BookCard = ({book}) => {
           href={link}
           target="_blank"
           rel="noreferrer nofollow"
-        ><FaAmazon /> Comprar</a>
+        ><FaAmazon /> {(lang === "es") ? "Comprar" : "Buy it"}</a>
       </div>
     </div>
   );

@@ -21,12 +21,22 @@ const Layout = ({ children, i18n }) => {
       <main>{children}</main>
       <Footer lang={i18n.actual} />
       <CookieConsent
-        buttonText="Las acepto"
+        buttonText={(i18n.actual === 'es') ? "Las acepto" : "I agree"}
         containerClasses="layout__cookie-banner"
         buttonClasses="layout__cookie-banner-button"
       >
-        Este sitio web utiliza cookies para mejorar tu experiencia de uso. <Link to="/politica-privacidad/">Política de
-        privacidad</Link>
+        {
+          (i18n.actual === "es")
+            ? "Este sitio web utiliza cookies para mejorar tu experiencia de uso. "
+            : "This website uses cookies to improve your experience. "
+        }
+        <Link to="/politica-privacidad/">
+          {
+            (i18n.actual === "es")
+              ? "Política de privacidad"
+              : "Privacy policy"
+          }
+        </Link>
       </CookieConsent>
     </>
   );

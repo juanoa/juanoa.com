@@ -1,17 +1,18 @@
 import React from "react";
-import { FaCode, FaGithub, MdWeb } from "react-icons/all";
+import {FaCode, FaGithub, MdInfo, MdWeb} from "react-icons/all";
+import {Link} from "gatsby";
 
-const ProjectCard = ({ project }) => {
+import {createProjectSlug} from "../../helpers/createSlugs";
+
+const ProjectCard = ({ project, lang }) => {
   if (!project) return (<></>);
 
   const {
     logo,
+    slug,
     title,
     description,
     tech: techs,
-    external,
-    docs,
-    github
   } = project;
 
   return (
@@ -36,39 +37,12 @@ const ProjectCard = ({ project }) => {
           }
         </div>
         <div>
-          {
-            external &&
-            <a
-              className="btn btn-sm btn-outline-primary mr-2 mt-3"
-              href={external}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <MdWeb /> <span className="project__post-button-text">Sitio web</span>
-            </a>
-          }
-          {
-            docs &&
-            <a
-              className="btn btn-sm btn-outline-primary mr-2 mt-3"
-              href={docs}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaCode /> <span className="project__post-button-text">Documentación</span>
-            </a>
-          }
-          {
-            github &&
-            <a
-              className="btn btn-sm btn-dark mr-2 mt-3"
-              href={github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub /> <span className="project__post-button-text">Repositorio</span>
-            </a>
-          }
+          <Link
+            className="btn btn-sm btn-outline-primary mr-2 mt-3"
+            to={createProjectSlug(slug, lang)}
+          >
+            <MdInfo /> <span className="project__post-button-text">{(lang === "es") ? "Más información" : "Show details"}</span>
+          </Link>
         </div>
       </div>
     </div>

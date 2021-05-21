@@ -60,8 +60,8 @@ const PostTemplate = ({ data }) => {
       </div>
 
       <div className="content">
-        <BookCard book={book} />
-        <ProjectCard project={project} />
+        <BookCard book={book} lang={locale} />
+        <ProjectCard project={project} lang={locale} />
         <Markdown content={content} />
       </div>
     </Layout>
@@ -77,6 +77,9 @@ export const query = graphql`
       title
       content
       slug
+      seoDescription
+      seoTitle
+      locale
       category {
           id
           slug
@@ -98,8 +101,7 @@ export const query = graphql`
       }
       project {
         title
-        github
-        external
+        slug
         description
         tech
         logo {
@@ -108,9 +110,6 @@ export const query = graphql`
           }
         }
       }
-      seoDescription
-      seoTitle
-      locale
     }
     otherLangPost: strapiPost(strapiId: {eq: $otherLangPostId}) {
       slug

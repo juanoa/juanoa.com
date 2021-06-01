@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import MarkdownIt from "markdown-it"
+import highlight from "../../helpers/highlight";
 
 export const Markdown = ({content, className = ''}) => {
 
@@ -11,6 +12,11 @@ export const Markdown = ({content, className = ''}) => {
     typographer: true, // reemplaza ciertas palabras para mejorar el texto
     langPrefix: "language-" // agrega una clase `language-[lang]` a los bloques de código
   });
+
+  useEffect(() => {
+    highlight.highlightCode()
+  }, []);
+
 
   return (
     <div

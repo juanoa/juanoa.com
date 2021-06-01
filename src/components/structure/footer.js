@@ -65,10 +65,10 @@ const Footer = ({lang}) => {
               }
             </h4>
             <ul className="footer__interest-links">
-              <li><a href="https://github.com/juanoa" target="_blank"><FaGithub/> GitHub</a></li>
-              <li><a href="https://twitter.com/juanoa_" target="_blank"><FaTwitter/> Twitter</a></li>
-              <li><a href="https://linkedin.com/in/juanoa" target="_blank"><FaLinkedin/> LinkedIn</a></li>
-              <li><a href="https://goodreads.com/juanoa" target="_blank"><FaGoodreads/> Goodreads</a></li>
+              <li><a href="https://github.com/juanoa" target="_blank" rel="noreferrer"><FaGithub/> GitHub</a></li>
+              <li><a href="https://twitter.com/juanoa_" target="_blank" rel="noreferrer"><FaTwitter/> Twitter</a></li>
+              <li><a href="https://linkedin.com/in/juanoa" target="_blank" rel="noreferrer"><FaLinkedin/> LinkedIn</a></li>
+              <li><a href="https://goodreads.com/juanoa" target="_blank" rel="noreferrer"><FaGoodreads/> Goodreads</a></li>
             </ul>
           </div>
           <div className="col-md-3">

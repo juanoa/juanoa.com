@@ -14,6 +14,7 @@
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-source-strapi": "^1.0.0-alpha.2",
+    "highlight.js": "^11.0.0",
     "jquery": "^3.6.0",
     "markdown-it": "^12.0.6",
     "popper.js": "^1.16.1",

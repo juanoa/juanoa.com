@@ -1,5 +1,5 @@
 import React from "react";
-import {FaCode, FaGithub, MdInfo, MdWeb} from "react-icons/all";
+import {MdInfo} from "react-icons/all";
 import {Link} from "gatsby";
 
 import {createProjectSlug} from "../../helpers/createSlugs";

@@ -7,15 +7,15 @@ export const AboutMeSection = ({lang}) => {
 
   let description = ""
   if (lang === "es") {
-    description= "¡Hola! Soy Juan, estudiante de Ingeniería Informática en Murcia (🇪🇸).\n" +
+    description= "¡Hola! Soy Juan, Ingeniero Informático y vivo en Murcia (🇪🇸).\n" +
       "\n" +
-      "Compagino mis estudios en la Universidad de Murcia con proyectos propios, trabajos de freelancer y formación.\n" +
+      "Actualmente me dedico a proyectos propios, trabajos de freelancer y formación.\n" +
       "\n" +
       "Aquí tienes algunas tecnologías con las que he trabajado recientemente:"
   } else {
-    description = "Hi, I'm Juan, a student of Computer Engineering in Murcia (🇪🇸).\n" +
+    description = "Hi, I'm Juan, Computer Engineer in Murcia (🇪🇸).\n" +
       "\n" +
-      "I combine my studies at the University of Murcia with my own projects, freelancer jobs and self-education.\n" +
+      "I am currently dedicated to my own projects, freelancer jobs and self-education.\n" +
       "\n" +
       "Here are some of the technologies I have worked with recently:"
   }

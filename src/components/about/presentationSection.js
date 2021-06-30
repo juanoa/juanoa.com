@@ -25,8 +25,8 @@ export const PresentationSection = ({lang}) => {
       <p className="about__presentation-description">
         {
           (lang === 'es')
-            ? 'Soy estudiante de Ingeniería Informática por la Universidad de Murcia y me dedico a desarrollar páginas web y aplicaciones web de cualquier tipo.'
-            : 'I am a student of Computer Engineering at the University of Murcia and I develop websites and web applications of any type.'
+            ? 'Soy Ingeniero Informático por la Universidad de Murcia y me dedico a desarrollar páginas web y aplicaciones web de cualquier tipo.'
+            : 'I am Computer Engineer and I develop websites and web applications of any type.'
         }
       </p>
       <Link

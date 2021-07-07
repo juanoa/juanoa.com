@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/structure/layout";
 import Seo from "../components/structure/seo";
-import { FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar, MdWeb } from "react-icons/all";
+import {AiFillCloud, FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar} from "react-icons/all";
 import { graphql } from "gatsby";
 import { PostGrid } from "../components/posts/postGrid";
 import {Markdown} from "../components/structure/markdown";
@@ -90,7 +90,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <MdWeb />
+                      <AiFillCloud />
                     </a>
                   }
                   {

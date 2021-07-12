@@ -19,6 +19,7 @@ const BlogPageEn = ({data}) => {
     <Layout i18n={i18n}>
       <Seo title="Blog" i18n={i18n}/>
       <div className="container-fluid homepage">
+        <h1>Blog</h1>
         <MainPost post={firstPost} lang="en"/>
         <PostGrid posts={posts} init={1} end={5} lang="en"/>
       </div>

@@ -5,7 +5,7 @@ import Seo from "../components/structure/seo"
 
 const PrivacyPolicyPage = () => (
   <Layout>
-    <Seo title="Política de privacidad" index={false} />
+    <Seo title="Política de privacidad | Juan Otálora" index={false} />
     <div className="page-content">
       <h1>Política de privacidad</h1>
         <h2>1. Quiénes somos</h2>

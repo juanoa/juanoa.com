@@ -11,7 +11,7 @@ const ContactPageEn = () => {
 
   return (
     <Layout i18n={i18n}>
-      <Seo title="Contact" description="My inbox is always open for new opportunities, personal and professional."  i18n={i18n}/>
+      <Seo title="Contact | Juan Otálora" description="My inbox is always open for new opportunities, personal and professional."  i18n={i18n}/>
       <div className="homepage">
         <h1>Contact</h1>
         <div className="row">

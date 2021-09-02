@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "gatsby";
 
 import FotoJuan from "../../images/juan.jpg";
-import {FaGithub, FaGoodreads, FaLinkedin, FaTwitter} from "react-icons/all";
+import {FaGithub, FaGoodreads, FaLinkedin, FaTwitter, FaMedium} from "react-icons/all";
 
 const Footer = ({lang}) => {
 
@@ -69,6 +69,7 @@ const Footer = ({lang}) => {
               <li><a href="https://twitter.com/juanoa_" target="_blank" rel="noreferrer"><FaTwitter/> Twitter</a></li>
               <li><a href="https://linkedin.com/in/juanoa" target="_blank" rel="noreferrer"><FaLinkedin/> LinkedIn</a></li>
               <li><a href="https://goodreads.com/juanoa" target="_blank" rel="noreferrer"><FaGoodreads/> Goodreads</a></li>
+              <li><a href="https://juanoa.medium.com/" target="_blank" rel="noreferrer"><FaMedium/> Medium</a></li>
             </ul>
           </div>
           <div className="col-md-3">

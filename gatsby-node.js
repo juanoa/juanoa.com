@@ -169,7 +169,7 @@ exports.createPages = ({ actions, graphql }) => {
           isFeature: node.isFeature,
           tech: node.tech,
           description: node.description,
-          company: node.job.company,
+          job: node.job,
           locale: node.locale,
           otherLangProjectId: node.localizations[0].id,
         },

@@ -23,7 +23,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
     isFeature,
     tech,
     description,
-    company,
+    job,
     locale,
   } = pageContext;
 
@@ -76,11 +76,15 @@ const ProjectTemplate = ({ data, pageContext }) => {
                 <div className="mt-4 mb-4">
                   <small>{description}</small>
                 </div>
-                <div className="mt-4 mb-4">
+                {
+                  job &&
+                  <div className="mt-4 mb-4">
                   <span className="badge badge-pill badge-dark pt-2 pl-3 pr-3 pb-2">
-                    <FaBriefcase className="mr-2" /> {company}
+                    <FaBriefcase className="mr-2" /> {job.company}
                   </span>
-                </div>
+                  </div>
+                }
+
                 <div>
                   {
                     external &&

@@ -4,10 +4,54 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Juan Otálora Alarcón`,
+    title: `Juan Otálora`,
     description: `La vida de un ingeniero informático como yo no es nada fácil. Me gusta leer, retener y escribir sobre temas que me gustan. ¿Me lees?`,
     author: `@juanoa_`,
     siteUrl: `https://www.juanoa.com`,
+    startYear: '2018',
+    social: [
+      {
+        name: 'GitHub',
+        link: 'https://github.com/juanoa',
+        icon: 'FaGithub'
+      },
+      {
+        name: 'Twitter',
+        link: 'https://twitter.com/juanoa_',
+        icon: 'FaTwitter'
+      },
+      {
+        name: 'LinkedIn',
+        link: 'https://linkedin.com/in/juanoa',
+        icon: 'FaLinkedin'
+      },
+      {
+        name: 'Goodreads',
+        link: 'https://goodreads.com/juanoa',
+        icon: 'FaGoodreads'
+      },
+      {
+        name: 'Medium',
+        link: 'https://juanoa.medium.com/',
+        icon: 'FaMedium'
+      },
+    ],
+    footerLinks: {
+      es: [
+        {name: 'Sobre mi', url: '/'},
+        {name: 'Blog', url: '/blog/'},
+        {name: 'Proyectos', url: '/proyectos/'},
+        {name: 'Contacto', url: '/contacto/'},
+        {name: 'Política de privacidad', url: '/politica-privacidad/'},
+      ],
+      en: [
+        {name: 'About me', url: '/en/'},
+        {name: 'Blog', url: '/en/blog/'},
+        {name: 'Projects', url: '/en/projects/'},
+        {name: 'Contact', url: '/en/contact/'},
+        {name: 'Privacy policy (ES)', url: '/politica-privacidad/'},
+      ]
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -93,8 +137,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

@@ -2,14 +2,30 @@ import React from "react"
 
 import Layout from "../components/structure/layout"
 import Seo from "../components/structure/seo"
+import {graphql, useStaticQuery} from "gatsby";
 
-const PrivacyPolicyPage = () => (
-  <Layout>
-    <Seo title="Política de privacidad | Juan Otálora" index={false} />
-    <div className="page-content">
-      <h1>Política de privacidad</h1>
+const PrivacyPolicyPage = () => {
+
+  const {site: {siteMetadata}} = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            siteUrl
+          }
+        }
+      }
+    `
+  );
+
+  return (
+    <Layout>
+      <Seo title="Política de privacidad | Juan Otálora" index={false}/>
+      <div className="page-content">
+        <h1>Política de privacidad</h1>
         <h2>1. Quiénes somos</h2>
-        <p>La dirección de la web es: https://juanoa.com. Está página es mantenida por Juan Otálora Alarcón.</p>
+        <p>La dirección de la web es: {siteMetadata.siteUrl}. Está página es mantenida por {siteMetadata.title}.</p>
         <h2>2. Qué datos personales recogemos y por qué los recogemos</h2>
         <h3>2.1. Comentarios</h3>
         <p>Cuando los visitantes dejan comentarios en la web, recopilamos los datos que se muestran en el formulario de
@@ -176,8 +192,9 @@ const PrivacyPolicyPage = () => (
           pertenecientes a&nbsp;<a href="https://juanoa.com" target="_blank" rel="noreferrer">Juan
             Otálora</a>&nbsp;Alarcón.</p>
         <p>Envío de newsletters a usuarios que únicamente han dado su consentimiento</p>
-    </div>
-  </Layout>
-)
+      </div>
+    </Layout>
+  )
+}
 
 export default PrivacyPolicyPage

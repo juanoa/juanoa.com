@@ -1,6 +1,6 @@
 import React from "react";
 
-import FotoJuan from "../../images/juan.jpg";
+import PersonalPhoto from "../../images/personal.jpg";
 import {Markdown} from "../structure/markdown";
 
 export const AboutMeSection = ({lang}) => {
@@ -48,8 +48,8 @@ export const AboutMeSection = ({lang}) => {
         </div>
         <div className="col-md-5 text-center">
           <img
-            src={FotoJuan}
-            alt="Juan Otálora"
+            src={PersonalPhoto}
+            alt="Personal photo"
             className="rounded about__about-me-image mt-4 mt-md-0"
           />
         </div>

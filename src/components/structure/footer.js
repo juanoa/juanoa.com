@@ -1,26 +1,38 @@
 import React from "react";
-import {Link} from "gatsby";
+import {graphql, Link, useStaticQuery} from "gatsby";
 
-import FotoJuan from "../../images/juan.jpg";
-import {FaGithub, FaGoodreads, FaLinkedin, FaTwitter, FaMedium} from "react-icons/all";
+import PersonalPhoto from "../../images/personal.jpg";
+import {DynamicFaIcon} from "../../helpers/icons";
 
 const Footer = ({lang}) => {
 
-  const featuredLinks = {
-    es: [
-      {name: 'Sobre mi', url: '/'},
-      {name: 'Blog', url: '/blog/'},
-      {name: 'Proyectos', url: '/proyectos/'},
-      {name: 'Contacto', url: '/contacto/'},
-      {name: 'Política de privacidad', url: '/politica-privacidad/'},
-    ],
-    en: [
-      {name: 'About me', url: '/en/'},
-      {name: 'Blog', url: '/en/blog/'},
-      {name: 'Projects', url: '/en/projects/'},
-      {name: 'Contact', url: '/en/contact/'},
-    ]
-  }
+  const {site: {siteMetadata: {social, footerLinks, title, startYear}}} = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            startYear
+            social {
+              icon
+              link
+              name
+            }
+            footerLinks {
+              en {
+                name
+                url
+              }
+              es {
+                name
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+  );
 
   return (
     <footer className="pt-4 pt-md-5 pb-md-5 pb-4 border-top mt-5">
@@ -29,8 +41,8 @@ const Footer = ({lang}) => {
           <div className="col-md-3">
             <img
               className="footer__avatar"
-              src={FotoJuan}
-              alt="Juan Otálora"
+              src={PersonalPhoto}
+              alt={title}
             />
             <p className="mt-3 mb-2 footer__profile-description">
               {
@@ -65,11 +77,9 @@ const Footer = ({lang}) => {
               }
             </h4>
             <ul className="footer__interest-links">
-              <li><a href="https://github.com/juanoa" target="_blank" rel="noreferrer"><FaGithub/> GitHub</a></li>
-              <li><a href="https://twitter.com/juanoa_" target="_blank" rel="noreferrer"><FaTwitter/> Twitter</a></li>
-              <li><a href="https://linkedin.com/in/juanoa" target="_blank" rel="noreferrer"><FaLinkedin/> LinkedIn</a></li>
-              <li><a href="https://goodreads.com/juanoa" target="_blank" rel="noreferrer"><FaGoodreads/> Goodreads</a></li>
-              <li><a href="https://juanoa.medium.com/" target="_blank" rel="noreferrer"><FaMedium/> Medium</a></li>
+              {
+                social.map((s, i) => <li key={i}><a href={s.link} target="_blank" rel="noreferrer"><DynamicFaIcon name={s.icon}/> {s.name}</a></li>)
+              }
             </ul>
           </div>
           <div className="col-md-3">
@@ -82,7 +92,7 @@ const Footer = ({lang}) => {
             </h4>
             <ul className="footer__interest-links">
               {
-                featuredLinks[lang].map((link, index) => (
+                footerLinks[lang].map((link, index) => (
                   <li key={index}><Link to={link.url}>{link.name}</Link></li>
                 ))
               }
@@ -90,8 +100,8 @@ const Footer = ({lang}) => {
           </div>
         </div>
         <small className="footer__copyright">
-          juanoa.com © 2018-{new Date().getFullYear()} | {(lang === 'es') ? 'Diseñado por' : 'Design by'} <a
-          href="https://juanoa.com" className="footer__link">Juan Otálora</a>
+          {startYear}-{new Date().getFullYear()} © {(lang === 'es') ? 'Diseñado por' : 'Design by'} <a
+          href="https://juanoa.com" className="footer__link">{title}</a>
         </small>
       </div>
     </footer>

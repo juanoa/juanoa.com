@@ -1,7 +1,19 @@
 import React from "react";
-import {Link} from "gatsby";
+import {graphql, Link, useStaticQuery} from "gatsby";
 
 export const PresentationSection = ({lang}) => {
+
+  const {site: {siteMetadata: {title}}} = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  );
 
   return (
     <div className="about__section">
@@ -13,7 +25,7 @@ export const PresentationSection = ({lang}) => {
         }
       </span>
       <h1 className="about__presentation-name">
-        Juan Otálora.
+        {title}.
       </h1>
       <h2 className="about__primary-light-title">
         {

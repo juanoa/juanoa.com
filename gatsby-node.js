@@ -137,9 +137,6 @@ exports.createPages = ({ actions, graphql }) => {
                       isFeature
                       tech
                       description
-                      job {
-                        company
-                      }
                       locale
                       localizations {
                         id
@@ -169,7 +166,6 @@ exports.createPages = ({ actions, graphql }) => {
           isFeature: node.isFeature,
           tech: node.tech,
           description: node.description,
-          job: node.job,
           locale: node.locale,
           otherLangProjectId: node.localizations[0].id,
         },

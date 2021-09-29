@@ -49,7 +49,7 @@ export const AboutMeSection = ({lang}) => {
         <div className="col-md-5 text-center">
           <img
             src={PersonalPhoto}
-            alt="Personal photo"
+            alt="Personal"
             className="rounded about__about-me-image mt-4 mt-md-0"
           />
         </div>

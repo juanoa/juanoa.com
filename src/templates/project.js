@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/structure/layout";
 import Seo from "../components/structure/seo";
-import {AiFillCloud, FaAndroid, FaApple, FaBriefcase, FaGithub, FaStar} from "react-icons/all";
+import {AiFillCloud, FaAndroid, FaApple, FaGithub, FaStar} from "react-icons/all";
 import { graphql } from "gatsby";
 import { PostGrid } from "../components/posts/postGrid";
 import {Markdown} from "../components/structure/markdown";
@@ -23,7 +23,6 @@ const ProjectTemplate = ({ data, pageContext }) => {
     isFeature,
     tech,
     description,
-    job,
     locale,
   } = pageContext;
 
@@ -76,14 +75,6 @@ const ProjectTemplate = ({ data, pageContext }) => {
                 <div className="mt-4 mb-4">
                   <small>{description}</small>
                 </div>
-                {
-                  job &&
-                  <div className="mt-4 mb-4">
-                  <span className="badge badge-pill badge-dark pt-2 pl-3 pr-3 pb-2">
-                    <FaBriefcase className="mr-2" /> {job.company}
-                  </span>
-                  </div>
-                }
 
                 <div>
                   {

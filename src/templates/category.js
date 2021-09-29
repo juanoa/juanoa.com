@@ -23,8 +23,6 @@ const CategoryTemplate = ({data, pageContext}) => {
   const otherLangCategory = data.otherLangCategory
   const i18n = getI18nForCategory(locale, slug, otherLangCategory)
 
-  console.log(locale)
-
   return (
     <Layout i18n={i18n}>
       <Seo title={title} description={description?.slice(0, 140)} index={index} i18n={i18n}/>

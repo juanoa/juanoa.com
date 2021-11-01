@@ -5,17 +5,17 @@ import {Markdown} from "../structure/markdown";
 
 export const AboutMeSection = ({lang}) => {
 
-  let description = ""
+  let description;
   if (lang === "es") {
-    description= "¡Hola! Soy Juan, Ingeniero Informático y vivo en Murcia (🇪🇸).\n" +
+    description= "¡Hola! Soy Juan, Ingeniero Informático y vivo en La Coruña (🇪🇸).\n" +
       "\n" +
-      "Actualmente me dedico a proyectos propios, trabajos de freelancer y formación.\n" +
+      "Soy ingeniero de software en Inditex, trabajando en el e-commerce de Zara.\n" +
       "\n" +
       "Aquí tienes algunas tecnologías con las que he trabajado recientemente:"
   } else {
-    description = "Hi, I'm Juan, Computer Engineer in Murcia (🇪🇸).\n" +
+    description = "Hi, I'm Juan, Computer Engineer in La Coruña (🇪🇸).\n" +
       "\n" +
-      "I am currently dedicated to my own projects, freelancer jobs and self-education.\n" +
+      "I'm software developer at Inditex, working on Zara's e-commerce.\n" +
       "\n" +
       "Here are some of the technologies I have worked with recently:"
   }
@@ -32,14 +32,14 @@ export const AboutMeSection = ({lang}) => {
           <div className="row">
             <div className="col-6 col-md-4">
               <ul>
-                <li className="about__about-me-skill">PHP</li>
+                <li className="about__about-me-skill">Java</li>
                 <li className="about__about-me-skill">WordPress</li>
                 <li className="about__about-me-skill">HTML & CSS</li>
               </ul>
             </div>
             <div className="col-6 col-md-4">
               <ul>
-                <li className="about__about-me-skill">Symphony</li>
+                <li className="about__about-me-skill">Spring boot</li>
                 <li className="about__about-me-skill">JavaScript (ES6+)</li>
                 <li className="about__about-me-skill">React</li>
               </ul>

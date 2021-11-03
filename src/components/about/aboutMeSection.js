@@ -13,9 +13,9 @@ export const AboutMeSection = ({lang}) => {
       "\n" +
       "Aquí tienes algunas tecnologías con las que he trabajado recientemente:"
   } else {
-    description = "Hi, I'm Juan, Computer Engineer in La Coruña (🇪🇸).\n" +
+    description = "Hi, It's Juan, Computer Engineer from Spain 🇪🇸.\n" +
       "\n" +
-      "I'm software developer at Inditex, working on Zara's e-commerce.\n" +
+      "Currently, I'm software engineer at Inditex, working on ZARA's e-commerce.\n" +
       "\n" +
       "Here are some of the technologies I have worked with recently:"
   }
@@ -33,15 +33,15 @@ export const AboutMeSection = ({lang}) => {
             <div className="col-6 col-md-4">
               <ul>
                 <li className="about__about-me-skill">Java</li>
-                <li className="about__about-me-skill">WordPress</li>
+                <li className="about__about-me-skill">JavaScript (ES6+)</li>
                 <li className="about__about-me-skill">HTML & CSS</li>
               </ul>
             </div>
             <div className="col-6 col-md-4">
               <ul>
                 <li className="about__about-me-skill">Spring boot</li>
-                <li className="about__about-me-skill">JavaScript (ES6+)</li>
                 <li className="about__about-me-skill">React</li>
+                <li className="about__about-me-skill">Git / GitHub</li>
               </ul>
             </div>
           </div>

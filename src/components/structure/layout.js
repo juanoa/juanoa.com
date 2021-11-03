@@ -9,7 +9,7 @@ import React from "react";
 import { Link } from "gatsby";
 import CookieConsent from "react-cookie-consent";
 
-import Header from "./header";
+import Header from "../header/header";
 import Footer from "./footer";
 import PropTypes from "prop-types";
 

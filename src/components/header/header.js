@@ -2,20 +2,63 @@ import React from "react";
 import "react-icons/fa";
 import {Link} from "gatsby";
 import PropTypes from "prop-types";
-import {LanguageSelect} from "./languageSelect";
+import {LanguageSelect} from "../structure/languageSelect";
+import {NavLink} from "./navLink";
+
+import Medium from './icons/medium.png'
+import Substack from './icons/substack.png'
+import Juanoa from './icons/juanoa.png'
 
 const Header = ({i18n}) => {
 
   const navBarLinks = {
     es:[
       {name: 'Sobre mi', url: '/'},
-      {name: 'Blog', url: '/blog/'},
+      {
+        name: 'Posts',
+        subLinks: [
+          {
+            name: 'Blog',
+            url: '/blog/',
+            icon: Juanoa
+          },
+          {
+            name: 'Medium (EN)',
+            url: 'https://juanoa.medium.com/',
+            icon: Medium
+          },
+          {
+            name: 'Errare Humanum Est',
+            url: 'https://errarehumanumest.substack.com/',
+            icon: Substack
+          },
+        ]
+      },
       {name: 'Proyectos', url: '/proyectos/'},
       {name: 'Contacto', url: '/contacto/'},
     ],
     en: [
       {name: 'About me', url: '/en/'},
-      {name: 'Blog', url: '/en/blog/'},
+      {
+        name: 'Posts',
+        subLinks: [
+          {
+            name: 'Blog',
+            url: '/en/blog/',
+            icon: Juanoa
+          },
+          {
+            name: 'Medium',
+            url: 'https://juanoa.medium.com/',
+            icon: Medium
+          },
+          {
+            name: 'Errare Humanum Est (ES)',
+            url: 'https://errarehumanumest.substack.com/',
+            icon: Substack
+          },
+        ]
+      },
       {name: 'Projects', url: '/en/projects/'},
       {name: 'Contact', url: '/en/contact/'},
     ]
@@ -38,11 +81,7 @@ const Header = ({i18n}) => {
           <ul className="navbar-nav mr-auto">
             {
               navBarLinks[i18n.actual].map((link, index) => (
-                <li className="nav-item" key={index}>
-                  <Link className="nav-link" activeClassName="header__nav-link-active" to={link.url}>
-                    {link.name}
-                  </Link>
-                </li>
+                <NavLink link={link} key={index} />
               ))
             }
           </ul>

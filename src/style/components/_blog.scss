@@ -1,0 +1,14 @@
+.blog__load-more-button {
+  background: linear-gradient(90deg, $primary, $cyan-gradient);
+  border: none;
+  color: white;
+  padding: 12px 17px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  display: block;
+
+  &:hover {
+    color: white !important;
+  }
+}

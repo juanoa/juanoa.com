@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/structure/layout";
@@ -15,6 +15,14 @@ const BlogPage = ({ data }) => {
 
   const i18n = getI18nForPage('es', '/blog/', 'en', '/en/blog/')
 
+  const [postsLoaded, setPostsLoaded] = useState(21)
+
+  const loadMore = () => {
+    if (postsLoaded < posts.length) {
+      setPostsLoaded(postsLoaded+8)
+    }
+  }
+
   return (
     <Layout i18n={i18n}>
       <Seo title="Blog | Juan Otálora" i18n={i18n}/>
@@ -29,7 +37,16 @@ const BlogPage = ({ data }) => {
       </div>
       <FeaturedPostGrid posts={posts} categoryName={"Tecnología"} categorySlug={"tecnologia"} lang="es"/>
       <div className="container-fluid homepage mt-5">
-        <PostGrid posts={posts} init={13} end={21} lang="es" />
+        <PostGrid posts={posts} init={13} end={postsLoaded} lang="es" />
+        {
+          postsLoaded < posts.length &&
+          <button
+            className="btn blog__load-more-button"
+            onClick={loadMore}
+          >
+            Cargar más
+          </button>
+        }
       </div>
     </Layout>
   );

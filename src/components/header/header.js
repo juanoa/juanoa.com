@@ -21,12 +21,14 @@ const Header = ({i18n}) => {
           {
             name: 'Blog',
             url: '/blog/',
-            icon: Juanoa
+            icon: Juanoa,
+            internal: true
           },
           {
             name: 'Medium (EN)',
             url: 'https://juanoa.medium.com/',
-            icon: Medium
+            icon: Medium,
+            internal: false
           },
           {
             name: 'Mirror (EN)',
@@ -36,7 +38,8 @@ const Header = ({i18n}) => {
           {
             name: 'Errare Humanum Est',
             url: 'https://errarehumanumest.substack.com/',
-            icon: Substack
+            icon: Substack,
+            internal: false
           },
         ]
       },

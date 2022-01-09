@@ -37,7 +37,7 @@ const Header = ({i18n}) => {
             internal: false
           },
           {
-            name: 'Errare Humanum Est',
+            name: 'Substack',
             url: 'https://errarehumanumest.substack.com/',
             icon: Substack,
             internal: false
@@ -68,7 +68,7 @@ const Header = ({i18n}) => {
             icon: Mirror
           },
           {
-            name: 'Errare Humanum Est (ES)',
+            name: 'Substack (ES)',
             url: 'https://errarehumanumest.substack.com/',
             icon: Substack
           },

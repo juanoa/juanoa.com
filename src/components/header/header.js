@@ -8,6 +8,7 @@ import {NavLink} from "./navLink";
 import Medium from './icons/medium.png'
 import Substack from './icons/substack.png'
 import Juanoa from './icons/juanoa.png'
+import Mirror from './icons/mirror.png'
 
 const Header = ({i18n}) => {
 
@@ -30,7 +31,13 @@ const Header = ({i18n}) => {
             internal: false
           },
           {
-            name: 'Errare Humanum Est',
+            name: 'Mirror (EN)',
+            url: 'https://mirror.xyz/0xcd8669693ec034BAb890709a1089DC9C9a2F80c4',
+            icon: Mirror,
+            internal: false
+          },
+          {
+            name: 'Substack',
             url: 'https://errarehumanumest.substack.com/',
             icon: Substack,
             internal: false
@@ -56,7 +63,12 @@ const Header = ({i18n}) => {
             icon: Medium
           },
           {
-            name: 'Errare Humanum Est (ES)',
+            name: 'Mirror',
+            url: 'https://mirror.xyz/0xcd8669693ec034BAb890709a1089DC9C9a2F80c4',
+            icon: Mirror
+          },
+          {
+            name: 'Substack (ES)',
             url: 'https://errarehumanumest.substack.com/',
             icon: Substack
           },

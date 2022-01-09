@@ -33,7 +33,8 @@ const Header = ({i18n}) => {
           {
             name: 'Mirror (EN)',
             url: 'https://mirror.xyz/0xcd8669693ec034BAb890709a1089DC9C9a2F80c4',
-            icon: Mirror
+            icon: Mirror,
+            internal: false
           },
           {
             name: 'Errare Humanum Est',

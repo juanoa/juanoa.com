@@ -98,6 +98,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* SM breakpoint */
+@media (min-width: 576px) {
+  /* CUSTOM WIDTHS */
+  .w-sm-50 { width: 50%!important; }
+}
+
+/* MD breakpoint*/
+@media (min-width: 768px) {
+  /* CUSTOM WIDTHS */
+  .w-md-50 { width: 50%!important; }
+}
+
+/* LG breakpoint */
+@media (min-width: 992px) {
+  /* CUSTOM WIDTHS */
+  .w-lg-50 { width: 50%!important; }
+}
+
 // Cookies Banner
 .layout__cookie-banner {
   background-color: $white !important;

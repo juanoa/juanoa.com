@@ -45,6 +45,7 @@ const Header = ({i18n}) => {
         ]
       },
       {name: 'Proyectos', url: '/proyectos/'},
+      {name: 'Roadmap', url: '/roadmap-primer-trabajo-desarrollador/'},
       {name: 'Contacto', url: '/contacto/'},
     ],
     en: [

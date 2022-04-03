@@ -7,7 +7,7 @@ export const AboutMeSection = ({lang}) => {
 
   let description;
   if (lang === "es") {
-    description= "¡Hola! Soy Juan, Ingeniero Informático y vivo en La Coruña (🇪🇸).\n" +
+    description= "¡Hola! Soy Juan, Ingeniero Informático y vivo en A Coruña (🇪🇸).\n" +
       "\n" +
       "Soy ingeniero de software en Inditex, trabajando en el e-commerce de Zara.\n" +
       "\n" +

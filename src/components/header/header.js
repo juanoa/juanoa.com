@@ -16,13 +16,24 @@ const Header = ({i18n}) => {
     es:[
       {name: 'Sobre mi', url: '/'},
       {
-        name: 'Posts',
+        name: 'Escribo',
         subLinks: [
           {
             name: 'Blog',
             url: '/blog/',
             icon: Juanoa,
             internal: true
+          },
+          {
+            name: 'Errare Humanum Est',
+            url: 'https://errarehumanumest.substack.com/',
+            icon: Substack,
+            internal: false
+          },
+          {
+            name: '101web3',
+            url: 'https://www.101web3.xyz/',
+            icon: Substack
           },
           {
             name: 'Medium (EN)',
@@ -36,12 +47,6 @@ const Header = ({i18n}) => {
             icon: Mirror,
             internal: false
           },
-          {
-            name: 'Substack',
-            url: 'https://errarehumanumest.substack.com/',
-            icon: Substack,
-            internal: false
-          },
         ]
       },
       {name: 'Proyectos', url: '/proyectos/'},
@@ -50,12 +55,22 @@ const Header = ({i18n}) => {
     en: [
       {name: 'About me', url: '/en/'},
       {
-        name: 'Posts',
+        name: 'Write',
         subLinks: [
           {
             name: 'Blog',
             url: '/en/blog/',
             icon: Juanoa
+          },
+          {
+            name: 'Errare Humanum Est (ES)',
+            url: 'https://errarehumanumest.substack.com/',
+            icon: Substack
+          },
+          {
+            name: '101web3 (ES)',
+            url: 'https://www.101web3.xyz/',
+            icon: Substack
           },
           {
             name: 'Medium',
@@ -66,11 +81,6 @@ const Header = ({i18n}) => {
             name: 'Mirror',
             url: 'https://mirror.xyz/0xcd8669693ec034BAb890709a1089DC9C9a2F80c4',
             icon: Mirror
-          },
-          {
-            name: 'Substack (ES)',
-            url: 'https://errarehumanumest.substack.com/',
-            icon: Substack
           },
         ]
       },

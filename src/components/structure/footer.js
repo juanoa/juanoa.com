@@ -47,8 +47,8 @@ const Footer = ({lang}) => {
             <p className="mt-3 mb-2 footer__profile-description">
               {
                 (lang === 'es')
-                  ? 'Mi nombre es Juan Otálora y soy estudiante de ingeniería informática.'
-                  : 'My name is Juan Otálora and I am a student of Computer Engineering.'
+                  ? 'Mi nombre es Juan Otálora y soy ingeniero informático.'
+                  : 'My name is Juan Otálora and I am software engineer.'
               }
             </p>
             <p className="footer__profile-description">
@@ -59,20 +59,11 @@ const Footer = ({lang}) => {
               }
             </p>
           </div>
-          <div className="col-md-3 text-center">
-            <a href="https://scrummanager.com/website/c/profile/member.php?id=30425" target="_blank" rel="noreferrer">
-              <img
-                alt="Scrum Manager Expert"
-                src="https://scrummanager.com/website/img/experto-en.png"
-                className="mb-4"
-              />
-            </a>
-          </div>
-          <div className="col-md-3">
+          <div className="col-md-3 offset-md-3">
             <h4 className="footer__heading">
               {
                 (lang === 'es')
-                  ? 'Redes sociales'
+                  ? 'Social'
                   : 'Social links'
               }
             </h4>
@@ -86,7 +77,7 @@ const Footer = ({lang}) => {
             <h4 className="footer__heading">
               {
                 (lang === 'es')
-                  ? 'Enlaces de interés'
+                  ? 'Enlaces'
                   : 'Featured links'
               }
             </h4>

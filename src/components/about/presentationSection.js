@@ -34,13 +34,6 @@ export const PresentationSection = ({lang}) => {
             : 'I build things for the WWW'
         }
       </h2>
-      <p className="about__presentation-description">
-        {
-          (lang === 'es')
-            ? 'Soy Ingeniero de Software en Inditex y desarrollo aplicaciones web de todo tipo.'
-            : 'I\'m Software Engineer @ Inditex and I develop websites and web applications of any type.'
-        }
-      </p>
       <Link
         to={
           (lang === 'es')
@@ -48,7 +41,7 @@ export const PresentationSection = ({lang}) => {
             : '/en/contact/'
 
         }
-        className="btn about__button"
+        className="btn about__button mt-4"
       >
         <span role="img" aria-label="hand">👋</span> {(lang === 'es') ? 'Hablemos' : 'Contact'}
       </Link>

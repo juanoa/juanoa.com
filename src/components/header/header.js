@@ -19,12 +19,6 @@ const Header = ({i18n}) => {
         name: 'Escribo',
         subLinks: [
           {
-            name: 'Blog',
-            url: '/blog/',
-            icon: Juanoa,
-            internal: true
-          },
-          {
             name: 'Errare Humanum Est',
             url: 'https://errarehumanumest.substack.com/',
             icon: Substack,
@@ -41,12 +35,6 @@ const Header = ({i18n}) => {
             icon: Medium,
             internal: false
           },
-          {
-            name: 'Mirror (EN)',
-            url: 'https://mirror.xyz/0xcd8669693ec034BAb890709a1089DC9C9a2F80c4',
-            icon: Mirror,
-            internal: false
-          },
         ]
       },
       {name: 'Proyectos', url: '/proyectos/'},
@@ -57,11 +45,6 @@ const Header = ({i18n}) => {
       {
         name: 'Write',
         subLinks: [
-          {
-            name: 'Blog',
-            url: '/en/blog/',
-            icon: Juanoa
-          },
           {
             name: 'Errare Humanum Est (ES)',
             url: 'https://errarehumanumest.substack.com/',
@@ -76,11 +59,6 @@ const Header = ({i18n}) => {
             name: 'Medium',
             url: 'https://juanoa.medium.com/',
             icon: Medium
-          },
-          {
-            name: 'Mirror',
-            url: 'https://mirror.xyz/0xcd8669693ec034BAb890709a1089DC9C9a2F80c4',
-            icon: Mirror
           },
         ]
       },

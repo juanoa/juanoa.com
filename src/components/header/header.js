@@ -19,6 +19,12 @@ const Header = ({i18n}) => {
         name: 'Escribo',
         subLinks: [
           {
+            name: 'Blog',
+            url: '/blog/',
+            icon: Juanoa,
+            internal: true
+          },
+          {
             name: 'Errare Humanum Est',
             url: 'https://errarehumanumest.substack.com/',
             icon: Substack,
@@ -45,6 +51,12 @@ const Header = ({i18n}) => {
       {
         name: 'Write',
         subLinks: [
+          {
+            name: 'Blog',
+            url: '/en/blog/',
+            icon: Juanoa,
+            internal: true
+          },
           {
             name: 'Errare Humanum Est (ES)',
             url: 'https://errarehumanumest.substack.com/',

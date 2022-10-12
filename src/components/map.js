@@ -8,7 +8,7 @@ const Map = () => {
    */
 
   useEffect(() => {
-    const visited = ["ES", "FR", "DE", "PL", "GB", "AT", "IT", "IE", "CZ"]
+    const visited = ["ES", "FR", "DE", "PL", "GB", "AT", "IT", "IE", "CZ", "PT"]
     visited.forEach(country => {
       let element = document.getElementById(country)
       element.classList.add("visited")
